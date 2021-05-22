@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Gyms database</title>
+</head>
+<body>
+	<div th:switch="${gyms}">
+		<h2 th:case="null">No gyms yet!</h2>
+		<div th:case="*">
+			<h2>Gyms</h2>
+			<table>
+				<thead>
+					<tr>
+						<th>Name</th>
+						<th>Email</th>
+						<th>URL</th>
+						<th>Edit</th>
+						<th>Delete</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr th:each="gym : ${gyms}">
+						<td th:text="${gym.name}"></td>
+						<td th:text="${gym.email}"></td>
+						<td th:text="${gym.url}"></td>
+						<td><a th:href="@{/edit/{id}(id=${gym.id})}">Edit</a></td>
+						<td><a th:href="@{/delete/{id}(id=${gym.id})}">Delete</a></td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+		<p>
+			<a href="/signup">Add a new gym</a>
+		</p>
+	</div>
+</body>
+</html>
