@@ -57,6 +57,58 @@ public class ScrapeController {
 		Scraper.scrape_dieBasis_Adresse();
 		Scraper.scrape_dieBasis_Zeit();
 	}
+	
+	
+	public static void update_snapfit_karlstrasse() {
+		Scraper.scrape_snapfit_Adresse_karlstrasse();
+	}
+	
+	public static void update_snapfit_hagsfeld() {
+		Scraper.scrape_snapfit_Adresse_hagsfeld();
+	}
+	
+	public static void update_cleverfit() {
+		Scraper.scrape_cleverfit_kosten();
+		Scraper.scrape_cleverfit_Adresse();
+		Scraper.scrape_cleverfit_zeit();
+	}
+	
+	public static void update_fitpur() {
+		Scraper.scrape_fitpur_kosten();
+		Scraper.scrape_fitpur_Adresse();
+		Scraper.scrape_fitpur_Zeit();
+	}
+	
+	
+	
+	public static void update_sportprinz_sued() {
+		Scraper.scrape_sportprinz_kosten();
+		Scraper.scrape_sportprinz_adresse_sued();
+		Scraper.scrape_sportprinz_Zeit_sued();
+	}
+	
+	public static void update_sportprinz_west() {
+		Scraper.scrape_sportprinz_kosten();
+		Scraper.scrape_sportprinz_adresse_west();
+		Scraper.scrape_sportprinz_Zeit_west();
+		
+	}
+	
+	public static void update_jonnyM() {
+		Scraper.scrape_jonnyM_kosten();
+		Scraper.scrape_jonnyM_adresse();
+		Scraper.scrape_jonnyM_zeit();
+	}
+	
+	
+	public static void update_bulldog() {
+		Scraper.scrape_bulldog_adresse();
+		Scraper.scrape_bulldog_zeiten();
+	}
+	
+	
+	
+	
 
 	public static void main(String[] args) {
 
