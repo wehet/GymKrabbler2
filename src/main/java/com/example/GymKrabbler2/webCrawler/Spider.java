@@ -1,14 +1,20 @@
 package com.example.GymKrabbler2.webCrawler;
 
+import java.io.IOException;
 import java.util.HashSet;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Set;
 
+import org.jsoup.Jsoup;
+import org.jsoup.nodes.Document;
+
 public class Spider {
-	private static final int MAX_PAGES_TO_SEARCH = 10;
+	private static final int MAX_PAGES_TO_SEARCH = 50;
 	private Set<String> pagesVisited = new HashSet<String>();
 	private List<String> pagesToVisit = new LinkedList<String>();
+	
+	private String treffer;
 
 	/**
 	 * Our main launching point for the Spider's functionality. Internally it
@@ -33,6 +39,7 @@ public class Spider {
 			boolean success = leg.searchForWord(searchWord);
 			if (success) {
 				System.out.println(String.format("**Success** Word %s found at %s", searchWord, currentUrl));
+				treffer = currentUrl;
 				break;
 			}
 			this.pagesToVisit.addAll(leg.getLinks());
@@ -59,4 +66,15 @@ public class Spider {
 	Set<String> getLinks(){
 		return pagesVisited;
 	}
+	
+	
+	public String getTreffer() {
+		return treffer;
+	}
+	
+	
+	
+	
+	
+	
 }

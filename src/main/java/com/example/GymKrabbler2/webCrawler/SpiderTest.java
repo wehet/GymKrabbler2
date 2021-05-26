@@ -11,8 +11,10 @@ public class SpiderTest
     public static void main(String[] args)
     {
         Spider spider = new Spider();
-        spider.search("https://fit-in.de/club/daimlerstrasse/", "Daimlerstrasse");
-        System.out.print(""+ spider.getLinks());
+        spider.search("https://fit-in.de/", "Laufzeit");
+        String kosten_fitIn = spider.getTreffer();
+        
+        
        
         
     }
