@@ -3,7 +3,6 @@ package com.example.GymKrabbler2;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
-import com.example.GymKrabbler2.webCrawler.SpiderTest;
 
 @SpringBootApplication
 public class GymKrabbler2Application {
