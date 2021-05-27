@@ -44,6 +44,9 @@ public class Scraper {
 			HtmlElement element = ((HtmlElement) page
 					.getFirstByXPath("//*[@id=\"Content\"]/div/div/div[2]/div/div[4]/div[2]"));
 			el = element.asText();
+			
+			GymParser gymParser = new GymParser();
+			el = gymParser.getTokens(el, "Tel.");
 
 			return el;
 		} catch (Exception e) {
@@ -974,7 +977,8 @@ public class Scraper {
 
 	public static void main(String[] args) {
 
-		System.out.print(scrape_bulldog_zeiten());
+//		System.out.print(scrape_fitIn_Adresse_Kaiserstraße());
+		System.out.print(scrape_fitIn_Adresse_Kaiserstraße());
 
 	}
 
