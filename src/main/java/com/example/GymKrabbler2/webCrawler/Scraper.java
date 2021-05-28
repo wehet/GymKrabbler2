@@ -1,7 +1,6 @@
 package com.example.GymKrabbler2.webCrawler;
 
 import com.gargoylesoftware.htmlunit.WebClient;
-import com.gargoylesoftware.htmlunit.html.DomNode;
 import com.gargoylesoftware.htmlunit.html.HtmlElement;
 import com.gargoylesoftware.htmlunit.html.HtmlPage;
 
@@ -932,7 +931,8 @@ public class Scraper {
 		try {
 			HtmlPage page = client.getPage("https://bulldog-gym.com/");
 
-			HtmlElement element1 = ((HtmlElement) page.getFirstByXPath("//*[@id=\"offnungszeiten\"]/div[2]/div/div/div/div/section[1]/div/div/div/div/div/div[2]/div/div/p"));
+			HtmlElement element1 = ((HtmlElement) page.getFirstByXPath(
+					"//*[@id=\"offnungszeiten\"]/div[2]/div/div/div/div/section[1]/div/div/div/div/div/div[2]/div/div/p"));
 			zeit = element1.asText();
 
 			return zeit;
@@ -945,11 +945,7 @@ public class Scraper {
 
 	}
 
-
-	
-	
 	public static String scrape_bulldog_zeiten() {
-	
 
 		client.getOptions().setCssEnabled(false);
 		client.getOptions().setJavaScriptEnabled(false);
@@ -959,7 +955,8 @@ public class Scraper {
 		try {
 			HtmlPage page = client.getPage("https://bulldog-gym.com/");
 
-			HtmlElement element1 = ((HtmlElement) page.getFirstByXPath("//*[@id=\"offnungszeiten\"]/div[2]/div/div/div/div/section[1]/div/div/div/div/div/div[3]"));
+			HtmlElement element1 = ((HtmlElement) page.getFirstByXPath(
+					"//*[@id=\"offnungszeiten\"]/div[2]/div/div/div/div/section[1]/div/div/div/div/div/div[3]"));
 			zeit = element1.asText();
 
 			return zeit;
