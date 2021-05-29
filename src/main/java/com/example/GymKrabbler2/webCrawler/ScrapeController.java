@@ -1,8 +1,10 @@
 package com.example.GymKrabbler2.webCrawler;
 
+import java.io.IOException;
+
 public class ScrapeController {
 
-	public static void update_fitIn_Kaiserstrasse() {
+	public static void update_fitIn_Kaiserstrasse() throws IOException {
 		
 		Scraper.scrape_fitIn_Kosten();
 		Scraper.scrape_fitIn_Adresse_Kaiserstraße();
@@ -10,19 +12,20 @@ public class ScrapeController {
 	}
 	
 
-	public static void update_fitIn_Daimlerstrasse() {
+	public static void update_fitIn_Daimlerstrasse() throws IOException {
 		Scraper.scrape_fitIn_Kosten();
 		Scraper.scrape_fitIn_Adresse_Daimlerstrasse();
 		Scraper.scrape_fitIn_Zeit_Daimlerstrasse();
+		
 	}
 
-	public static void update_fitIn_Ebertstrasse() {
+	public static void update_fitIn_Ebertstrasse() throws IOException {
 		Scraper.scrape_fitIn_Kosten();
 		Scraper.scrape_fitIn_Adresse_Ebertstrasse();
 		Scraper.scrape_fitIn_Zeit_Ebertstrasse();
 	}
 	
-	public static void update_fitIn_Durlach() {
+	public static void update_fitIn_Durlach() throws IOException {
 		Scraper.scrape_fitIn_Kosten();
 		Scraper.scrape_fitIn_Adresse_Durlach();
 		Scraper.scrape_fitIn_Zeit_Durlach();

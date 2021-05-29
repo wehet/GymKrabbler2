@@ -1,6 +1,10 @@
 package com.example.GymKrabbler2.webCrawler;
 
+import java.io.IOException;
+import java.net.MalformedURLException;
+
 import com.example.GymKrabbler2.model.Gym;
+import com.gargoylesoftware.htmlunit.FailingHttpStatusCodeException;
 import com.gargoylesoftware.htmlunit.WebClient;
 import com.gargoylesoftware.htmlunit.html.HtmlElement;
 import com.gargoylesoftware.htmlunit.html.HtmlPage;
@@ -9,77 +13,48 @@ public class Scraper {
 
 	static WebClient client = new WebClient();
 
+	// General Scraping method
+	private static String scrapeWebsite(WebClient client, String link, String xPath) throws IOException {
+		client.getOptions().setCssEnabled(false);
+		client.getOptions().setJavaScriptEnabled(false);
+		String el = null;
+
+		HtmlPage page = client.getPage(link);
+
+		HtmlElement element = ((HtmlElement) page.getFirstByXPath(xPath));
+		el = element.asText();
+		return el;
+	}
+
 	// FitIn Scraping
 
-	public static String scrape_fitIn_Kosten() {
-		client.getOptions().setCssEnabled(false);
-		client.getOptions().setJavaScriptEnabled(false);
+	public static String scrape_fitIn_Kosten() throws IOException {
 
-		String el = null;
-		try {
-			HtmlPage page = client.getPage("https://fit-in.de/mitgliedschaft/");
-
-			HtmlElement element = ((HtmlElement) page.getFirstByXPath(
-					"//*[@id=\"Content\"]/div/div/div/div/div/div/div[9]/div[2]/div/div/div[2]/div/div/p[1]"));
-			el = element.asText();
-
-			return el;
-		} catch (Exception e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-
-		}
+		String el = scrapeWebsite(client, "https://fit-in.de/mitgliedschaft/",
+				"//*[@id=\"Content\"]/div/div/div/div/div/div/div[9]/div[2]/div/div/div[2]/div/div/p[1]");
 		return el;
 	}
 
-	public static String scrape_fitIn_Adresse_Kaiserstraße() {
+	public static String scrape_fitIn_Adresse_Kaiserstraße() throws IOException {
 		// NLP
-		client.getOptions().setCssEnabled(false);
-		client.getOptions().setJavaScriptEnabled(false);
+		String el = scrapeWebsite(client, "https://fit-in.de/club/kaiserstrasse/",
+				"//*[@id=\"Content\"]/div/div/div[2]/div/div[4]/div[2]");
 
-		String el = null;
-		try {
-			HtmlPage page = client.getPage("https://fit-in.de/club/kaiserstrasse/");
-
-			HtmlElement element = ((HtmlElement) page
-					.getFirstByXPath("//*[@id=\"Content\"]/div/div/div[2]/div/div[4]/div[2]"));
-			el = element.asText();
-
-			GymParser gymParser = new GymParser();
-			el = gymParser.getTokensFromStart(el, "Tel.");
-
-			return el;
-		} catch (Exception e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-
-		}
+		GymParser gymParser = new GymParser();
+		el = gymParser.getTokensFromStart(el, "Tel.");
 		return el;
 
 	}
 
-	public static String scrape_fitIn_Adresse_Daimlerstrasse() {
+	public static String scrape_fitIn_Adresse_Daimlerstrasse() throws IOException {
 		// NLP
-		client.getOptions().setCssEnabled(false);
-		client.getOptions().setJavaScriptEnabled(false);
 
-		String el = null;
-		try {
-			HtmlPage page = client.getPage("https://fit-in.de/club/daimlerstrasse/");
+		String el = scrapeWebsite(client, "https://fit-in.de/club/daimlerstrasse/",
+				"//*[@id=\"Content\"]/div/div/div[2]/div/div[4]/div[2]");
 
-			HtmlElement element = ((HtmlElement) page
-					.getFirstByXPath("//*[@id=\"Content\"]/div/div/div[2]/div/div[4]/div[2]"));
-			el = element.asText();
+		GymParser gymParser = new GymParser();
+		el = gymParser.getTokensFromStart(el, "Tel.");
 
-			GymParser gymParser = new GymParser();
-			el = gymParser.getTokensFromStart(el, "Tel.");
-
-			return el;
-		} catch (Exception e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-
-		}
 		return el;
 
 	}
@@ -664,7 +639,7 @@ public class Scraper {
 
 			HtmlElement element = ((HtmlElement) page.getFirstByXPath("//*[@id=\"contact-info\"]/div[2]/div[3]"));
 			el = element.asText();
-			
+
 			GymParser gymParser = new GymParser();
 			el = gymParser.getTokensFromBehind(el, "Öffnungszeiten");
 
@@ -739,12 +714,11 @@ public class Scraper {
 			HtmlElement element1 = ((HtmlElement) page.getFirstByXPath(
 					"//*[@id=\"content\"]/div/div/div/section[9]/div/div/div/div/div/section/div/div/div[1]/div/div/div[2]/div/div"));
 			adresse = element1.asText();
-			
+
 			GymParser gymParser = new GymParser();
 			help = gymParser.getTokens(adresse, "Karlsruhe", "Tel");
 			help = help + gymParser.getTokens(adresse, "663", "karlsruhe@fit-pur");
 			adresse = help;
-			
 
 			return adresse;
 		} catch (Exception e) {
@@ -768,7 +742,7 @@ public class Scraper {
 			HtmlElement element1 = ((HtmlElement) page.getFirstByXPath(
 					"//*[@id=\"content\"]/div/div/div/section[9]/div/div/div/div/div/section/div/div/div[1]/div/div/div[2]/div/div"));
 			zeit = element1.asText();
-			
+
 			GymParser gymParser = new GymParser();
 			zeit = gymParser.getTokensFromBehind(zeit, "!");
 
@@ -817,7 +791,7 @@ public class Scraper {
 
 			HtmlElement element = ((HtmlElement) page.getFirstByXPath("//*[@id=\"studio\"]/article/div/div[2]/p[21]"));
 			el = element.asText();
-			
+
 			GymParser gymParser = new GymParser();
 			el = gymParser.getTokensFromBehind(el, "WEST");
 
@@ -843,7 +817,7 @@ public class Scraper {
 			HtmlElement element2 = ((HtmlElement) page
 					.getFirstByXPath("//*[@id=\"studio\"]/article/div/div[2]/div[4]"));
 			adresse = element2.asText();
-			
+
 			GymParser gymParser = new GymParser();
 			adresse = gymParser.getTokens(adresse);
 
@@ -968,7 +942,7 @@ public class Scraper {
 			HtmlElement element1 = ((HtmlElement) page
 					.getFirstByXPath("//*[@id=\"post-32544\"]/div/div/div/div[6]/div[2]/div[2]/div[2]"));
 			zeit = element1.asText();
-			
+
 			GymParser gymParser = new GymParser();
 			zeit = gymParser.getTokensFromBehind(zeit, "Öffnungszeiten");
 
@@ -998,13 +972,12 @@ public class Scraper {
 			HtmlElement element1 = ((HtmlElement) page.getFirstByXPath(
 					"//*[@id=\"offnungszeiten\"]/div[2]/div/div/div/div/section[1]/div/div/div/div/div/div[2]/div/div/p"));
 			zeit = element1.asText();
-			
+
 			GymParser gymParser = new GymParser();
 			help = gymParser.getTokens(zeit, ">", "|");
 			help = help + gymParser.getTokens(zeit, "|", "<");
-			zeit = help;			
-			
-			
+			zeit = help;
+
 			return zeit;
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
@@ -1039,9 +1012,9 @@ public class Scraper {
 
 	}
 
-	public static void main(String[] args) {
+	public static void main(String[] args) throws IOException {
 
-		System.out.print(scrape_bulldog_zeiten());
+		System.out.print(scrape_fitIn_Kosten());
 
 	}
 
