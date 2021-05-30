@@ -52,40 +52,27 @@ public class ScrapeController {
 			update_bulldog();
 			break;
 		}
-		
-		
 
 	}
-	
+
 	public static void updateAll() throws IOException {
 		update_fitIn_Kaiserstrasse();
-		 update_fitIn_Kaiserstrasse();
-		 update_fitIn_Ebertstrasse();
-		 update_fitIn_Durlach();
-		 update_Pfitzenmeier();
-		 update_VeniceBeach_postgalerie();
-		 update_VeniceBeach_suedstadt();
-		 update_dieBasis();
-		 update_snapfit_karlstrasse();
-		 update_snapfit_hagsfeld();
-		 update_cleverfit();
-		 update_fitpur();
-		 update_sportprinz_sued();
-		 update_sportprinz_west();
-		 update_jonnyM();
-		 update_bulldog();
-		 
-		 
-		 
-		 
-		 
-		 
-		
-		
-		
-		
-		
-		
+		update_fitIn_Kaiserstrasse();
+		update_fitIn_Ebertstrasse();
+		update_fitIn_Durlach();
+		update_Pfitzenmeier();
+		update_VeniceBeach_postgalerie();
+		update_VeniceBeach_suedstadt();
+		update_dieBasis();
+		update_snapfit_karlstrasse();
+		update_snapfit_hagsfeld();
+		update_cleverfit();
+		update_fitpur();
+		update_sportprinz_sued();
+		update_sportprinz_west();
+		update_jonnyM();
+		update_bulldog();
+
 	}
 
 	public static void update_fitIn_Kaiserstrasse() throws IOException {
