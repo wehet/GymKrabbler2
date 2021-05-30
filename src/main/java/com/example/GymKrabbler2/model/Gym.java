@@ -15,6 +15,12 @@ public class Gym {
 	public Gym() {
 		super();
 	}
+	
+	public Gym(String name, String url, String email) {
+		this.name = name;
+		this.url = url;
+		this.email = email;
+	}
 
 	public long getId() {
 		return id;

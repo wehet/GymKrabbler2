@@ -7,6 +7,9 @@ import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
 
 import com.example.GymKrabbler2.model.Gym;
 import com.example.GymKrabbler2.repository.GymRepository;
@@ -20,6 +23,11 @@ public class GymController {
 	public GymController() {
 		// TODO Auto-generated constructor stub
 	}
+	
+
+	
+	
+	
 
 	@GetMapping("/signup")
 	public String showSignUpForm(Gym gym) {

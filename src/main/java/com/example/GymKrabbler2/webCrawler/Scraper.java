@@ -1,10 +1,6 @@
 package com.example.GymKrabbler2.webCrawler;
 
 import java.io.IOException;
-import java.net.MalformedURLException;
-
-import com.example.GymKrabbler2.model.Gym;
-import com.gargoylesoftware.htmlunit.FailingHttpStatusCodeException;
 import com.gargoylesoftware.htmlunit.WebClient;
 import com.gargoylesoftware.htmlunit.html.HtmlElement;
 import com.gargoylesoftware.htmlunit.html.HtmlPage;
