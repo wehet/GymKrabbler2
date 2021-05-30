@@ -21,6 +21,8 @@ public class Scraper {
 		el = element.asText();
 		return el;
 	}
+	
+	
 
 	// FitIn Scraping
 
@@ -55,106 +57,54 @@ public class Scraper {
 
 	}
 
-	public static String scrape_fitIn_Adresse_Ebertstrasse() {
+	public static String scrape_fitIn_Adresse_Ebertstrasse() throws IOException {
 		// NLP
-		client.getOptions().setCssEnabled(false);
-		client.getOptions().setJavaScriptEnabled(false);
 
-		String el = null;
-		try {
-			HtmlPage page = client.getPage("https://fit-in.de/club/ebertstrasse/");
+		String el = scrapeWebsite(client, "https://fit-in.de/club/ebertstrasse/",
+				"//*[@id=\"Content\"]/div/div/div[2]/div/div[4]/div[2]");
 
-			HtmlElement element = ((HtmlElement) page
-					.getFirstByXPath("//*[@id=\"Content\"]/div/div/div[2]/div/div[4]/div[2]"));
-			el = element.asText();
+		GymParser gymParser = new GymParser();
+		el = gymParser.getTokensFromStart(el, "Tel.");
 
-			GymParser gymParser = new GymParser();
-			el = gymParser.getTokensFromStart(el, "Tel.");
-
-			return el;
-		} catch (Exception e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-
-		}
 		return el;
 
 	}
 
 	// TODO
-	public static String scrape_fitIn_Adresse_Durlach() {
+	public static String scrape_fitIn_Adresse_Durlach() throws IOException {
 		// NLP
-		client.getOptions().setCssEnabled(false);
-		client.getOptions().setJavaScriptEnabled(false);
 
-		String el = null;
-		try {
-			HtmlPage page = client.getPage("https://fit-in.de/club/ebertstrasse/");
+		String el = scrapeWebsite(client, "", "");
 
-			HtmlElement element = ((HtmlElement) page.getFirstByXPath(""));
-			el = element.asText();
+		GymParser gymParser = new GymParser();
+		el = gymParser.getTokensFromStart(el, "Tel.");
 
-			GymParser gymParser = new GymParser();
-			el = gymParser.getTokensFromStart(el, "Tel.");
-
-			return el;
-		} catch (Exception e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-
-		}
 		return el;
 
 	}
 
 	// TODO
-	public static String scrape_fitIn_Adresse_Blankenloch() {
+	public static String scrape_fitIn_Adresse_Blankenloch() throws IOException {
 		// NLP
-		client.getOptions().setCssEnabled(false);
-		client.getOptions().setJavaScriptEnabled(false);
 
-		String el = null;
-		try {
-			HtmlPage page = client.getPage("https://fit-in.de/club/ebertstrasse/");
+		String el = scrapeWebsite(client, "", "");
 
-			HtmlElement element = ((HtmlElement) page.getFirstByXPath(""));
-			el = element.asText();
+		GymParser gymParser = new GymParser();
+		el = gymParser.getTokensFromStart(el, "Tel.");
 
-			GymParser gymParser = new GymParser();
-			el = gymParser.getTokensFromStart(el, "Tel.");
-
-			return el;
-		} catch (Exception e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-
-		}
 		return el;
 
 	}
 
-	public static String scrape_fitIn_Zeit_Kaiserstraße() {
+	public static String scrape_fitIn_Zeit_Kaiserstraße() throws IOException {
 		// NLP
-		client.getOptions().setCssEnabled(false);
-		client.getOptions().setJavaScriptEnabled(false);
 
-		String el = null;
-		try {
-			HtmlPage page = client.getPage("https://fit-in.de/club/kaiserstrasse/");
+		String el = scrapeWebsite(client, "https://fit-in.de/club/kaiserstrasse/",
+				"//*[@id=\\\"Content\\\"]/div/div/div[2]/div/div[4]/div[2]");
 
-			HtmlElement element = ((HtmlElement) page
-					.getFirstByXPath("//*[@id=\"Content\"]/div/div/div[2]/div/div[4]/div[2]"));
-			el = element.asText();
+		GymParser gymParser = new GymParser();
+		el = gymParser.getTokens(el, "ÖFFNUNGSZEITEN", "KIDS");
 
-			GymParser gymParser = new GymParser();
-			el = gymParser.getTokens(el, "ÖFFNUNGSZEITEN", "KIDS");
-
-			return el;
-		} catch (Exception e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-
-		}
 		return el;
 
 	}

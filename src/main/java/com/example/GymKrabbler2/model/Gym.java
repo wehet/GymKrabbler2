@@ -11,15 +11,25 @@ public class Gym {
 	private String name;
 	private String url;
 	private String email;
+	private String zeiten;
+	private String preis;
+	private String adresse;
+	private String bewertung;
+	
+	
 
 	public Gym() {
 		super();
 	}
 	
-	public Gym(String name, String url, String email) {
+	public Gym(String name, String url, String email, String zeiten, String preis, String adresse, String bewertung) {
 		this.name = name;
 		this.url = url;
 		this.email = email;
+		this.adresse = adresse;
+		this.bewertung = bewertung;
+		this.preis = preis;
+		
 	}
 
 	public long getId() {
@@ -57,6 +67,38 @@ public class Gym {
 	@Override
 	public String toString() {
 		return this.name;
+	}
+
+	public String getZeiten() {
+		return zeiten;
+	}
+
+	public void setZeiten(String zeiten) {
+		this.zeiten = zeiten;
+	}
+
+	public String getPreis() {
+		return preis;
+	}
+
+	public void setPreis(String preis) {
+		this.preis = preis;
+	}
+
+	public String getAdresse() {
+		return adresse;
+	}
+
+	public void setAdresse(String adresse) {
+		this.adresse = adresse;
+	}
+
+	public String getBewertung() {
+		return bewertung;
+	}
+
+	public void setBewertung(String bewertung) {
+		this.bewertung = bewertung;
 	}
 
 }

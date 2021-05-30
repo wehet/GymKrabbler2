@@ -13,8 +13,12 @@
 				<thead>
 					<tr>
 						<th>Name</th>
-						<th>Email</th>
-						<th>URL</th>
+						<th>Öffnungszeiten</th>
+						<th>Preise</th>
+						<th>Adresse</th>
+						<th>E-Mail</th>
+						<th>Link</th>
+						<th>Bewertung</th>
 						<th>Edit</th>
 						<th>Delete</th>
 					</tr>
@@ -22,8 +26,13 @@
 				<tbody>
 					<tr th:each="gym : ${gyms}">
 						<td th:text="${gym.name}"></td>
+						<td th:text="${gym.zeiten}"></td>
+						<td th:text="${gym.preis}"></td>
+						<td th:text="${gym.adresse}"></td>
 						<td th:text="${gym.email}"></td>
 						<td th:text="${gym.url}"></td>
+						<td th:text="${gym.bewertung}"></td>
+						
 						<td><a th:href="@{/edit/{id}(id=${gym.id})}">Edit</a></td>
 						<td><a th:href="@{/delete/{id}(id=${gym.id})}">Delete</a></td>
 					</tr>

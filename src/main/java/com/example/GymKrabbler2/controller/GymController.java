@@ -25,9 +25,6 @@ public class GymController {
 	}
 	
 
-	
-	
-	
 
 	@GetMapping("/signup")
 	public String showSignUpForm(Gym gym) {
