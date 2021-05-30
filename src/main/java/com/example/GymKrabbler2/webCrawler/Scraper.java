@@ -55,442 +55,165 @@ public class Scraper {
 
 	}
 
-	public static String scrape_fitIn_Adresse_Ebertstrasse() {
+	public static String scrape_fitIn_Adresse_Ebertstrasse() throws IOException {
 		// NLP
-		client.getOptions().setCssEnabled(false);
-		client.getOptions().setJavaScriptEnabled(false);
+		String el = scrapeWebsite(client, "https://fit-in.de/club/ebertstrasse/",
+				"//*[@id=\"Content\"]/div/div/div[2]/div/div[4]/div[2]");
+		GymParser gymParser = new GymParser();
+		el = gymParser.getTokensFromStart(el, "Tel.");
 
-		String el = null;
-		try {
-			HtmlPage page = client.getPage("https://fit-in.de/club/ebertstrasse/");
-
-			HtmlElement element = ((HtmlElement) page
-					.getFirstByXPath("//*[@id=\"Content\"]/div/div/div[2]/div/div[4]/div[2]"));
-			el = element.asText();
-
-			GymParser gymParser = new GymParser();
-			el = gymParser.getTokensFromStart(el, "Tel.");
-
-			return el;
-		} catch (Exception e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-
-		}
 		return el;
 
 	}
 
 	// TODO
-	public static String scrape_fitIn_Adresse_Durlach() {
+	public static String scrape_fitIn_Adresse_Durlach() throws IOException {
 		// NLP
-		client.getOptions().setCssEnabled(false);
-		client.getOptions().setJavaScriptEnabled(false);
-
-		String el = null;
-		try {
-			HtmlPage page = client.getPage("https://fit-in.de/club/ebertstrasse/");
-
-			HtmlElement element = ((HtmlElement) page.getFirstByXPath(""));
-			el = element.asText();
-
-			GymParser gymParser = new GymParser();
-			el = gymParser.getTokensFromStart(el, "Tel.");
-
-			return el;
-		} catch (Exception e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-
-		}
+		String el = scrapeWebsite(client, "https://fit-in.de/club/durlach/",
+				"//*[@id=\"Content\"]/div/div/div[2]/div/div[4]/div[2]");
+		GymParser gymParser = new GymParser();
+		el = gymParser.getTokensFromStart(el, "Tel.");
 		return el;
 
 	}
 
 	// TODO
-	public static String scrape_fitIn_Adresse_Blankenloch() {
+	public static String scrape_fitIn_Adresse_Blankenloch() throws IOException {
 		// NLP
-		client.getOptions().setCssEnabled(false);
-		client.getOptions().setJavaScriptEnabled(false);
+		String el = scrapeWebsite(client, "https://fit-in.de/club/blankenloch/",
+				"//*[@id=\"Content\"]/div/div/div[2]/div/div[4]/div[2]");
+		GymParser gymParser = new GymParser();
+		el = gymParser.getTokensFromStart(el, "Tel.");
 
-		String el = null;
-		try {
-			HtmlPage page = client.getPage("https://fit-in.de/club/ebertstrasse/");
+		return el;
+	}
 
-			HtmlElement element = ((HtmlElement) page.getFirstByXPath(""));
-			el = element.asText();
+	public static String scrape_fitIn_Zeit_Kaiserstraße() throws IOException {
+		// NLP
+		String el = scrapeWebsite(client, "https://fit-in.de/club/kaiserstrasse/",
+				"//*[@id=\"Content\"]/div/div/div[2]/div/div[4]/div[2]");
+		GymParser gymParser = new GymParser();
+		el = gymParser.getTokens(el, "ÖFFNUNGSZEITEN", "KIDS");
 
-			GymParser gymParser = new GymParser();
-			el = gymParser.getTokensFromStart(el, "Tel.");
+		return el;
+	}
 
-			return el;
-		} catch (Exception e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
+	public static String scrape_fitIn_Zeit_Daimlerstrasse() throws IOException {
+		// NLP
+		String el = scrapeWebsite(client, "https://fit-in.de/club/daimlerstrasse/",
+				"//*[@id=\"Content\"]/div/div/div[2]/div/div[4]/div[2]");
+		GymParser gymParser = new GymParser();
+		el = gymParser.getTokens(el, "ÖFFNUNGSZEITEN", "KIDS");
+		return el;
+	}
 
-		}
+	public static String scrape_fitIn_Zeit_Ebertstrasse() throws IOException {
+		// NLP
+		String el = scrapeWebsite(client, "https://fit-in.de/club/ebertstrasse/",
+				"//*[@id=\"Content\"]/div/div/div[2]/div/div[4]/div[2]");
+		GymParser gymParser = new GymParser();
+		el = gymParser.getTokens(el, "ÖFFNUNGSZEITEN", "KIDS");
+		return el;
+	}
+
+	public static String scrape_fitIn_Zeit_Durlach() throws IOException {
+		// NLP
+		String el = scrapeWebsite(client, "https://fit-in.de/club/durlach/",
+				"//*[@id=\\\"Content\\\"]/div/div/div[2]/div/div[4]/div[2]");
+		GymParser gymParser = new GymParser();
+		el = gymParser.getTokens(el, "ÖFFNUNGSZEITEN", "KIDS");
 		return el;
 
 	}
 
-	public static String scrape_fitIn_Zeit_Kaiserstraße() {
+	public static String scrape_fitIn_Zeit_Blankenloch() throws IOException {
 		// NLP
-		client.getOptions().setCssEnabled(false);
-		client.getOptions().setJavaScriptEnabled(false);
-
-		String el = null;
-		try {
-			HtmlPage page = client.getPage("https://fit-in.de/club/kaiserstrasse/");
-
-			HtmlElement element = ((HtmlElement) page
-					.getFirstByXPath("//*[@id=\"Content\"]/div/div/div[2]/div/div[4]/div[2]"));
-			el = element.asText();
-
-			GymParser gymParser = new GymParser();
-			el = gymParser.getTokens(el, "ÖFFNUNGSZEITEN", "KIDS");
-
-			return el;
-		} catch (Exception e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-
-		}
-		return el;
-
-	}
-
-	public static String scrape_fitIn_Zeit_Daimlerstrasse() {
-		// NLP
-		client.getOptions().setCssEnabled(false);
-		client.getOptions().setJavaScriptEnabled(false);
-
-		String el = null;
-		try {
-			HtmlPage page = client.getPage("https://fit-in.de/club/daimlerstrasse/");
-
-			HtmlElement element = ((HtmlElement) page
-					.getFirstByXPath("//*[@id=\"Content\"]/div/div/div[2]/div/div[4]/div[2]"));
-			el = element.asText();
-
-			GymParser gymParser = new GymParser();
-			el = gymParser.getTokens(el, "ÖFFNUNGSZEITEN", "KIDS");
-
-			return el;
-		} catch (Exception e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-
-		}
-		return el;
-
-	}
-
-	public static String scrape_fitIn_Zeit_Ebertstrasse() {
-		// NLP
-		client.getOptions().setCssEnabled(false);
-		client.getOptions().setJavaScriptEnabled(false);
-
-		String el = null;
-		try {
-			HtmlPage page = client.getPage("https://fit-in.de/club/ebertstrasse/");
-
-			HtmlElement element = ((HtmlElement) page.getFirstByXPath(""));
-			el = element.asText();
-
-			GymParser gymParser = new GymParser();
-			el = gymParser.getTokens(el, "ÖFFNUNGSZEITEN", "KIDS");
-
-			return el;
-		} catch (Exception e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-
-		}
-		return el;
-
-	}
-
-	// TODO
-	public static String scrape_fitIn_Zeit_Durlach() {
-		// NLP
-		client.getOptions().setCssEnabled(false);
-		client.getOptions().setJavaScriptEnabled(false);
-
-		String el = null;
-		try {
-			HtmlPage page = client.getPage("https://fit-in.de/club/ebertstrasse/");
-
-			HtmlElement element = ((HtmlElement) page.getFirstByXPath(""));
-			el = element.asText();
-
-			return el;
-		} catch (Exception e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-
-		}
-		return el;
-
-	}
-
-	// TODO
-	public static String scrape_fitIn_Zeit_Blankenloch() {
-		// NLP
-		client.getOptions().setCssEnabled(false);
-		client.getOptions().setJavaScriptEnabled(false);
-
-		String el = null;
-		try {
-			HtmlPage page = client.getPage("https://fit-in.de/club/ebertstrasse/");
-
-			HtmlElement element = ((HtmlElement) page.getFirstByXPath(""));
-			el = element.asText();
-
-			return el;
-		} catch (Exception e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-
-		}
+		String el = scrapeWebsite(client, "https://fit-in.de/club/blankenloch/",
+				"//*[@id=\\\"Content\\\"]/div/div/div[2]/div/div[4]/div[2]");
+		GymParser gymParser = new GymParser();
+		el = gymParser.getTokens(el, "ÖFFNUNGSZEITEN", "KIDS");
 		return el;
 
 	}
 
 	// Pfitzenmeier Scraping
 
-	public static String scrape_pfitzenmeier_Kosten() {
-		client.getOptions().setCssEnabled(false);
-		client.getOptions().setJavaScriptEnabled(false);
-
-		String el = null;
-		try {
-			HtmlPage page = client.getPage("https://www.pfitzenmeier.de/karlsruhe/");
-
-			HtmlElement element = ((HtmlElement) page
-					.getFirstByXPath("//*[@id=\"tab_6767_30bis65\"]/div[1]/table/tbody/tr[1]/td[1]/span"));
-			el = element.asText();
-
-			return el;
-		} catch (Exception e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-
-		}
+	public static String scrape_pfitzenmeier_Kosten() throws IOException {
+		String el = scrapeWebsite(client, "https://www.pfitzenmeier.de/karlsruhe/",
+				"//*[@id=\"tab_6767_30bis65\"]/div[1]/table/tbody/tr[1]/td[1]/span");
 		return el;
 	}
 
-	public static String scrape_pfitzenmeier_Adresse() {
-		client.getOptions().setCssEnabled(false);
-		client.getOptions().setJavaScriptEnabled(false);
-
-		String el = null;
-		try {
-			HtmlPage page = client.getPage("https://www.pfitzenmeier.de/karlsruhe/");
-
-			HtmlElement element = ((HtmlElement) page.getFirstByXPath("//*[@id=\"collapseAddress\"]/div"));
-			el = element.asText();
-
-			return el;
-		} catch (Exception e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-
-		}
+	public static String scrape_pfitzenmeier_Adresse() throws IOException {
+		String el = scrapeWebsite(client, "https://www.pfitzenmeier.de/karlsruhe/", "//*[@id=\"collapseAddress\"]/div");
 		return el;
 	}
 
-	public static String scrape_pfitzenmeier_Zeit() {
-		// NLP
-		client.getOptions().setCssEnabled(false);
-		client.getOptions().setJavaScriptEnabled(false);
-
-		String el = null;
-		try {
-			HtmlPage page = client.getPage("https://www.pfitzenmeier.de/karlsruhe/");
-
-			HtmlElement element = ((HtmlElement) page
-					.getFirstByXPath("//*[@id=\"tab_oeffnungszeiten-02.11.2020\"]/div/div/div/table/tbody"));
-			el = element.asText();
-
-			GymParser gymParser = new GymParser();
-			el = gymParser.getTokens(el);
-
-			return el;
-		} catch (Exception e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-
-		}
+	public static String scrape_pfitzenmeier_Zeit() throws IOException {
+		String el = scrapeWebsite(client, "https://www.pfitzenmeier.de/karlsruhe/",
+				"//*[@id=\"tab_oeffnungszeiten-02.11.2020\"]/div/div/div/table/tbody");
+		GymParser gymParser = new GymParser();
+		el = gymParser.getTokens(el);
 		return el;
 	}
 
 	// Venice Beach Scraping
 
-	public static String scrape_veniceBeach_Kosten_postgalerie() {
-		client.getOptions().setCssEnabled(false);
-		client.getOptions().setJavaScriptEnabled(false);
-
-		String el = null;
-		try {
-			HtmlPage page = client
-					.getPage("https://www.venicebeach-fitness.de/clubs/premium-fitness/karlsruhe-postgalerie/");
-
-			HtmlElement element = ((HtmlElement) page
-					.getFirstByXPath("//*[@id=\"tab-8-1\"]/div/div/div/div/ul/li[1]/strong"));
-			el = element.asText();
-
-			return el;
-		} catch (Exception e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-
-		}
+	public static String scrape_veniceBeach_Kosten_postgalerie() throws IOException {
+		String el = scrapeWebsite(client,
+				"https://www.venicebeach-fitness.de/clubs/premium-fitness/karlsruhe-postgalerie/",
+				"//*[@id=\"tab-8-1\"]/div/div/div/div/ul/li[1]/strong");
 		return el;
 	}
 
-	public static String scrape_veniceBeach_Adresse_postgalerie() {
-		client.getOptions().setCssEnabled(false);
-		client.getOptions().setJavaScriptEnabled(false);
-
-		String el = null;
-		try {
-			HtmlPage page = client
-					.getPage("https://www.venicebeach-fitness.de/clubs/premium-fitness/karlsruhe-postgalerie/");
-
-			HtmlElement element = ((HtmlElement) page.getFirstByXPath("//*[@id=\"kontakt\"]/div/p[1]"));
-			el = element.asText();
-
-			return el;
-		} catch (Exception e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-
-		}
+	public static String scrape_veniceBeach_Adresse_postgalerie() throws IOException {
+		String el = scrapeWebsite(client,
+				"https://www.venicebeach-fitness.de/clubs/premium-fitness/karlsruhe-postgalerie/",
+				"//*[@id=\"kontakt\"]/div/p[1]");
 		return el;
 	}
 
-	public static String scrape_veniceBeach_Zeit_postgalerie() {
+	public static String scrape_veniceBeach_Zeit_postgalerie() throws IOException {
 		// NLP
-		client.getOptions().setCssEnabled(false);
-		client.getOptions().setJavaScriptEnabled(false);
-
-		String el = null;
-		try {
-			HtmlPage page = client
-					.getPage("https://www.venicebeach-fitness.de/clubs/premium-fitness/karlsruhe-postgalerie/");
-
-			HtmlElement element = ((HtmlElement) page.getFirstByXPath("//*[@id=\"pane_276\"]/div[1]/table/tbody"));
-			el = element.asText();
-
-			GymParser gymParser = new GymParser();
-			el = gymParser.getTokensFromStart(el, "An");
-
-			return el;
-		} catch (Exception e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-
-		}
+		String el = scrapeWebsite(client,
+				"https://www.venicebeach-fitness.de/clubs/premium-fitness/karlsruhe-postgalerie/",
+				"//*[@id=\"pane_276\"]/div[1]/table/tbody");
+		GymParser gymParser = new GymParser();
+		el = gymParser.getTokensFromStart(el, "An");
 		return el;
 	}
 
-	public static String scrape_veniceBeach_Kosten_suedstadt() {
-		client.getOptions().setCssEnabled(false);
-		client.getOptions().setJavaScriptEnabled(false);
-
-		String el = null;
-		try {
-			HtmlPage page = client
-					.getPage("https://www.venicebeach-fitness.de/clubs/lifestyle-fitness-plus/karlsruhe/");
-
-			HtmlElement element = ((HtmlElement) page
-					.getFirstByXPath("//*[@id=\"tab-8-1\"]/div/div/div/div/ul/li[1]/strong"));
-			el = element.asText();
-
-			return el;
-		} catch (Exception e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-
-		}
+	public static String scrape_veniceBeach_Kosten_suedstadt() throws IOException {
+		String el = scrapeWebsite(client, "https://www.venicebeach-fitness.de/clubs/lifestyle-fitness-plus/karlsruhe/",
+				"//*[@id=\"tab-8-1\"]/div/div/div/div/ul/li[1]/strong");
 		return el;
 	}
 
-	public static String scrape_veniceBeach_Adresse_suedstadt() {
-		client.getOptions().setCssEnabled(false);
-		client.getOptions().setJavaScriptEnabled(false);
-
-		String el = null;
-		try {
-			HtmlPage page = client
-					.getPage("https://www.venicebeach-fitness.de/clubs/lifestyle-fitness-plus/karlsruhe/");
-
-			HtmlElement element = ((HtmlElement) page.getFirstByXPath("//*[@id=\"kontakt\"]/div/p[1]"));
-			el = element.asText();
-
-			return el;
-		} catch (Exception e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-
-		}
+	public static String scrape_veniceBeach_Adresse_suedstadt() throws IOException {
+		String el = scrapeWebsite(client, "https://www.venicebeach-fitness.de/clubs/lifestyle-fitness-plus/karlsruhe/",
+				"//*[@id=\"kontakt\"]/div/p[1]");
 		return el;
 	}
 
-	public static String scrape_veniceBeach_Zeit_suedstadt() {
+	public static String scrape_veniceBeach_Zeit_suedstadt() throws IOException {
 		// NLP
-		client.getOptions().setCssEnabled(false);
-		client.getOptions().setJavaScriptEnabled(false);
-
-		String el = null;
-		try {
-			HtmlPage page = client
-					.getPage("https://www.venicebeach-fitness.de/clubs/lifestyle-fitness-plus/karlsruhe/");
-
-			HtmlElement element = ((HtmlElement) page.getFirstByXPath("//*[@id=\"pane_413\"]/div/table/tbody"));
-			el = element.asText();
-
-			GymParser gymParser = new GymParser();
-			el = gymParser.getTokens(el);
-
-			return el;
-		} catch (Exception e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-
-		}
+		String el = scrapeWebsite(client, "https://www.venicebeach-fitness.de/clubs/lifestyle-fitness-plus/karlsruhe/",
+				"//*[@id=\"pane_413\"]/div/table/tbody");
+		GymParser gymParser = new GymParser();
+		el = gymParser.getTokens(el);
 		return el;
 	}
 
 	// DIe Basis
 
-	public static String scrape_dieBasis_Adresse() {
-		client.getOptions().setCssEnabled(false);
-		client.getOptions().setJavaScriptEnabled(false);
-
-		String name = null;
+	public static String scrape_dieBasis_Adresse() throws IOException {
 		String strasse = null;
 		String plz = null;
-		try {
-			HtmlPage page = client.getPage("https://basis-karlsruhe.de/impressum/");
-
-			HtmlElement element = ((HtmlElement) page
-					.getFirstByXPath("//*[@id=\"content\"]/section/div/div/div/div/div/div/div[2]/div/p[1]"));
-			name = element.asText();
-			HtmlElement element1 = ((HtmlElement) page
-					.getFirstByXPath("//*[@id=\"content\"]/section/div/div/div/div/div/div/div[2]/div/p[2]"));
-			strasse = element1.asText();
-			HtmlElement element2 = ((HtmlElement) page
-					.getFirstByXPath("//*[@id=\"content\"]/section/div/div/div/div/div/div/div[2]/div/p[3]"));
-			plz = element2.asText();
-
-			return name + " " + strasse + " " + plz;
-		} catch (Exception e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-
-		}
-		return name;
+		strasse = scrapeWebsite(client, "https://basis-karlsruhe.de/impressum/",
+				"//*[@id=\"content\"]/section/div/div/div/div/div/div/div[2]/div/p[2]");
+		plz = scrapeWebsite(client, "https://basis-karlsruhe.de/impressum/",
+				"//*[@id=\"content\"]/section/div/div/div/div/div/div/div[2]/div/p[3]");
+		return strasse + " " + plz;
 	}
 
 	public static String scrape_dieBasis_Zeit() {

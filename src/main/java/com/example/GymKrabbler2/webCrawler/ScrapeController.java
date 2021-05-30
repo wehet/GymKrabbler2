@@ -32,7 +32,7 @@ public class ScrapeController {
 	}
 	
 	
-	public static void update_Pfitzenmeier() {
+	public static void update_Pfitzenmeier() throws IOException {
 		Scraper.scrape_pfitzenmeier_Kosten();
 		Scraper.scrape_pfitzenmeier_Adresse();
 		Scraper.scrape_pfitzenmeier_Zeit();
@@ -40,7 +40,7 @@ public class ScrapeController {
 	
 	
 	
-	public static void update_VeniceBeach_postgalerie() {
+	public static void update_VeniceBeach_postgalerie() throws IOException {
 		Scraper.scrape_veniceBeach_Kosten_postgalerie();
 		Scraper.scrape_veniceBeach_Adresse_postgalerie();
 		Scraper.scrape_veniceBeach_Zeit_postgalerie();
@@ -48,7 +48,7 @@ public class ScrapeController {
 	
 	
 	
-	public static void update_VeniceBeach_suedstadt() {
+	public static void update_VeniceBeach_suedstadt() throws IOException {
 		Scraper.scrape_veniceBeach_Kosten_suedstadt();
 		Scraper.scrape_veniceBeach_Adresse_suedstadt();
 		Scraper.scrape_veniceBeach_Zeit_suedstadt();
@@ -56,7 +56,7 @@ public class ScrapeController {
 	}
 	
 	
-	public static void update_dieBasis() {
+	public static void update_dieBasis() throws IOException {
 		Scraper.scrape_dieBasis_Adresse();
 		Scraper.scrape_dieBasis_Zeit();
 	}
