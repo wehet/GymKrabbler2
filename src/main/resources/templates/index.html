@@ -26,6 +26,7 @@
 						<th>Bewertung</th>
 						<th>Edit</th>
 						<th>Delete</th>
+						<th>Update</th>
 					</tr>
 				</thead>
 				<tbody>
@@ -39,6 +40,8 @@
 						<td th:text="${gym.bewertung}"></td>
 						<td><a th:href="@{/edit/{id}(id=${gym.id})}">Edit</a></td>
 						<td><a th:href="@{/delete/{id}(id=${gym.id})}">Delete</a></td>
+						<td><a th:href="@{/updateGym/{id}(id=${gym.id})}">Update</a></td>
+						
 					</tr>
 				</tbody>
 			</table>

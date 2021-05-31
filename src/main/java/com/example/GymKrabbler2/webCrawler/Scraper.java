@@ -205,6 +205,13 @@ public class Scraper {
 	}
 
 	// DIe Basis
+	public static String scrape_dieBasis_Kosten() throws IOException {
+		String el = scrapeWebsite(client, "https://basis-karlsruhe.de/membership/",
+				"//*[@id=\"content\"]/section[4]/div/div/div[1]/div/div/div/div/div[3]/p");
+		return el;
+	}
+	
+	
 
 	public static String scrape_dieBasis_Adresse() throws IOException {
 		String strasse = null;
@@ -483,10 +490,10 @@ public class Scraper {
 
 		String el = null;
 		try {
-			HtmlPage page = client.getPage("https://www.sportprinz-fitness.de/mitgliedschaft");
+			HtmlPage page = client.getPage("https://www.sportprinz-fitness.de/preise/");
 
 			HtmlElement element = ((HtmlElement) page
-					.getFirstByXPath("//*[@id=\"content\"]/section/article/div/div/ul[1]/li[1]/strong"));
+					.getFirstByXPath("//*[@id=\"Wrapper\"]/div[2]/div/div/section/div[2]/div/div/div/div/section[1]/div/div/div[1]/div/div/div/div/div/div[2]"));
 			el = element.asText();
 
 			return el;
@@ -732,8 +739,9 @@ public class Scraper {
 	}
 
 	public static void main(String[] args) throws IOException {
+		System.out.println(scrape_bulldog_adresse());
 
-		System.out.print(scrape_fitIn_Kosten());
+	
 
 	}
 
