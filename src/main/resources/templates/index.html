@@ -2,13 +2,18 @@
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link th:href="@{/styles/main.css}" rel="stylesheet" />
+<script type="text/javascript" th:src="@{/js/actions.js}"></script>
 <title>Gyms database</title>
 </head>
 <body>
-	<div th:switch="${gyms}">
-		<h2 th:case="null">No gyms yet!</h2>
+  <h1 align="center">GymKrabbler</h1>
+  <h2 style="text-align:center; font-style:italic;"> Finde dein Fitnesstudio in Karlsruhe! </h2>
+	<div th:switch="${gyms}" class="container">
+    
+    <h3 th:case="null">Bisher gibt es noch keine Fitnessstudios!</h3>
 		<div th:case="*">
-			<h2>Gyms</h2>
+      <h3>Fitnessstudios in Karlsruhe:</h3>
 			<table>
 				<thead>
 					<tr>
@@ -32,7 +37,6 @@
 						<td th:text="${gym.email}"></td>
 						<td th:text="${gym.url}"></td>
 						<td th:text="${gym.bewertung}"></td>
-						
 						<td><a th:href="@{/edit/{id}(id=${gym.id})}">Edit</a></td>
 						<td><a th:href="@{/delete/{id}(id=${gym.id})}">Delete</a></td>
 					</tr>
@@ -43,5 +47,51 @@
 			<a href="/signup">Add a new gym</a>
 		</p>
 	</div>
+
+	
+<div class="container">
+<center>
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Url</th>
+    <th>EMail</th>
+    <th>Edit</th>
+    <th>Delete</th>
+  </tr>
+  <tr>
+    <th>3</th>
+    <td>4</td>
+    <td>6</td>
+    <td>8</td>
+    <td>10</td>
+  </tr>
+  <tr>
+    <th>3</th>
+    <td>6</td>
+    <td>9</td>
+    <td>12</td>
+    <td>15</td>
+  </tr>
+  <tr>
+    <th>4</th>
+    <td>8</td>
+    <td>12</td>
+    <td>16</td>
+    <td>20</td>
+  </tr>
+  <tr>
+    <th>5</th>
+    <td>10</td>
+    <td>15</td>
+    <td>20</td>
+    <td>25</td>
+  </tr>
+</table>
+</center>
+</div>
+
+<!--Button-->
+<button type="button" th:onclick="showAlert()">Show Alert</button>
 </body>
 </html>
