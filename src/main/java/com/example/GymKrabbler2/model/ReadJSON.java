@@ -27,7 +27,7 @@ public class ReadJSON
     
     @SuppressWarnings("unchecked")
 	public static void parseGyms(GymRepository gymRepository) {
-    	  try (FileReader reader = new FileReader("C:\\Users\\Tim\\git\\GymKrabbler2\\src\\main\\resources\\gymData.json"))
+    	  try (FileReader reader = new FileReader("C:\\Users\\Antonia\\git\\GymKrabbler2\\src\\main\\resources\\gymData.json"))
         {
             //Read JSON file
             Object obj = jsonParser.parse(reader);

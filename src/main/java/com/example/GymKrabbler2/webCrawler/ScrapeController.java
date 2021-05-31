@@ -175,21 +175,21 @@ public class ScrapeController {
 
 	}
 
-	public static void update_snapfit_karlstrasse(Gym gym) {
+	public static void update_snapfit_karlstrasse(Gym gym) throws IOException {
 		String adresse = Scraper.scrape_snapfit_Adresse_karlstrasse();
 
 		gym.setAdresse(adresse);
 
 	}
 
-	public static void update_snapfit_hagsfeld(Gym gym) {
+	public static void update_snapfit_hagsfeld(Gym gym) throws IOException {
 		String adresse = Scraper.scrape_snapfit_Adresse_hagsfeld();
 
 		gym.setAdresse(adresse);
 
 	}
 
-	public static void update_cleverfit(Gym gym) {
+	public static void update_cleverfit(Gym gym) throws IOException {
 		String kosten = Scraper.scrape_cleverfit_kosten();
 		String adresse = Scraper.scrape_cleverfit_Adresse();
 		String zeit = Scraper.scrape_cleverfit_zeit();
@@ -200,7 +200,7 @@ public class ScrapeController {
 
 	}
 
-	public static void update_fitpur(Gym gym) {
+	public static void update_fitpur(Gym gym) throws IOException {
 		String kosten = Scraper.scrape_fitpur_kosten();
 		String adresse = Scraper.scrape_fitpur_Adresse();
 		String zeit = Scraper.scrape_fitpur_Zeit();
@@ -211,7 +211,7 @@ public class ScrapeController {
 
 	}
 
-	public static void update_sportprinz_sued(Gym gym) {
+	public static void update_sportprinz_sued(Gym gym) throws IOException {
 		String kosten = Scraper.scrape_sportprinz_kosten();
 		String adresse = Scraper.scrape_sportprinz_adresse_sued();
 		String zeit = Scraper.scrape_sportprinz_Zeit_sued();
@@ -222,7 +222,7 @@ public class ScrapeController {
 
 	}
 
-	public static void update_sportprinz_west(Gym gym) {
+	public static void update_sportprinz_west(Gym gym) throws IOException {
 		String kosten = Scraper.scrape_sportprinz_kosten();
 		String adresse = Scraper.scrape_sportprinz_adresse_west();
 		String zeit = Scraper.scrape_sportprinz_Zeit_west();
@@ -233,7 +233,7 @@ public class ScrapeController {
 
 	}
 
-	public static void update_jonnyM(Gym gym) {
+	public static void update_jonnyM(Gym gym) throws IOException {
 		String kosten = Scraper.scrape_jonnyM_kosten();
 		String adresse = Scraper.scrape_jonnyM_adresse();
 		String zeit = Scraper.scrape_jonnyM_zeit();
@@ -244,7 +244,7 @@ public class ScrapeController {
 
 	}
 
-	public static void update_bulldog(Gym gym) {
+	public static void update_bulldog(Gym gym) throws IOException {
 		String adresse = Scraper.scrape_bulldog_adresse();
 		String zeit = Scraper.scrape_bulldog_zeiten();
 
