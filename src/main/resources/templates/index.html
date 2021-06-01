@@ -10,7 +10,7 @@
   <h1 align="center">GymKrabbler</h1>
   <h2 style="text-align:center; font-style:italic;"> Finde dein Fitnesstudio in Karlsruhe! </h2>
 	<div th:switch="${gyms}" class="container">
-    
+    <center>
     <h3 th:case="null">Bisher gibt es noch keine Fitnessstudios!</h3>
 		<div th:case="*">
       <h3>Fitnessstudios in Karlsruhe:</h3>
@@ -49,6 +49,7 @@
 		<p>
 			<a href="/signup">Add a new gym</a>
 		</p>
+	</center>
 	</div>
 
 	
