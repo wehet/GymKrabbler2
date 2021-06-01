@@ -1,0 +1,45 @@
+h2 {
+    font-family: sans-serif;
+    font-size: 1.5em;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+h3 {
+    font-family: sans-serif;
+    font-size: 1.0em;
+    text-align: center;
+    color: white;
+}
+
+
+p {
+    font-family: sans-serif;
+}
+
+td, th {
+  width: 4rem;
+  height: 2rem;
+  border: 1px solid #ccc;
+  text-align: center;
+}
+th {
+  background: lightblue;
+  /*border-color: white;*/
+}
+
+td {
+  background: white;
+}
+
+
+body {
+  padding: 1rem;
+}
+
+.container {
+    background: rgba(29,31,33,0.9);
+    padding: 1em;
+    margin: 2em;
+    border: 2px solid #f25278;
+}
