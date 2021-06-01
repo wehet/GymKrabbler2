@@ -1,178 +1,162 @@
 [
 	{
 		"gym": {
+			"zeiten": "Mo - Fr : 06.00 Uhr \u2013 23.00 Uhr Sa - So : 08.00 Uhr \u2013 22.00 Uhr ",
+			"preis": "44,90 \u20AC",
 			"name": "fit-in",
-			"adresse": "Kaiserstrasse",
-			"zeiten": "-",
-			"url": "https://fit-in.de/",
-			"email": "mitgliederservice@fit-in.de.com",
-			"bewertung": "0.0",
-			"preis": ""
+			"adresse": "Kaiserstraße 94 a 76133 Karlsruhe ",
+			"url": "https:\/\/fit-in.de\/",
+			"email": "mitgliederservice@fit-in.de"
 		}
 	},
 	{
 		"gym": {
+			"zeiten": null,
+			"preis": "",
 			"name": "fit-in",
 			"adresse": "Daimlerstrasse",
-			"zeiten": "-",
-			"url": "https://fit-in.de/",
-			"email": "mitgliederservice@fit-in.de.com",
-			"bewertung": "0.0",
-			"preis": ""
+			"url": "https:\/\/fit-in.de\/",
+			"email": "mitgliederservice@fit-in.de.com"
 		}
 	},
 	{
 		"gym": {
+			"zeiten": null,
+			"preis": "",
 			"name": "fit-in",
 			"adresse": "Ebertstrasse",
-			"zeiten": "-",
-			"url": "https://fit-in.de/",
-			"email": "mitgliederservice@fit-in.de.com",
-			"bewertung": "0.0",
-			"preis": ""
+			"url": "https:\/\/fit-in.de\/",
+			"email": "mitgliederservice@fit-in.de.com"
 		}
 	},
 	{
 		"gym": {
+			"zeiten": null,
+			"preis": "",
 			"name": "fit-in",
 			"adresse": "Durlach",
-			"zeiten": "-",
-			"url": "https://fit-in.de/",
-			"email": "mitgliederservice@fit-in.de.com",
-			"bewertung": "0.0",
-			"preis": ""
+			"url": "https:\/\/fit-in.de\/",
+			"email": "mitgliederservice@fit-in.de.com"
 		}
 	},
 	{
 		"gym": {
+			"zeiten": null,
+			"preis": "",
 			"name": "Pfitzenmeier",
 			"adresse": "-",
-			"zeiten": "-",
-			"url": "https://fit-in.de/",
-			"email": "mitgliederservice@fit-in.de.com",
-			"bewertung": "0.0",
-			"preis": ""
+			"url": "https:\/\/fit-in.de\/",
+			"email": "mitgliederservice@fit-in.de.com"
 		}
 	},
 	{
 		"gym": {
+			"zeiten": null,
+			"preis": "",
 			"name": "Venice Beach",
 			"adresse": "Postgalerie",
-			"zeiten": "-",
-			"url": "https://fit-in.de/",
-			"email": "mitgliederservice@fit-in.de.com",
-			"bewertung": "0.0",
-			"preis": ""
+			"url": "https:\/\/fit-in.de\/",
+			"email": "mitgliederservice@fit-in.de.com"
 		}
 	},
 	{
 		"gym": {
+			"zeiten": null,
+			"preis": "",
 			"name": "Venice Beach",
 			"adresse": "Suedstadt",
-			"zeiten": "-",
-			"url": "https://fit-in.de/",
-			"email": "mitgliederservice@fit-in.de.com",
-			"bewertung": "0.0",
-			"preis": ""
+			"url": "https:\/\/fit-in.de\/",
+			"email": "mitgliederservice@fit-in.de.com"
 		}
 	},
 	{
 		"gym": {
+			"zeiten": null,
+			"preis": "",
 			"name": "Die Basis",
 			"adresse": "-",
-			"zeiten": "-",
-			"url": "https://fit-in.de/",
-			"email": "mitgliederservice@fit-in.de.com",
-			"bewertung": "0.0",
-			"preis": ""
+			"url": "https:\/\/fit-in.de\/",
+			"email": "mitgliederservice@fit-in.de.com"
 		}
 	},
 	{
 		"gym": {
+			"zeiten": null,
+			"preis": "",
 			"name": "SnapFIt",
 			"adresse": "Karlstrasse",
-			"zeiten": "-",
-			"url": "https://fit-in.de/",
-			"email": "mitgliederservice@fit-in.de.com",
-			"bewertung": "0.0",
-			"preis": ""
+			"url": "https:\/\/fit-in.de\/",
+			"email": "mitgliederservice@fit-in.de.com"
 		}
 	},
 	{
 		"gym": {
+			"zeiten": null,
+			"preis": "",
 			"name": "SnapFit",
 			"adresse": "Hagsfeld",
-			"zeiten": "-",
-			"url": "https://fit-in.de/",
-			"email": "mitgliederservice@fit-in.de.com",
-			"bewertung": "0.0",
-			"preis": ""
+			"url": "https:\/\/fit-in.de\/",
+			"email": "mitgliederservice@fit-in.de.com"
 		}
 	},
 	{
 		"gym": {
+			"zeiten": null,
+			"preis": "",
 			"name": "CleverFit",
 			"adresse": "-",
-			"zeiten": "-",
-			"url": "https://fit-in.de/",
-			"email": "mitgliederservice@fit-in.de.com",
-			"bewertung": "0.0",
-			"preis": ""
+			"url": "https:\/\/fit-in.de\/",
+			"email": "mitgliederservice@fit-in.de.com"
 		}
 	},
 	{
 		"gym": {
+			"zeiten": null,
+			"preis": "",
 			"name": "FitPur",
 			"adresse": "-",
-			"zeiten": "-",
-			"url": "https://fit-in.de/",
-			"email": "mitgliederservice@fit-in.de.com",
-			"bewertung": "0.0",
-			"preis": ""
+			"url": "https:\/\/fit-in.de\/",
+			"email": "mitgliederservice@fit-in.de.com"
 		}
 	},
 	{
 		"gym": {
+			"zeiten": null,
+			"preis": "",
 			"name": "Sportprinz",
 			"adresse": "Sued",
-			"zeiten": "-",
-			"url": "https://fit-in.de/",
-			"email": "mitgliederservice@fit-in.de.com",
-			"bewertung": "0.0",
-			"preis": ""
+			"url": "https:\/\/fit-in.de\/",
+			"email": "mitgliederservice@fit-in.de.com"
 		}
 	},
 	{
 		"gym": {
+			"zeiten": null,
+			"preis": "",
 			"name": "Sportprinz",
 			"adresse": "West",
-			"zeiten": "-",
-			"url": "https://fit-in.de/",
-			"email": "mitgliederservice@fit-in.de.com",
-			"bewertung": "0.0",
-			"preis": ""
+			"url": "https:\/\/fit-in.de\/",
+			"email": "mitgliederservice@fit-in.de.com"
 		}
 	},
 	{
 		"gym": {
+			"zeiten": null,
+			"preis": "",
 			"name": "Johnny M",
 			"adresse": "-",
-			"zeiten": "-",
-			"url": "https://fit-in.de/",
-			"email": "mitgliederservice@fit-in.de.com",
-			"bewertung": "0.0",
-			"preis": ""
+			"url": "https:\/\/fit-in.de\/",
+			"email": "mitgliederservice@fit-in.de.com"
 		}
 	},
 	{
 		"gym": {
+			"zeiten": null,
+			"preis": "",
 			"name": "Bulldog",
 			"adresse": "-",
-			"zeiten": "-",
-			"url": "https://fit-in.de/",
-			"email": "mitgliederservice@fit-in.de.com",
-			"bewertung": "0.0",
-			"preis": ""
+			"url": "https:\/\/fit-in.de\/",
+			"email": "mitgliederservice@fit-in.de.com"
 		}
 	}
 ]

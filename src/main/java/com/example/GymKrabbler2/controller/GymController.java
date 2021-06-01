@@ -14,6 +14,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 
 import com.example.GymKrabbler2.model.Gym;
+import com.example.GymKrabbler2.model.WriteJSON;
 import com.example.GymKrabbler2.repository.GymRepository;
 import com.example.GymKrabbler2.webCrawler.ScrapeController;
 
@@ -82,7 +83,17 @@ public class GymController {
 		gymRepository.save(gym);
 
 		return "redirect:/index";
-
 	}
+	
+	@GetMapping("/writeGym/{id}")
+	public String write(@PathVariable("id") long id, Model model) throws IOException {
+		WriteJSON.updateJSON(gymRepository);
+	
+	
+
+		return "redirect:/index";
+	}
+	
+	
 
 }
