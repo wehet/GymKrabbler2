@@ -22,8 +22,6 @@ public class ReadJSON
 	static JSONParser jsonParser = new JSONParser();
 	
 	
-  
-    
     
     @SuppressWarnings("unchecked")
 	public static void parseGyms(GymRepository gymRepository) {
