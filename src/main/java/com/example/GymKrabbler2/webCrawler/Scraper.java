@@ -24,6 +24,22 @@ public class Scraper {
 
 	// FitIn Scraping
 
+	public static String scrape_fitIn_Email() throws IOException {
+		String el = scrapeWebsite(client, "https://fit-in.de/impressum/",
+				"//*[@id=\"Content\"]/div/div/div/div/div/div/div[2]/div[2]/div/div/div/div/p[1]/a[2]");
+		return el;
+	}
+
+//	public static String scrape_fitIn_Bewertung() throws IOException {
+//		String el = scrapeWebsite(client,
+//				"https://www.dasoertliche.de/?form_name=detail&action=58&page=78&context=11&id=0383201440375469573979&recuid=DPBGW7XCYSCHFNRWGX7RLX2RCBM5CWEGPMNDLQ2S5IQZGJI5AI&niceid=Fit-in-FitnessClubs-Karlsruhe-S%C3%BCdweststadt-Ebertstr&buc=383&showbuc=0&verlNr=383&kw=Fit%20In&ci=Karlsruhe&recFrom=1&pagePos=1&lastFormName=search_nat&zvo_ok=0&hitno=0",
+//				"//*[@id=\"nRatingStar\"]/div[2]");
+//		GymParser gymParser = new GymParser();
+//		el = gymParser.getTokensFromStart(el, "von");
+//		return el;
+//
+//	}
+
 	public static String scrape_fitIn_Kosten() throws IOException {
 
 		String el = scrapeWebsite(client, "https://fit-in.de/mitgliedschaft/",
@@ -138,6 +154,21 @@ public class Scraper {
 
 	// Pfitzenmeier Scraping
 
+	public static String scrape_pfitzenmeier_Email() throws IOException {
+		String el = scrapeWebsite(client, "https://www.pfitzenmeier.de/impressum/",
+				"//*[@id=\"pos_2\"]/div/div/div/div/div/div[1]/div[6]/div/div/p[1]/a");
+
+		return el;
+	}
+
+//	public static String scrape_pfitzenmeier_Bewertung() throws IOException {
+//		String el = scrapeWebsite(client,
+//				"https://www.kununu.com/de/unternehmensgruppe-pfitzenmeier-pfitzenmeier-resorts-clubs/kommentare",
+//				"//*[@id=\"__next\"]/div/main/div/div[4]/div/article[1]/div/div/span/span[1]/span[2]");
+//
+//		return el;
+//	}
+
 	public static String scrape_pfitzenmeier_Kosten() throws IOException {
 		String el = scrapeWebsite(client, "https://www.pfitzenmeier.de/karlsruhe/",
 				"//*[@id=\"tab_6767_30bis65\"]/div[1]/table/tbody/tr[1]/td[1]/span");
@@ -158,6 +189,22 @@ public class Scraper {
 	}
 
 	// Venice Beach Scraping
+
+	public static String scrape_veniceBeach_Email() throws IOException {
+
+		String el = scrapeWebsite(client,
+				"https://www.venicebeach-fitness.de/service/impressum.html",
+				"//*[@id=\"footer\"]/div/div/div[1]/div/div[2]/p/a");
+		return el;
+	}
+	
+//	public static String scrape_veniceBeach_Bewertung() throws IOException {
+//
+//		String el = scrapeWebsite(client,
+//				"https://www.venicebeach-fitness.de/service/impressum.html",
+//				"//*[@id=\"footer\"]/div/div/div[1]/div/div[2]/p/a");
+//		return el;
+//	}
 
 	public static String scrape_veniceBeach_Kosten_postgalerie() throws IOException {
 		String el = scrapeWebsite(client,
@@ -205,6 +252,19 @@ public class Scraper {
 	}
 
 	// DIe Basis
+	
+	public static String scrape_dieBasis_Email() throws IOException {
+		String el = scrapeWebsite(client, "https://basis-karlsruhe.de/impressum/",
+				"//*[@id=\"content\"]/section/div/div/div/div/div/div/div[2]/div/p[8]");
+		
+		GymParser gymParser = new GymParser();
+		el = gymParser.getTokensFromBehind(el, ":");
+		
+		return el;
+	}
+	
+	
+	
 	public static String scrape_dieBasis_Kosten() throws IOException {
 		String el = scrapeWebsite(client, "https://basis-karlsruhe.de/membership/",
 				"//*[@id=\"content\"]/section[4]/div/div/div[1]/div/div/div/div/div[3]/p");
@@ -233,6 +293,17 @@ public class Scraper {
 	// Snapfit scraping
 
 	// oeffnungszeiten und kosten fehlen
+	
+	public static String scrape_snapfit_Email() throws IOException {
+		// NLP
+		String el = scrapeWebsite(client, "https://snap-fit.de/impressum/", "/html/body/div[5]/div/div[2]/p[3]");
+		GymParser gymParser = new GymParser();
+		el = gymParser.getTokensFromBehind(el, ":");
+		el = gymParser.getTokensFromBehind(el, ":");
+		el = gymParser.getTokensFromBehind(el, ":");
+		el = gymParser.getTokens(el, ":", "Geschäftsführung");
+		return el;
+	}
 
 	public static String scrape_snapfit_Adresse_karlstrasse() throws IOException {
 		// NLP
@@ -251,6 +322,15 @@ public class Scraper {
 	}
 
 	// Scrape Clever Fit
+	
+	public static String scrape_cleverfit_Email() throws IOException {
+		// NLP
+		String el = scrapeWebsite(client,
+				"https://www.clever-fit.com/de-de/fitnessstudio-in-der-naehe/clever-fit-karlsruhe/",
+				"//*[@id=\"contact-info\"]/div[2]/div[2]/div[3]/a");
+		
+		return el;
+	}
 
 	public static String scrape_cleverfit_kosten() throws IOException {
 		client.getOptions().setCssEnabled(false);
@@ -307,6 +387,17 @@ public class Scraper {
 //	}
 
 	// Scrape Fitpur
+	
+	public static String scrape_fitpur_Email() throws IOException {
+		String el = scrapeWebsite(client, "https://www.fit-pur.eu/impressum/",
+				"//*[@id=\"content\"]/div/div/div/section/div/div/div/div/div/section/div/div/div/div/div/div[3]/div/div/p[4]");
+		GymParser gymParser = new GymParser();
+		el = gymParser.getTokensFromBehind(el, ":");
+		el = gymParser.getTokensFromBehind(el, ":");
+		el = gymParser.getTokensFromBehind(el, ":");
+		el = gymParser.getTokensFromBehind(el, ":");
+		return el;
+	}
 
 	public static String scrape_fitpur_kosten() throws IOException {
 		String el = scrapeWebsite(client, "https://www.fit-pur.eu/karlsruhe/",
@@ -415,7 +506,7 @@ public class Scraper {
 	}
 
 	public static void main(String[] args) throws IOException {
-		System.out.println(scrape_bulldog_adresse());
+		System.out.println(scrape_fitpur_Email());
 
 	}
 
