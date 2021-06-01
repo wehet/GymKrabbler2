@@ -128,16 +128,16 @@ public class Scraper {
 		String el = scrapeWebsite(client, "https://fit-in.de/club/ebertstrasse/",
 				"//*[@id=\"Content\"]/div/div/div[2]/div/div[4]/div[2]");
 		GymParser gymParser = new GymParser();
-		el = gymParser.getTokens(el, "ÖFFNUNGSZEITEN", "KIDS");
+		el = gymParser.getTokens(el, "ÖFFNUNGSZEITEN", "Noch");
 		return el;
 	}
 
 	public static String scrape_fitIn_Zeit_Durlach() throws IOException {
 		// NLP
 		String el = scrapeWebsite(client, "https://fit-in.de/club/durlach/",
-				"//*[@id=\\\"Content\\\"]/div/div/div[2]/div/div[4]/div[2]");
+				"//*[@id=\"Content\"]/div/div/div[2]/div/div[4]/div[2]");
 		GymParser gymParser = new GymParser();
-		el = gymParser.getTokens(el, "ÖFFNUNGSZEITEN", "KIDS");
+		el = gymParser.getTokens(el, "ÖFFNUNGSZEITEN", "Noch");
 		return el;
 
 	}
@@ -192,12 +192,11 @@ public class Scraper {
 
 	public static String scrape_veniceBeach_Email() throws IOException {
 
-		String el = scrapeWebsite(client,
-				"https://www.venicebeach-fitness.de/service/impressum.html",
+		String el = scrapeWebsite(client, "https://www.venicebeach-fitness.de/service/impressum.html",
 				"//*[@id=\"footer\"]/div/div/div[1]/div/div[2]/p/a");
 		return el;
 	}
-	
+
 //	public static String scrape_veniceBeach_Bewertung() throws IOException {
 //
 //		String el = scrapeWebsite(client,
@@ -252,19 +251,17 @@ public class Scraper {
 	}
 
 	// DIe Basis
-	
+
 	public static String scrape_dieBasis_Email() throws IOException {
 		String el = scrapeWebsite(client, "https://basis-karlsruhe.de/impressum/",
 				"//*[@id=\"content\"]/section/div/div/div/div/div/div/div[2]/div/p[8]");
-		
+
 		GymParser gymParser = new GymParser();
 		el = gymParser.getTokensFromBehind(el, ":");
-		
+
 		return el;
 	}
-	
-	
-	
+
 	public static String scrape_dieBasis_Kosten() throws IOException {
 		String el = scrapeWebsite(client, "https://basis-karlsruhe.de/membership/",
 				"//*[@id=\"content\"]/section[4]/div/div/div[1]/div/div/div/div/div[3]/p");
@@ -287,13 +284,13 @@ public class Scraper {
 				"//*[@id=\"oeffnungszeiten\"]/div/div/div/table/tbody");
 		GymParser gymParser = new GymParser();
 		el = gymParser.getTokensFromStart(el, "unterschiedliche");
-		return el;
+		return "zu lang";
 	}
 
 	// Snapfit scraping
 
 	// oeffnungszeiten und kosten fehlen
-	
+
 	public static String scrape_snapfit_Email() throws IOException {
 		// NLP
 		String el = scrapeWebsite(client, "https://snap-fit.de/impressum/", "/html/body/div[5]/div/div[2]/p[3]");
@@ -322,13 +319,13 @@ public class Scraper {
 	}
 
 	// Scrape Clever Fit
-	
+
 	public static String scrape_cleverfit_Email() throws IOException {
 		// NLP
 		String el = scrapeWebsite(client,
 				"https://www.clever-fit.com/de-de/fitnessstudio-in-der-naehe/clever-fit-karlsruhe/",
 				"//*[@id=\"contact-info\"]/div[2]/div[2]/div[3]/a");
-		
+
 		return el;
 	}
 
@@ -387,7 +384,7 @@ public class Scraper {
 //	}
 
 	// Scrape Fitpur
-	
+
 	public static String scrape_fitpur_Email() throws IOException {
 		String el = scrapeWebsite(client, "https://www.fit-pur.eu/impressum/",
 				"//*[@id=\"content\"]/div/div/div/section/div/div/div/div/div/section/div/div/div/div/div/div[3]/div/div/p[4]");
@@ -428,6 +425,12 @@ public class Scraper {
 
 	// Scrape Sportprinz
 
+	public static String scrape_sportprinz_Email() throws IOException {
+		String el = scrapeWebsite(client, "https://www.sportprinz-fitness.de/impressum/",
+				"//*[@id=\"Wrapper\"]/div[2]/div/div/section[2]/div/div/div[1]/div/div/div/div/div/p[4]/span[1]/a/strong");
+		return el;
+	}
+
 	public static String scrape_sportprinz_kosten() throws IOException {
 		String el = scrapeWebsite(client, "https://www.sportprinz-fitness.de/preise/",
 				"//*[@id=\"Wrapper\"]/div[2]/div/div/section/div[2]/div/div/div/div/section[1]/div/div/div[1]/div/div/div/div/div/div[2]");
@@ -436,33 +439,39 @@ public class Scraper {
 
 	public static String scrape_sportprinz_adresse_west() throws IOException {
 		String el = scrapeWebsite(client, "https://www.sportprinz-fitness.de/karlsruhe-west",
-				"//*[@id=\"studio\"]/article/div/div[2]/p[21]");
+				"//*[@id=\"Wrapper\"]/div[2]/div/div/section[1]/div[2]/div/div/div/div/div[2]/div/h4");
 		GymParser gymParser = new GymParser();
-		el = gymParser.getTokensFromBehind(el, "WEST");
+		el = gymParser.getTokensFromBehind(el, "|");
 		return el;
 	}
 
 	public static String scrape_sportprinz_adresse_sued() throws IOException {
-		String adresse = scrapeWebsite(client, "https://www.sportprinz-fitness.de/karlsruhe-sued",
-				"//*[@id=\"studio\"]/article/div/div[2]/div[4]");
+		String el = scrapeWebsite(client, "https://www.sportprinz-fitness.de/karlsruhe-sued",
+				"//*[@id=\"Wrapper\"]/div[2]/div/div/section[1]/div[2]/div/div/div/div/div[2]/div/h4");
 		GymParser gymParser = new GymParser();
-		adresse = gymParser.getTokens(adresse);
-		return adresse;
+		el = gymParser.getTokensFromBehind(el, "|");
+		return el;
 	}
 
 	public static String scrape_sportprinz_Zeit_west() throws IOException {
 		String zeit = scrapeWebsite(client, "https://www.sportprinz-fitness.de/karlsruhe-west",
-				"//*[@id=\"studio\"]/article/div/div[2]/div");
+				"//*[@id=\"Wrapper\"]/div[2]/div/div/section[6]/div/div/div[1]/div/div/div[2]/div/div/p");
 		return zeit;
 	}
 
 	public static String scrape_sportprinz_Zeit_sued() throws IOException {
 		String zeit = scrapeWebsite(client, "https://www.sportprinz-fitness.de/karlsruhe-sued",
-				"//*[@id=\"studio\"]/article/div/div[2]/div[1]");
+				"//*[@id=\"Wrapper\"]/div[2]/div/div/section[6]/div/div/div[1]/div/div/div[2]/div/div/p");
 		return zeit;
 	}
 
 // Scrape Jonny M
+
+	public static String scrape_jonnyM_Email() throws IOException {
+		String el = scrapeWebsite(client, "https://jonny-m.de/impressum",
+				"//*[@id=\"post-32194\"]/div/div/div/div/div/div/div/div/p[6]/a");
+		return el;
+	}
 
 	public static String scrape_jonnyM_kosten() throws IOException {
 		String zeit = scrapeWebsite(client, "https://jonny-m.de/preise/#blue-label",
@@ -487,6 +496,14 @@ public class Scraper {
 	}
 
 //Bulldog gym#
+	public static String scrape_bulldog_Email() throws IOException {
+		String el = scrapeWebsite(client, "https://bulldog-gym.com/impressum/",
+				"//*[@id=\"main\"]/div/div/div/section[2]/div/div/div/div/div/div[2]/div/div/p[3]");
+		GymParser gymParser = new GymParser();
+		el = gymParser.getTokensFromBehind(el, ":");
+		el = gymParser.getTokens(el, ":", "Internet");
+		return el;
+	}
 
 	public static String scrape_bulldog_adresse() throws IOException {
 		String zeit = scrapeWebsite(client, "https://bulldog-gym.com/",
@@ -506,7 +523,7 @@ public class Scraper {
 	}
 
 	public static void main(String[] args) throws IOException {
-		System.out.println(scrape_fitpur_Email());
+		System.out.println(scrape_sportprinz_Zeit_sued());
 
 	}
 

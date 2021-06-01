@@ -87,20 +87,25 @@ public class ScrapeController {
 		String kosten = Scraper.scrape_fitIn_Kosten();
 		String adresse = Scraper.scrape_fitIn_Adresse_Kaiserstraße();
 		String zeit = Scraper.scrape_fitIn_Zeit_Kaiserstraße();
+		String email = Scraper.scrape_fitIn_Email();
+	
 
 		gym.setAdresse(adresse);
 		gym.setPreis(kosten);
 		gym.setZeiten(zeit);
+		gym.setEmail(email);
 	}
 
 	public static void update_fitIn_Daimlerstrasse(Gym gym) throws IOException {
 		String kosten = Scraper.scrape_fitIn_Kosten();
 		String adresse = Scraper.scrape_fitIn_Adresse_Daimlerstrasse();
 		String zeit = Scraper.scrape_fitIn_Zeit_Daimlerstrasse();
+		String email = Scraper.scrape_fitIn_Email();
 
 		gym.setAdresse(adresse);
 		gym.setPreis(kosten);
 		gym.setZeiten(zeit);
+		gym.setEmail(email);
 
 	}
 
@@ -109,10 +114,12 @@ public class ScrapeController {
 		String kosten = Scraper.scrape_fitIn_Kosten();
 		String adresse = Scraper.scrape_fitIn_Adresse_Ebertstrasse();
 		String zeit = Scraper.scrape_fitIn_Zeit_Ebertstrasse();
+		String email = Scraper.scrape_fitIn_Email();
 
 		gym.setAdresse(adresse);
 		gym.setPreis(kosten);
 		gym.setZeiten(zeit);
+		gym.setEmail(email);
 	}
 
 	public static void update_fitIn_Durlach(Gym gym) throws IOException {
@@ -120,10 +127,12 @@ public class ScrapeController {
 		String kosten = Scraper.scrape_fitIn_Kosten();
 		String adresse = Scraper.scrape_fitIn_Adresse_Durlach();
 		String zeit = Scraper.scrape_fitIn_Zeit_Durlach();
+		String email = Scraper.scrape_fitIn_Email();
 
 		gym.setAdresse(adresse);
 		gym.setPreis(kosten);
 		gym.setZeiten(zeit);
+		gym.setEmail(email);
 
 	}
 
@@ -132,10 +141,12 @@ public class ScrapeController {
 		String kosten = Scraper.scrape_pfitzenmeier_Kosten();
 		String adresse = Scraper.scrape_pfitzenmeier_Adresse();
 		String zeit = Scraper.scrape_pfitzenmeier_Zeit();
+		String email = Scraper.scrape_pfitzenmeier_Email();
 
 		gym.setAdresse(adresse);
 		gym.setPreis(kosten);
 		gym.setZeiten(zeit);
+		gym.setEmail(email);
 
 	}
 
@@ -144,10 +155,12 @@ public class ScrapeController {
 		String kosten = Scraper.scrape_veniceBeach_Kosten_postgalerie();
 		String adresse = Scraper.scrape_veniceBeach_Adresse_postgalerie();
 		String zeit = Scraper.scrape_veniceBeach_Zeit_postgalerie();
+		String email = Scraper.scrape_veniceBeach_Email();
 
 		gym.setAdresse(adresse);
 		gym.setPreis(kosten);
 		gym.setZeiten(zeit);
+		gym.setEmail(email);
 
 	}
 
@@ -156,10 +169,12 @@ public class ScrapeController {
 		String kosten = Scraper.scrape_veniceBeach_Kosten_suedstadt();
 		String adresse = Scraper.scrape_veniceBeach_Adresse_suedstadt();
 		String zeit = Scraper.scrape_veniceBeach_Zeit_suedstadt();
+		String email = Scraper.scrape_veniceBeach_Email();
 
 		gym.setAdresse(adresse);
 		gym.setPreis(kosten);
 		gym.setZeiten(zeit);
+		gym.setEmail(email);
 
 	}
 
@@ -167,24 +182,30 @@ public class ScrapeController {
 		String kosten = Scraper.scrape_dieBasis_Kosten();
 		String adresse = Scraper.scrape_dieBasis_Adresse();
 		String zeit = Scraper.scrape_dieBasis_Zeit();
+		String email = Scraper.scrape_dieBasis_Email();
 
 		gym.setAdresse(adresse);
 		gym.setPreis(kosten);
 		gym.setZeiten(zeit);
+		gym.setEmail(email);
 
 	}
 
 	public static void update_snapfit_karlstrasse(Gym gym) throws IOException {
 		String adresse = Scraper.scrape_snapfit_Adresse_karlstrasse();
+		String email = Scraper.scrape_snapfit_Email();
 
 		gym.setAdresse(adresse);
+		gym.setEmail(email);
 
 	}
 
 	public static void update_snapfit_hagsfeld(Gym gym) throws IOException {
 		String adresse = Scraper.scrape_snapfit_Adresse_hagsfeld();
+		String email = Scraper.scrape_snapfit_Email();
 
 		gym.setAdresse(adresse);
+		gym.setEmail(email);
 
 	}
 
@@ -192,10 +213,12 @@ public class ScrapeController {
 		String kosten = Scraper.scrape_cleverfit_kosten();
 		String adresse = Scraper.scrape_cleverfit_Adresse();
 		String zeit = Scraper.scrape_cleverfit_zeit();
+		String email = Scraper.scrape_cleverfit_Email();
 
 		gym.setAdresse(adresse);
 		gym.setPreis(kosten);
 		gym.setZeiten(zeit);
+		gym.setEmail(email);
 
 	}
 
@@ -203,10 +226,12 @@ public class ScrapeController {
 		String kosten = Scraper.scrape_fitpur_kosten();
 		String adresse = Scraper.scrape_fitpur_Adresse();
 		String zeit = Scraper.scrape_fitpur_Zeit();
+		String email = Scraper.scrape_fitpur_Email();
 
 		gym.setAdresse(adresse);
 		gym.setPreis(kosten);
 		gym.setZeiten(zeit);
+		gym.setEmail(email);
 
 	}
 
@@ -214,10 +239,13 @@ public class ScrapeController {
 		String kosten = Scraper.scrape_sportprinz_kosten();
 		String adresse = Scraper.scrape_sportprinz_adresse_sued();
 		String zeit = Scraper.scrape_sportprinz_Zeit_sued();
+		String email = Scraper.scrape_sportprinz_Email();
+		
 
 		gym.setAdresse(adresse);
 		gym.setPreis(kosten);
 		gym.setZeiten(zeit);
+		gym.setEmail(email);
 
 	}
 
@@ -225,10 +253,12 @@ public class ScrapeController {
 		String kosten = Scraper.scrape_sportprinz_kosten();
 		String adresse = Scraper.scrape_sportprinz_adresse_west();
 		String zeit = Scraper.scrape_sportprinz_Zeit_west();
+		String email = Scraper.scrape_sportprinz_Email();
 
 		gym.setAdresse(adresse);
 		gym.setPreis(kosten);
 		gym.setZeiten(zeit);
+		gym.setEmail(email);
 
 	}
 
@@ -236,19 +266,23 @@ public class ScrapeController {
 		String kosten = Scraper.scrape_jonnyM_kosten();
 		String adresse = Scraper.scrape_jonnyM_adresse();
 		String zeit = Scraper.scrape_jonnyM_zeit();
+		String email = Scraper.scrape_jonnyM_Email();
 
 		gym.setAdresse(adresse);
 		gym.setPreis(kosten);
 		gym.setZeiten(zeit);
+		gym.setEmail(email);
 
 	}
 
 	public static void update_bulldog(Gym gym) throws IOException {
 		String adresse = Scraper.scrape_bulldog_adresse();
 		String zeit = Scraper.scrape_bulldog_zeiten();
+		String email = Scraper.scrape_bulldog_Email();
 
 		gym.setAdresse(adresse);
 		gym.setZeiten(zeit);
+		gym.setEmail(email);
 
 	}
 
