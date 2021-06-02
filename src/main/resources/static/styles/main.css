@@ -1,8 +1,15 @@
+h1 {
+    font-family: sans-serif;
+    font-size: 2em;
+    text-align: center;
+	color: white;
+}
 h2 {
     font-family: sans-serif;
     font-size: 1.5em;
     text-transform: uppercase;
     text-align: center;
+	color: white;
 }
 
 h3 {
@@ -11,7 +18,10 @@ h3 {
     text-align: center;
     color: white;
 }
-
+table{
+	/*border-collapse: collapse;*/
+	width: 95%;
+}
 
 p {
     font-family: sans-serif;
@@ -20,27 +30,22 @@ p {
 td, th {
   width: 4rem;
   height: 2rem;
-  border: 1px solid #ccc;
+ /* border: 1px solid white; */
   text-align: center;
   font-family: Arial;
+	color: white;
 }
 th {
-  background: green;
-  font-family: sans-serif;
+  background: rgba(41,49,51,1);
 }
 
 td {
-  background: white;
+ /* background: black;*/
+background: rgba(41,49,51,1);
 }
 
 
 body {
-  padding: 1rem;
+	background-color: black;
 }
 
-.container {
-    background: rgba(29,31,33,0.9);
-    padding: 1em;
-    margin: 2em;
-    border: 2px solid #f25278;
-}
