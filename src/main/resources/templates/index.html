@@ -14,10 +14,12 @@
 <br>
   <div th:switch="${gyms}" class="container">
     <center>
+	<!--SearchFunction-->
+	<input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for names...">
     <h3 th:case="null">Bisher gibt es noch keine Fitnessstudios!</h3>
 		<div th:case="*">
 
-			<table>
+			<table id="myTable">
 				<thead>
 					<tr>
 						<th>Name</th>
