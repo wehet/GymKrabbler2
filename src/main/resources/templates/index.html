@@ -6,11 +6,12 @@
 <script type="text/javascript" th:src="@{/js/actions.js}"></script>
 <title>Gyms database</title>
 </head>
-<body>
+<body id="Content">
 <div class="header">
   <h1 align="center">GymKrabbler</h1>
   <h2 style="text-align:center; font-style:italic;"> Finde dein Fitnesstudio in Karlsruhe! </h2>
 </div>
+<br>
   <div th:switch="${gyms}" class="container">
     <center>
     <h3 th:case="null">Bisher gibt es noch keine Fitnessstudios!</h3>
@@ -52,7 +53,7 @@
 			</table>
 		</div>
 		<p>
-			<a href="/signup">Add a new gym</a>
+			<button class="glow-on-hover" type="button"><a href="/signup">Add a new gym</a></button>
 		</p>
 	</center>
 	</div>
