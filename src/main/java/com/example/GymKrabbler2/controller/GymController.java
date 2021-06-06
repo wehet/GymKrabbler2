@@ -2,6 +2,7 @@ package com.example.GymKrabbler2.controller;
 
 import java.io.IOException;
 
+import org.json.simple.JSONObject;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -79,21 +80,37 @@ public class GymController {
 	public String update(@PathVariable("id") long id, Model model) throws IOException {
 		Gym gym = gymRepository.findById(id).orElseThrow(() -> new IllegalArgumentException("Invalid gym Id:" + id));
 		ScrapeController.update(gym);
-		
+
 		gymRepository.save(gym);
 
 		return "redirect:/index";
 	}
-	
+
+	@GetMapping("/updateAllGyms")
+	public String update(Model model) throws IOException {
+
+		for (Gym gym : gymRepository.findAll()) {
+			ScrapeController.update(gym);
+
+			gymRepository.save(gym);
+
+		}
+
+		return "redirect:/index";
+	}
+
 	@GetMapping("/writeGym/{id}")
 	public String write(@PathVariable("id") long id, Model model) throws IOException {
 		WriteJSON.updateJSON(gymRepository);
-	
-	
 
 		return "redirect:/index";
 	}
 	
-	
+	@GetMapping("/saveAllGyms")
+	public String write( Model model) throws IOException {
+		WriteJSON.updateJSON(gymRepository);
+
+		return "redirect:/index";
+	}
 
 }

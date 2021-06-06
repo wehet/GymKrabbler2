@@ -109,7 +109,7 @@ public class Scraper {
 		String el = scrapeWebsite(client, "https://fit-in.de/club/kaiserstrasse/",
 				"//*[@id=\"Content\"]/div/div/div[2]/div/div[4]/div[2]");
 		GymParser gymParser = new GymParser();
-		el = gymParser.getTokens(el, "ÖFFNUNGSZEITEN", "KIDS");
+		el = gymParser.getTokens(el, "ÖFFNUNGSZEITEN", "Noch");
 
 		return el;
 	}
@@ -119,7 +119,7 @@ public class Scraper {
 		String el = scrapeWebsite(client, "https://fit-in.de/club/daimlerstrasse/",
 				"//*[@id=\"Content\"]/div/div/div[2]/div/div[4]/div[2]");
 		GymParser gymParser = new GymParser();
-		el = gymParser.getTokens(el, "ÖFFNUNGSZEITEN", "KIDS");
+		el = gymParser.getTokens(el, "ÖFFNUNGSZEITEN", "Noch");
 		return el;
 	}
 
@@ -182,7 +182,7 @@ public class Scraper {
 
 	public static String scrape_pfitzenmeier_Zeit() throws IOException {
 		String el = scrapeWebsite(client, "https://www.pfitzenmeier.de/karlsruhe/",
-				"//*[@id=\"tab_oeffnungszeiten-02.11.2020\"]/div/div/div/table/tbody");
+				"//*[@id=\"tab_oeffnungszeiten\"]/div/div/div/table/tbody");
 		GymParser gymParser = new GymParser();
 		el = gymParser.getTokens(el);
 		return el;
@@ -280,11 +280,11 @@ public class Scraper {
 
 	public static String scrape_dieBasis_Zeit() throws IOException {
 		// NLP
-		String el = scrapeWebsite(client, "https://www.gelbeseiten.de/gsbiz/b3ef6479-31e7-44f8-9dbe-27f75db9e777",
-				"//*[@id=\"oeffnungszeiten\"]/div/div/div/table/tbody");
+		String el = scrapeWebsite(client, "https://finde-offen.de/karlsruhe/basis-karlsruhe-crossfit-karlsruhe-569669",
+				"//*[@id=\"block-system-main\"]/div/div/div/div[2]/div/div[3]/div[1]/div/div[1]/div/div/div/div/div[2]/div[1]/div[2]/div/div");
 		GymParser gymParser = new GymParser();
-		el = gymParser.getTokensFromStart(el, "unterschiedliche");
-		return "zu lang";
+		el = gymParser.getTokensFromBehind(el, "28.05.2021");
+		return el;
 	}
 
 	// Snapfit scraping
@@ -523,7 +523,7 @@ public class Scraper {
 	}
 
 	public static void main(String[] args) throws IOException {
-		System.out.println(scrape_sportprinz_Zeit_sued());
+		System.out.println(scrape_dieBasis_Zeit());
 
 	}
 

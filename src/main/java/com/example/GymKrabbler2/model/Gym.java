@@ -29,6 +29,7 @@ public class Gym {
 		this.adresse = adresse;
 		this.bewertung = bewertung;
 		this.preis = preis;
+		this.zeiten = zeiten;
 		
 	}
 

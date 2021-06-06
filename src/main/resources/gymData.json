@@ -1,42 +1,42 @@
 [
 	{
 		"gym": {
-			"zeiten": "Mo - Fr : 06.00 Uhr \u2013 23.00 Uhr Sa - So : 08.00 Uhr \u2013 22.00 Uhr ",
-			"preis": "44,90 \u20AC",
-			"name": "fit-in",
-			"adresse": "Kaiserstraße 94 a 76133 Karlsruhe ",
-			"url": "https:\/\/fit-in.de\/",
+			"zeiten": null,
+			"preis": null,
+			"name": "Fit-In 1",
+			"adresse": null,
+			"url": "https:\/\/fit-in.de\/club\/kaiserstrasse\/",
 			"email": "mitgliederservice@fit-in.de"
 		}
 	},
 	{
 		"gym": {
 			"zeiten": null,
-			"preis": "",
-			"name": "fit-in",
+			"preis": null,
+			"name": "Fit-In 2",
 			"adresse": "Daimlerstrasse",
-			"url": "https:\/\/fit-in.de\/",
-			"email": "mitgliederservice@fit-in.de.com"
+			"url": "https:\/\/fit-in.de\/club\/daimlerstrasse\/",
+			"email": null
 		}
 	},
 	{
 		"gym": {
 			"zeiten": null,
 			"preis": "",
-			"name": "fit-in",
+			"name": "Fit-In 3",
 			"adresse": "Ebertstrasse",
-			"url": "https:\/\/fit-in.de\/",
-			"email": "mitgliederservice@fit-in.de.com"
+			"url": "https:\/\/fit-in.de\/club\/ebertstrasse\/",
+			"email": null
 		}
 	},
 	{
 		"gym": {
 			"zeiten": null,
 			"preis": "",
-			"name": "fit-in",
+			"name": "Fit-In 4",
 			"adresse": "Durlach",
-			"url": "https:\/\/fit-in.de\/",
-			"email": "mitgliederservice@fit-in.de.com"
+			"url": "https:\/\/fit-in.de\/club\/durlach\/",
+			"email": null
 		}
 	},
 	{
@@ -45,28 +45,28 @@
 			"preis": "",
 			"name": "Pfitzenmeier",
 			"adresse": "-",
-			"url": "https:\/\/fit-in.de\/",
-			"email": "mitgliederservice@fit-in.de.com"
+			"url": "https:\/\/www.pfitzenmeier.de\/karlsruhe\/",
+			"email": null
 		}
 	},
 	{
 		"gym": {
 			"zeiten": null,
 			"preis": "",
-			"name": "Venice Beach",
+			"name": "Venice Beach Postgalerie",
 			"adresse": "Postgalerie",
-			"url": "https:\/\/fit-in.de\/",
-			"email": "mitgliederservice@fit-in.de.com"
+			"url": "https:\/\/www.venicebeach-fitness.de\/clubs\/premium-fitness\/karlsruhe-postgalerie\/",
+			"email": null
 		}
 	},
 	{
 		"gym": {
 			"zeiten": null,
 			"preis": "",
-			"name": "Venice Beach",
+			"name": "Venice Beach Suedstadt",
 			"adresse": "Suedstadt",
-			"url": "https:\/\/fit-in.de\/",
-			"email": "mitgliederservice@fit-in.de.com"
+			"url": "https:\/\/www.venicebeach-fitness.de\/clubs\/lifestyle-fitness-plus\/karlsruhe\/",
+			"email": null
 		}
 	},
 	{
@@ -75,28 +75,28 @@
 			"preis": "",
 			"name": "Die Basis",
 			"adresse": "-",
-			"url": "https:\/\/fit-in.de\/",
-			"email": "mitgliederservice@fit-in.de.com"
+			"url": "https:\/\/basis-karlsruhe.de\/",
+			"email": null
 		}
 	},
 	{
 		"gym": {
-			"zeiten": null,
-			"preis": "",
-			"name": "SnapFIt",
+			"zeiten": "Di+Fr: 06: 00-23: 00UhrSa+So: 09: 00-20: 00UhrFeiertage: 10: 00-18: 00Uhr",
+			"preis": "4,95\u20AC pro Woche",
+			"name": "SnapFIt Karlstrasse",
 			"adresse": "Karlstrasse",
-			"url": "https:\/\/fit-in.de\/",
-			"email": "mitgliederservice@fit-in.de.com"
+			"url": "https:\/\/snap-fit.de\/",
+			"email": null
 		}
 	},
 	{
 		"gym": {
-			"zeiten": null,
-			"preis": "",
-			"name": "SnapFit",
+			"zeiten": "Di+Do: 09: 00-23: 00UhrSa+So: 09: 00-20: 00UhrFeiertage: 10: 00-18: 00Uhr",
+			"preis": "4,95\u20AC pro Woche",
+			"name": "SnapFit Hagsfeld",
 			"adresse": "Hagsfeld",
-			"url": "https:\/\/fit-in.de\/",
-			"email": "mitgliederservice@fit-in.de.com"
+			"url": "https:\/\/snap-fit.de\/",
+			"email": null
 		}
 	},
 	{
@@ -105,8 +105,8 @@
 			"preis": "",
 			"name": "CleverFit",
 			"adresse": "-",
-			"url": "https:\/\/fit-in.de\/",
-			"email": "mitgliederservice@fit-in.de.com"
+			"url": "https:\/\/www.clever-fit.com\/de-de\/fitnessstudio-in-der-naehe\/clever-fit-karlsruhe\/",
+			"email": null
 		}
 	},
 	{
@@ -115,28 +115,28 @@
 			"preis": "",
 			"name": "FitPur",
 			"adresse": "-",
-			"url": "https:\/\/fit-in.de\/",
-			"email": "mitgliederservice@fit-in.de.com"
+			"url": "https:\/\/www.fit-pur.eu\/karlsruhe\/",
+			"email": null
 		}
 	},
 	{
 		"gym": {
 			"zeiten": null,
 			"preis": "",
-			"name": "Sportprinz",
+			"name": "Sportprinz Sued",
 			"adresse": "Sued",
-			"url": "https:\/\/fit-in.de\/",
-			"email": "mitgliederservice@fit-in.de.com"
+			"url": "https:\/\/www.sportprinz-fitness.de\/clubs\/karlsruhe-sued\/",
+			"email": null
 		}
 	},
 	{
 		"gym": {
 			"zeiten": null,
 			"preis": "",
-			"name": "Sportprinz",
+			"name": "Sportprinz West",
 			"adresse": "West",
-			"url": "https:\/\/fit-in.de\/",
-			"email": "mitgliederservice@fit-in.de.com"
+			"url": "https:\/\/www.sportprinz-fitness.de\/clubs\/karlsruhe-west\/",
+			"email": null
 		}
 	},
 	{
@@ -145,18 +145,18 @@
 			"preis": "",
 			"name": "Johnny M",
 			"adresse": "-",
-			"url": "https:\/\/fit-in.de\/",
-			"email": "mitgliederservice@fit-in.de.com"
+			"url": "https:\/\/jonny-m.de\/clubs\/karlsruhe\/",
+			"email": null
 		}
 	},
 	{
 		"gym": {
 			"zeiten": null,
-			"preis": "",
+			"preis": "k.A.",
 			"name": "Bulldog",
 			"adresse": "-",
-			"url": "https:\/\/fit-in.de\/",
-			"email": "mitgliederservice@fit-in.de.com"
+			"url": "https:\/\/bulldog-gym.com\/",
+			"email": null
 		}
 	}
 ]

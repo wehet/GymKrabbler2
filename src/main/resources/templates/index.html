@@ -7,58 +7,61 @@
 <title>Gyms database</title>
 </head>
 <body id="Content">
-<div class="header">
-  <h1 align="center">GymKrabbler</h1>
-  <h2 style="text-align:center; font-style:italic;"> Finde dein Fitnesstudio in Karlsruhe! </h2>
-</div>
-<br>
-  <div th:switch="${gyms}" class="container">
-	<!--SearchFunction-->
-	<input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for names...">
-	<center>
-	
-    <h3 th:case="null">Bisher gibt es noch keine Fitnessstudios!</h3>
-		<div th:case="*">
+	<div class="header">
+		<h1 align="center">GymKrabbler</h1>
+		<h2 style="text-align: center; font-style: italic;">Finde dein
+			Fitnesstudio in Karlsruhe!</h2>
+	</div>
+	<br>
+	<div th:switch="${gyms}" class="container">
+		<!--SearchFunction-->
+		<input type="text" id="myInput" onkeyup="myFunction()"
+			placeholder="Search for names...">
+		<center>
 
-			<table id="myTable">
-				<thead>
-					<tr>
-						<th>Name</th>
-						<th>Öffnungszeiten</th>
-						<th>Preise</th>
-						<th>Adresse</th>
-						<th>E-Mail</th>
-						<th>Link</th>
-						<th>Bewertung</th>
-						<th>Edit</th>
-						<th>Delete</th>
-						<th>Update</th>
-						<th>Save</th>
-						
-					</tr>
-				</thead>
-				<tbody>
-					<tr th:each="gym : ${gyms}">
-						<td th:text="${gym.name}"></td>
-						<td th:text="${gym.zeiten}"></td>
-						<td th:text="${gym.preis}"></td>
-						<td th:text="${gym.adresse}"></td>
-						<td th:text="${gym.email}"></td>
-						<td th:text="${gym.url}"></td>
-						<td th:text="${gym.bewertung}"></td>
-						<td><a th:href="@{/edit/{id}(id=${gym.id})}">Edit</a></td>
-						<td><a th:href="@{/delete/{id}(id=${gym.id})}">Delete</a></td>
-						<td><a th:href="@{/updateGym/{id}(id=${gym.id})}">Update</a></td>
-						<td><a th:href="@{/writeGym/{id}(id=${gym.id})}">Save</a></td>
-						
-					</tr>
-				</tbody>
-			</table>
-		</div>
-		<p>
-			<button class="glow-on-hover" type="button"><a href="/signup">Add a new gym</a></button>
-		</p>
-	</center>
+			<h3 th:case="null">Bisher gibt es noch keine Fitnessstudios!</h3>
+			<div th:case="*">
+
+				<table id="myTable">
+					<thead>
+						<tr>
+							<th>Name</th>
+							<th>Öffnungszeiten</th>
+							<th>Preise</th>
+							<th>Adresse</th>
+							<th>E-Mail</th>
+							<th>Link</th>
+							<th>Update</th>
+
+
+						</tr>
+					</thead>
+					<tbody>
+						<tr th:each="gym : ${gyms}">
+							<td th:text="${gym.name}"></td>
+							<td th:text="${gym.zeiten}"></td>
+							<td th:text="${gym.preis}"></td>
+							<td th:text="${gym.adresse}"></td>
+							<td th:text="${gym.email}"></td>
+							<td th:text="${gym.url}"></td>
+							<td><a th:href="@{/updateGym/{id}(id=${gym.id})}">Update</a></td>
+
+
+						</tr>
+						<td><a th:href="@{/updateAllGyms/}">Update All</a></td>
+						<td><a th:href="@{/saveAllGyms/}">Save All</a></td>
+
+
+
+					</tbody>
+				</table>
+			</div>
+			<p>
+				<button class="glow-on-hover" type="button">
+					<a href="/signup">Add a new gym</a>
+				</button>
+			</p>
+		</center>
 	</div>
 
 </body>
