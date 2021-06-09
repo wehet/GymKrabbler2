@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link th:href="@{/styles/main.css}" rel="stylesheet" />
+<script type="text/javascript" th:src="@{/js/actions.js}"></script>
+<title>Fehler: Seite konnte nicht gescraped werden.</title>
+</head>
+<body>
+	<div class="alert">
+		<span class="closebtn"
+			onclick="this.parentElement.style.display='none';">&times;</span>
+		<p th:text="${errorMessage}"></p>
+		<p>Diese Webseite kann aktuell nicht
+			gescraped werden. Bitte kontaktieren Sie den Support unter
+			xxx@example.com.</p>
+	</div>
+</body>
+</html>

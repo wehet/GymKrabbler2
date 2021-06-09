@@ -62,28 +62,7 @@ public class ScrapeController {
 
 	}
 
-	public static void updateAll(Gym gym) throws IOException {
-		update_fitIn_Kaiserstrasse(gym);
-		update_fitIn_Kaiserstrasse(gym);
-		update_fitIn_Ebertstrasse(gym);
-		update_fitIn_Durlach(gym);
-		update_Pfitzenmeier(gym);
-		update_VeniceBeach_postgalerie(gym);
-		update_VeniceBeach_suedstadt(gym);
-		update_dieBasis(gym);
-		update_snapfit_karlstrasse(gym);
-		update_snapfit_hagsfeld(gym);
-		update_cleverfit(gym);
-		update_fitpur(gym);
-		update_sportprinz_sued(gym);
-		update_sportprinz_west(gym);
-		update_jonnyM(gym);
-		update_bulldog(gym);
-
-	}
-
 	public static void update_fitIn_Kaiserstrasse(Gym gym) throws IOException {
-
 		String kosten = Scraper.scrape_fitIn_Kosten();
 		String adresse = Scraper.scrape_fitIn_Adresse_Kaiserstraße();
 		String zeit = Scraper.scrape_fitIn_Zeit_Kaiserstraße();

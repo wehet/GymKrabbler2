@@ -1,7 +1,6 @@
 package com.example.GymKrabbler2.controller;
 
 import java.io.IOException;
-
 import org.json.simple.JSONObject;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -24,38 +23,17 @@ public class GymController {
 
 	@Autowired
 	private GymRepository gymRepository;
+	public static String errorMessage = "Aktuell gibt es keine Fehler.";
 
 	public GymController() {
 		// TODO Auto-generated constructor stub
 	}
 
-	@GetMapping("/signup")
-	public String showSignUpForm(Gym gym) {
-		return "add-gym";
-	}
-
-	@PostMapping("/addgym")
-	public String addUser(Gym gym, BindingResult result, Model model) {
-		if (result.hasErrors()) {
-			return "add-gym";
-		}
-
-		gymRepository.save(gym);
-		return "redirect:/index";
-	}
-
 	@GetMapping("/index")
 	public String showUserList(Model model) {
 		model.addAttribute("gyms", gymRepository.findAll());
+		
 		return "index";
-	}
-
-	@GetMapping("/edit/{id}")
-	public String showUpdateForm(@PathVariable("id") long id, Model model) {
-		Gym gym = gymRepository.findById(id).orElseThrow(() -> new IllegalArgumentException("Invalid gym Id:" + id));
-
-		model.addAttribute("gym", gym);
-		return "gym-user";
 	}
 
 	@PostMapping("/update/{id}")
@@ -69,33 +47,44 @@ public class GymController {
 		return "redirect:/index";
 	}
 
-	@GetMapping("/delete/{id}")
-	public String deleteUser(@PathVariable("id") long id, Model model) {
-		Gym gym = gymRepository.findById(id).orElseThrow(() -> new IllegalArgumentException("Invalid gym Id:" + id));
-		gymRepository.delete(gym);
-		return "redirect:/index";
-	}
-
 	@GetMapping("/updateGym/{id}")
 	public String update(@PathVariable("id") long id, Model model) throws IOException {
 		Gym gym = gymRepository.findById(id).orElseThrow(() -> new IllegalArgumentException("Invalid gym Id:" + id));
-		ScrapeController.update(gym);
 
+		try {
+			ScrapeController.update(gym);
+		} catch (IOException e) {
+			errorMessage = e.getMessage();
+		}
+		model.addAttribute("errorMessage", errorMessage);
 		gymRepository.save(gym);
 
 		return "redirect:/index";
 	}
 
+	@GetMapping("/messageBox")
+	public String messageBox(Model model) throws IOException {
+		model.addAttribute("errorMessage", errorMessage);
+		System.out.println(errorMessage);
+		return "messageBox";
+
+	}
+
 	@GetMapping("/updateAllGyms")
-	public String update(Model model) throws IOException {
+	public String update(Model model) {
 
 		for (Gym gym : gymRepository.findAll()) {
-			ScrapeController.update(gym);
 
-			gymRepository.save(gym);
-
+			try {
+				ScrapeController.update(gym);
+				gymRepository.save(gym);
+			} catch (IOException e) {
+				// TODO: handle exception
+				errorMessage = errorMessage + "\n" + e.getMessage();
+				continue;
+			}
 		}
-
+		model.addAttribute("errorMessage", errorMessage);
 		return "redirect:/index";
 	}
 
@@ -105,9 +94,9 @@ public class GymController {
 
 		return "redirect:/index";
 	}
-	
+
 	@GetMapping("/saveAllGyms")
-	public String write( Model model) throws IOException {
+	public String write(Model model) throws IOException {
 		WriteJSON.updateJSON(gymRepository);
 
 		return "redirect:/index";

@@ -42,26 +42,27 @@
 							<td th:text="${gym.zeiten}"></td>
 							<td th:text="${gym.preis}"></td>
 							<td th:text="${gym.adresse}"></td>
-							<td th:text="${gym.email}"></td>
-							<td th:text="${gym.url}"></td>
+							<td th:href="${gym.email}"></td>
+							<td><a th:text="${gym.url}" th:href="${gym.url}"></a></td>
 							<td><a th:href="@{/updateGym/{id}(id=${gym.id})}">Update</a></td>
 
 
 						</tr>
-						<td><a th:href="@{/updateAllGyms/}">Update All</a></td>
-						<td><a th:href="@{/saveAllGyms/}">Save All</a></td>
-
-
 
 					</tbody>
 				</table>
 			</div>
 			<p>
 				<button class="glow-on-hover" type="button">
-					<a href="/signup">Add a new gym</a>
+					<a th:href="@{/updateAllGyms/}">Update All</a>
 				</button>
 			</p>
 		</center>
+	</div>
+	<div>
+		<p>Bitte kontaktieren Sie den Support unter xxx@example.com, falls
+			Fehler beim Scraping auftreten.</p>
+		<p th:text="${errorMessage}"></p>
 	</div>
 
 </body>

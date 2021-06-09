@@ -1,6 +1,10 @@
 package com.example.GymKrabbler2.webCrawler;
 
 import java.io.IOException;
+import java.net.MalformedURLException;
+
+import com.example.GymKrabbler2.webCrawler.exceptions.ScrapeException;
+import com.gargoylesoftware.htmlunit.FailingHttpStatusCodeException;
 import com.gargoylesoftware.htmlunit.WebClient;
 import com.gargoylesoftware.htmlunit.html.HtmlElement;
 import com.gargoylesoftware.htmlunit.html.HtmlPage;
@@ -10,16 +14,29 @@ public class Scraper {
 	static WebClient client = new WebClient();
 
 	// General Scraping method
-	private static String scrapeWebsite(WebClient client, String link, String xPath) throws IOException {
+	private static String scrapeWebsite(WebClient client, String link, String xPath) {
 		client.getOptions().setCssEnabled(false);
 		client.getOptions().setJavaScriptEnabled(false);
 		String el = null;
 
-		HtmlPage page = client.getPage(link);
-
-		HtmlElement element = ((HtmlElement) page.getFirstByXPath(xPath));
-		el = element.asText();
-		return el;
+		HtmlPage page = null;
+		try {
+			page = client.getPage(link);
+			HtmlElement element = ((HtmlElement) page.getFirstByXPath(xPath));
+			el = element.asText();
+			return el;
+		} catch (FailingHttpStatusCodeException e) {
+			// TODO Auto-generated catch block
+			return "Fehler";
+		} catch (MalformedURLException e) {
+			// TODO Auto-generated catch block
+			return "Fehler";
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			return "Fehler";
+		} catch (NullPointerException e) {
+			return "Fehler";
+		}
 	}
 
 	// FitIn Scraping
@@ -50,8 +67,12 @@ public class Scraper {
 	public static String scrape_fitIn_Adresse_Kaiserstraße() throws IOException {
 		// NLP
 		String el = scrapeWebsite(client, "https://fit-in.de/club/kaiserstrasse/",
-				"//*[@id=\"Content\"]/div/div/div[2]/div/div[4]/div[2]");
-
+				"//*[@id=\\\"Content\\\"]/div/div/div[2]/div/div[4]/div[2]");
+//				"//*[@id=\"Content\"]/div/div/div[2]/div/div[4]/div[2]");
+		if(el=="Fehler") {
+			throw new IOException("FitIn Adresse konnte nicht gescraped werden.");
+		}
+		
 		GymParser gymParser = new GymParser();
 		el = gymParser.getTokensFromStart(el, "Tel.");
 		return el;
