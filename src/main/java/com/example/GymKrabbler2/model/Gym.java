@@ -5,7 +5,6 @@ import javax.persistence.*;
 @Entity
 public class Gym {
 	@Id
-	@GeneratedValue(strategy = GenerationType.AUTO)
 	private long id;
 
 	private String name;
@@ -22,7 +21,8 @@ public class Gym {
 		super();
 	}
 	
-	public Gym(String name, String url, String email, String zeiten, String preis, String adresse, String bewertung) {
+	public Gym(long id, String name, String url, String email, String zeiten, String preis, String adresse, String bewertung) {
+		this.id = id;
 		this.name = name;
 		this.url = url;
 		this.email = email;
