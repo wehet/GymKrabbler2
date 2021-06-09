@@ -1,0 +1,10 @@
+[
+	{
+		"scrape": {
+			"id": "11",
+			"normal": "true",
+			"url": "https://fit-in.de/club/kaiserstrasse/",
+			"name": "//*[@id=\"Content\"]/div/div/div[2]/div/div[4]/div[2]"
+		}
+	}
+]

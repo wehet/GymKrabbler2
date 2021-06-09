@@ -47,16 +47,6 @@ public class Scraper {
 		return el;
 	}
 
-//	public static String scrape_fitIn_Bewertung() throws IOException {
-//		String el = scrapeWebsite(client,
-//				"https://www.dasoertliche.de/?form_name=detail&action=58&page=78&context=11&id=0383201440375469573979&recuid=DPBGW7XCYSCHFNRWGX7RLX2RCBM5CWEGPMNDLQ2S5IQZGJI5AI&niceid=Fit-in-FitnessClubs-Karlsruhe-S%C3%BCdweststadt-Ebertstr&buc=383&showbuc=0&verlNr=383&kw=Fit%20In&ci=Karlsruhe&recFrom=1&pagePos=1&lastFormName=search_nat&zvo_ok=0&hitno=0",
-//				"//*[@id=\"nRatingStar\"]/div[2]");
-//		GymParser gymParser = new GymParser();
-//		el = gymParser.getTokensFromStart(el, "von");
-//		return el;
-//
-//	}
-
 	public static String scrape_fitIn_Kosten() throws IOException {
 
 		String el = scrapeWebsite(client, "https://fit-in.de/mitgliedschaft/",
@@ -68,7 +58,6 @@ public class Scraper {
 		// NLP
 		String el = scrapeWebsite(client, "https://fit-in.de/club/kaiserstrasse/",
 				"//*[@id=\\\"Content\\\"]/div/div/div[2]/div/div[4]/div[2]");
-//				"//*[@id=\"Content\"]/div/div/div[2]/div/div[4]/div[2]");
 		if(el=="Fehler") {
 			throw new IOException("FitIn Adresse konnte nicht gescraped werden.");
 		}
@@ -351,9 +340,6 @@ public class Scraper {
 	}
 
 	public static String scrape_cleverfit_kosten() throws IOException {
-		client.getOptions().setCssEnabled(false);
-		client.getOptions().setJavaScriptEnabled(false);
-
 		String el = scrapeWebsite(client,
 				"https://www.clever-fit.com/de-de/fitnessstudio-in-der-naehe/clever-fit-karlsruhe/#price",
 				"//*[@id=\"s-prices-container\"]/div[2]/section/div/div[3]/div[1]/div[2]/p");
@@ -380,29 +366,6 @@ public class Scraper {
 		return el;
 	}
 
-	// Scrape Active fit SEITE GEHT NICHT
-
-//	public static String activeFit_adresse() {
-//		//NLP
-//		client.getOptions().setCssEnabled(false);
-//		client.getOptions().setJavaScriptEnabled(false);
-//
-//		String el = null;
-//		try {
-//			HtmlPage page = client.getPage("https://www.activ-fitness-deutschland.de/karlsruhe.html");
-//
-//			HtmlElement element = ((HtmlElement) page.getFirstByXPath("//*[@id=\"footer\"]/div[1]/div[1]/p"));
-//			el = element.asText();
-//
-//			return el;
-//		} catch (Exception e) {
-//			// TODO Auto-generated catch block
-//			e.printStackTrace();
-//
-//		}
-//		return el;
-//
-//	}
 
 	// Scrape Fitpur
 
@@ -526,6 +489,7 @@ public class Scraper {
 		return el;
 	}
 
+	
 	public static String scrape_bulldog_adresse() throws IOException {
 		String zeit = scrapeWebsite(client, "https://bulldog-gym.com/",
 				"//*[@id=\"offnungszeiten\"]/div[2]/div/div/div/div/section[1]/div/div/div/div/div/div[2]/div/div/p");

@@ -1,12 +1,17 @@
 [
 	{
 		"gym": {
+			"id": "1",
 			"zeiten": null,
 			"preis": null,
 			"name": "Fit-In 1",
 			"adresse": null,
 			"url": "https:\/\/fit-in.de\/club\/kaiserstrasse\/",
-			"email": "mitgliederservice@fit-in.de"
+			"email": "mitgliederservice@fit-in.de",
+			"scrapeZeiten": "11",
+			"scrapePreis": "12",
+			"scrapeAdresse": "13",
+			"scrapeEmail": "14"
 		}
 	},
 	{

@@ -52,6 +52,10 @@ public class GymController {
 		Gym gym = gymRepository.findById(id).orElseThrow(() -> new IllegalArgumentException("Invalid gym Id:" + id));
 
 		try {
+			//
+			//Scraper scraper = new Scraper(gymRepository.findById(id));
+			//Adresse
+			//scraper.scrape(gym.adressescraper);
 			ScrapeController.update(gym);
 		} catch (IOException e) {
 			errorMessage = e.getMessage();
