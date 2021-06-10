@@ -57,9 +57,6 @@ public class ReadJSON
         //Get gym object within list
         JSONObject employeeObject = (JSONObject) employee.get("gym");
         
-        //Get gym id
-        long id = Long.parseLong((String) employeeObject.get("id"));    
-        System.out.println(id); 
         
         //Get gym name
         String name = (String) employeeObject.get("name");    
@@ -86,9 +83,9 @@ public class ReadJSON
         System.out.println(preis);
         
         
-        
+       
         //add new Gym
-        gyms.add(new Gym(id, name, url, email, zeiten, preis, adresse, bewertung));
+        gyms.add(new Gym(name, url, email, zeiten, preis, adresse, bewertung ));
         
         
         

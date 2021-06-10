@@ -16,46 +16,67 @@
 	},
 	{
 		"gym": {
+			"id": "2",
 			"zeiten": null,
 			"preis": null,
 			"name": "Fit-In 2",
 			"adresse": "Daimlerstrasse",
 			"url": "https:\/\/fit-in.de\/club\/daimlerstrasse\/",
-			"email": null
+			"email": null,
+			"scrapeZeiten": "21",
+			"scrapePreis": "22",
+			"scrapeAdresse": "23",
+			"scrapeEmail": "24"
 		}
 	},
 	{
 		"gym": {
+			"id": "3",
 			"zeiten": null,
 			"preis": "",
 			"name": "Fit-In 3",
 			"adresse": "Ebertstrasse",
 			"url": "https:\/\/fit-in.de\/club\/ebertstrasse\/",
-			"email": null
+			"email": null,
+			"scrapeZeiten": "31",
+			"scrapePreis": "32",
+			"scrapeAdresse": "33",
+			"scrapeEmail": "34"
 		}
 	},
 	{
 		"gym": {
+			"id": "4",
 			"zeiten": null,
 			"preis": "",
 			"name": "Fit-In 4",
 			"adresse": "Durlach",
 			"url": "https:\/\/fit-in.de\/club\/durlach\/",
-			"email": null
+			"email": null,
+			"scrapeZeiten": "41",
+			"scrapePreis": "42",
+			"scrapeAdresse": "43",
+			"scrapeEmail": "44"
 		}
 	},
 	{
 		"gym": {
+			"id": "5",
 			"zeiten": null,
 			"preis": "",
 			"name": "Pfitzenmeier",
 			"adresse": "-",
 			"url": "https:\/\/www.pfitzenmeier.de\/karlsruhe\/",
-			"email": null
+			"email": null,
+			"scrapeZeiten": "51",
+			"scrapePreis": "52",
+			"scrapeAdresse": "53",
+			"scrapeEmail": "54"
 		}
 	},
 	{
 		"gym": {
+			"id": "6",
 			"zeiten": null,
 			"preis": "",
 			"name": "Venice Beach Postgalerie",
@@ -66,6 +87,7 @@
 	},
 	{
 		"gym": {
+			"id": "7",
 			"zeiten": null,
 			"preis": "",
 			"name": "Venice Beach Suedstadt",
@@ -76,6 +98,7 @@
 	},
 	{
 		"gym": {
+			"id": "8",
 			"zeiten": null,
 			"preis": "",
 			"name": "Die Basis",
@@ -86,6 +109,7 @@
 	},
 	{
 		"gym": {
+			"id": "9",
 			"zeiten": "Di+Fr: 06: 00-23: 00UhrSa+So: 09: 00-20: 00UhrFeiertage: 10: 00-18: 00Uhr",
 			"preis": "4,95\u20AC pro Woche",
 			"name": "SnapFIt Karlstrasse",
@@ -96,6 +120,7 @@
 	},
 	{
 		"gym": {
+			"id": "10",
 			"zeiten": "Di+Do: 09: 00-23: 00UhrSa+So: 09: 00-20: 00UhrFeiertage: 10: 00-18: 00Uhr",
 			"preis": "4,95\u20AC pro Woche",
 			"name": "SnapFit Hagsfeld",
@@ -106,6 +131,7 @@
 	},
 	{
 		"gym": {
+			"id": "11",
 			"zeiten": null,
 			"preis": "",
 			"name": "CleverFit",
@@ -116,6 +142,7 @@
 	},
 	{
 		"gym": {
+			"id": "12",
 			"zeiten": null,
 			"preis": "",
 			"name": "FitPur",
@@ -126,6 +153,7 @@
 	},
 	{
 		"gym": {
+			"id": "13",
 			"zeiten": null,
 			"preis": "",
 			"name": "Sportprinz Sued",
@@ -136,6 +164,7 @@
 	},
 	{
 		"gym": {
+			"id": "14",
 			"zeiten": null,
 			"preis": "",
 			"name": "Sportprinz West",
@@ -146,6 +175,7 @@
 	},
 	{
 		"gym": {
+			"id": "15",
 			"zeiten": null,
 			"preis": "",
 			"name": "Johnny M",
@@ -156,6 +186,7 @@
 	},
 	{
 		"gym": {
+			"id": "16",
 			"zeiten": null,
 			"preis": "k.A.",
 			"name": "Bulldog",

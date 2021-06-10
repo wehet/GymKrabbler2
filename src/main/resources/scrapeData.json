@@ -8,5 +8,247 @@
 			"start": "ÖFFNUNGSZEITEN",
 			"end":  "Noch"
 		}
+	},
+	{
+		"scrape": {
+			"id": "12",
+			"normal": "true",
+			"url": "https://fit-in.de/mitgliedschaft/",
+			"xpath": "//*[@id=\"Content\"]/div/div/div/div/div/div/div[9]/div[2]/div/div/div[2]/div/div/p[1]",
+			"start": "",
+			"end":  ""
+		}
+	},
+	{
+		"scrape": {
+			"id": "13",
+			"normal": "true",
+			"url": "https://fit-in.de/club/kaiserstrasse/",
+			"xpath": "//*[@id=\\\"Content\\\"]/div/div/div[2]/div/div[4]/div[2]",
+			"start": "",
+			"end":  ""
+		}
+	},
+	{
+		"scrape": {
+			"id": "14",
+			"normal": "true",
+			"url": "https://fit-in.de/club/kaiserstrasse/",
+			"xpath": "//*[@id=\"Content\"]/div/div/div[2]/div/div[4]/div[2]",
+			"start": "",
+			"end":  ""
+		}
+	},
+	{
+		"scrape": {
+			"id": "21",
+			"normal": "true",
+			"url": "https://fit-in.de/club/daimlerstrasse/",
+			"xpath": "//*[@id=\"Content\"]/div/div/div[2]/div/div[4]/div[2]",
+			"start": "",
+			"end":  ""
+		}
+	},
+	{
+		"scrape": {
+			"id": "22",
+			"normal": "true",
+			"url": "https://fit-in.de/mitgliedschaft/",
+			"xpath": "//*[@id=\"Content\"]/div/div/div/div/div/div/div[9]/div[2]/div/div/div[2]/div/div/p[1]",
+			"start": "",
+			"end":  ""
+		}
+	},
+	{
+		"scrape": {
+			"id": "23",
+			"normal": "true",
+			"url": "https://fit-in.de/club/daimlerstrasse/",
+			"xpath": "//*[@id=\"Content\"]/div/div/div[2]/div/div[4]/div[2]",
+			"start": "",
+			"end":  ""
+		}
+	},
+	{
+		"scrape": {
+			"id": "24",
+			"normal": "true",
+			"url": "https://fit-in.de/impressum/",
+			"xpath": "//*[@id=\"Content\"]/div/div/div/div/div/div/div[2]/div[2]/div/div/div/div/p[1]/a[2]",
+			"start": "",
+			"end":  ""
+		}
+	},
+	{
+		"scrape": {
+			"id": "31",
+			"normal": "true",
+			"url": "https://fit-in.de/club/ebertstrasse/",
+			"xpath": "//*[@id=\"Content\"]/div/div/div[2]/div/div[4]/div[2]",
+			"start": "ÖFFNUNGSZEITEN",
+			"end":  "Noch"
+		}
+	},
+	{
+		"scrape": {
+			"id": "32",
+			"normal": "true",
+			"url": "https://fit-in.de/mitgliedschaft/",
+			"xpath": "//*[@id=\"Content\"]/div/div/div/div/div/div/div[9]/div[2]/div/div/div[2]/div/div/p[1]",
+			"start": "",
+			"end":  ""
+		}
+	},
+	{
+		"scrape": {
+			"id": "33",
+			"normal": "true",
+			"url": "https://fit-in.de/club/ebertstrasse/",
+			"xpath": "//*[@id=\"Content\"]/div/div/div[2]/div/div[4]/div[2]",
+			"start": "",
+			"end":  ""
+		}
+	},
+	{
+		"scrape": {
+			"id": "34",
+			"normal": "true",
+			"url": "https://fit-in.de/impressum/",
+			"xpath": "//*[@id=\"Content\"]/div/div/div/div/div/div/div[2]/div[2]/div/div/div/div/p[1]/a[2]",
+			"start": "",
+			"end":  ""
+		}
+	},
+	{
+		"scrape": {
+			"id": "41",
+			"normal": "true",
+			"url": "https://fit-in.de/club/durlach/",
+			"xpath": "//*[@id=\"Content\"]/div/div/div[2]/div/div[4]/div[2]",
+			"start": "",
+			"end":  ""
+		}
+	},
+	{
+		"scrape": {
+			"id": "42",
+			"normal": "true",
+			"url": "https://fit-in.de/mitgliedschaft/",
+			"xpath": "//*[@id=\"Content\"]/div/div/div/div/div/div/div[9]/div[2]/div/div/div[2]/div/div/p[1]",
+			"start": "",
+			"end":  ""
+		}
+	},
+	{
+		"scrape": {
+			"id": "43",
+			"normal": "true",
+			"url": "https://fit-in.de/club/durlach/",
+			"xpath": "//*[@id=\"Content\"]/div/div/div[2]/div/div[4]/div[2]",
+			"start": "",
+			"end":  ""
+		}
+	},
+	{
+		"scrape": {
+			"id": "44",
+			"normal": "true",
+			"url": "https://fit-in.de/impressum/",
+			"xpath": "//*[@id=\"Content\"]/div/div/div/div/div/div/div[2]/div[2]/div/div/div/div/p[1]/a[2]",
+			"start": "",
+			"end":  ""
+		}
+	},
+	{
+		"scrape": {
+			"id": "51",
+			"normal": "true",
+			"url": "https://www.pfitzenmeier.de/karlsruhe/",
+			"xpath": "//*[@id=\"tab_oeffnungszeiten\"]/div/div/div/table/tbody",
+			"start": "",
+			"end":  ""
+		}
+	},
+	{
+		"scrape": {
+			"id": "52",
+			"normal": "true",
+			"url": "https://www.pfitzenmeier.de/karlsruhe/",
+			"xpath": "//*[@id=\"tab_6767_30bis65\"]/div[1]/table/tbody/tr[1]/td[1]/span",
+			"start": "",
+			"end":  ""
+		}
+	},
+	{
+		"scrape": {
+			"id": "53",
+			"normal": "true",
+			"url": "https://fit-in.de/club/durlach/",
+			"xpath": "//*[@id=\"Content\"]/div/div/div[2]/div/div[4]/div[2]",
+			"start": "",
+			"end":  ""
+		}
+	},
+	{
+		"scrape": {
+			"id": "54",
+			"normal": "true",
+			"url": "https://fit-in.de/club/durlach/",
+			"xpath": "//*[@id=\"Content\"]/div/div/div[2]/div/div[4]/div[2]",
+			"start": "",
+			"end":  ""
+		}
+	},
+	{
+		"scrape": {
+			"id": "41",
+			"normal": "true",
+			"url": "https://fit-in.de/club/durlach/",
+			"xpath": "//*[@id=\"Content\"]/div/div/div[2]/div/div[4]/div[2]",
+			"start": "",
+			"end":  ""
+		}
+	},
+	{
+		"scrape": {
+			"id": "41",
+			"normal": "true",
+			"url": "https://fit-in.de/club/durlach/",
+			"xpath": "//*[@id=\"Content\"]/div/div/div[2]/div/div[4]/div[2]",
+			"start": "",
+			"end":  ""
+		}
+	},
+	{
+		"scrape": {
+			"id": "41",
+			"normal": "true",
+			"url": "https://fit-in.de/club/durlach/",
+			"xpath": "//*[@id=\"Content\"]/div/div/div[2]/div/div[4]/div[2]",
+			"start": "",
+			"end":  ""
+		}
+	},
+	{
+		"scrape": {
+			"id": "41",
+			"normal": "true",
+			"url": "https://fit-in.de/club/durlach/",
+			"xpath": "//*[@id=\"Content\"]/div/div/div[2]/div/div[4]/div[2]",
+			"start": "",
+			"end":  ""
+		}
+	},
+	{
+		"scrape": {
+			"id": "41",
+			"normal": "true",
+			"url": "https://fit-in.de/club/durlach/",
+			"xpath": "//*[@id=\"Content\"]/div/div/div[2]/div/div[4]/div[2]",
+			"start": "",
+			"end":  ""
+		}
 	}
+	
+	
 ]
