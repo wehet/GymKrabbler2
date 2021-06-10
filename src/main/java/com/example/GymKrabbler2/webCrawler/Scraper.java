@@ -2,6 +2,7 @@ package com.example.GymKrabbler2.webCrawler;
 
 import java.io.IOException;
 import java.net.MalformedURLException;
+import java.util.Iterator;
 
 import com.example.GymKrabbler2.model.ScrapeData;
 import com.example.GymKrabbler2.webCrawler.exceptions.ScrapeException;
@@ -14,44 +15,158 @@ public class Scraper {
 
 	static WebClient client = new WebClient();
 	public ScrapeData scrapeData;
-	
-	public Scraper (ScrapeData scrapeData) {
+
+	public Scraper(ScrapeData scrapeData) {
 		this.scrapeData = scrapeData;
 	}
 
 	// General Scraping method
 	private static String scrapeWebsite(WebClient client, ScrapeData scrapeData) {
-		if (scrapeData.getNormal()) {
-			client.getOptions().setCssEnabled(false);
-			client.getOptions().setJavaScriptEnabled(false);
-			String el = null;
+		client.getOptions().setCssEnabled(false);
+		client.getOptions().setJavaScriptEnabled(false);
+		String el = null;
 
-			HtmlPage page = null;
+		HtmlPage page = null;
+		try {
+			page = client.getPage(scrapeData.getUrl());
+			HtmlElement element = ((HtmlElement) page.getFirstByXPath(scrapeData.getXpath()));
+			el = element.asText();
+		} catch (FailingHttpStatusCodeException e) {
+			// TODO Auto-generated catch block
+		} catch (MalformedURLException e) {
+			// TODO Auto-generated catch block
+//			return "Fehler";
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+//			return "Fehler";
+		} catch (NullPointerException e) {
+//			return "Fehler";
+		}
+		
+		//evtl noch was für Catch überlegen
+		if (scrapeData.getNormal()) {
+			GymParser scraper = new GymParser();
 			try {
-				page = client.getPage(scrapeData.getUrl());
-				HtmlElement element = ((HtmlElement) page.getFirstByXPath(scrapeData.getXpath()));
-				el = element.asText();
-				return el;
-			} catch (FailingHttpStatusCodeException e) {
-				// TODO Auto-generated catch block
-				return "Fehler";
-			} catch (MalformedURLException e) {
-				// TODO Auto-generated catch block
-				return "Fehler";
+				el = scraper.getTokens(el, scrapeData.getStart(), scrapeData.getEnd());
 			} catch (IOException e) {
 				// TODO Auto-generated catch block
-				return "Fehler";
-			} catch (NullPointerException e) {
-				return "Fehler";
+				return el;
 			}
 		} else {
 			//switch-Implementierung
-			return "vorersgt>";
+			switch ((int) scrapeData.getId()) {
+			//@Schanne: als Utility Klasse ausgliedern?
+			case 1:
+				try {
+					scrape_bulldog_adresse(el);
+				} catch (IOException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+				break;
+			case 2:
+				try {
+					scrape_bulldog_Email(el);
+				} catch (IOException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+				break;
+			case 3:
+				try {
+					scrape_fitpur_Adresse(el);
+				} catch (IOException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+				break;
+			case 4:
+				try {
+					scrape_fitpur_Email(el);
+				} catch (IOException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+				break;
+			case 5:
+				try {
+					scrape_snapfit_Email(el);
+				} catch (IOException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+				break;
+			case 6:
+				try {
+					scrape_dieBasis_Adresse(el);
+				} catch (IOException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+				break;
+			}
+				
 		}
+		
+		return el;
 		
 		
 	}
 
+	public static String scrape_bulldog_adresse(String el) throws IOException {
+		String help = "";
+		GymParser gymParser = new GymParser();
+		help = gymParser.getTokens(el, ">", "|");
+		help = help + gymParser.getTokens(el, "|", "<");
+		el = help;
+		return el;
+	}
+
+	public static String scrape_bulldog_Email(String el) throws IOException {
+		GymParser gymParser = new GymParser();
+		el = (gymParser).getTokens(el, ":", null);
+		el = gymParser.getTokens(el, ":", "Internet");
+		return el;
+	}
+	
+	public static String scrape_fitpur_Email(String el) throws IOException {
+		GymParser gymParser = new GymParser();
+		for (int i = 0; i<4; i++) {
+			el = gymParser.getTokens(el, ":", null);
+		}
+		return el;
+	}
+
+	public static String scrape_fitpur_Adresse(String el) throws IOException {
+		// NLP
+		String help = "";
+		GymParser gymParser = new GymParser();
+		help = gymParser.getTokens(el, "Karlsruhe", "Tel");
+		help = help + gymParser.getTokens(el, "663", "karlsruhe@fit-pur");
+		el = help;
+		return el;
+	}
+	
+	public static String scrape_snapfit_Email(String el) throws IOException {
+		// NLP
+		GymParser gymParser = new GymParser();
+		for (int i = 0; i<3; i++) {
+			el = gymParser.getTokens(el, ":", null);
+		}
+		el = gymParser.getTokens(el, ":", "Geschäftsführung");
+		return el;
+	}
+	
+	public static String scrape_dieBasis_Adresse(String el) throws IOException {
+		String strasse = null;
+		String plz = null;
+//		strasse = scrapeWebsite(client, "https://basis-karlsruhe.de/impressum/",
+//				"//*[@id=\"content\"]/section/div/div/div/div/div/div/div[2]/div/p[2]");
+//		plz = scrapeWebsite(client, "https://basis-karlsruhe.de/impressum/",
+//				"//*[@id=\"content\"]/section/div/div/div/div/div/div/div[2]/div/p[3]");
+		return strasse + " " + plz;
+	}
+	
 	// FitIn Scraping
 
 //	public static String scrape_fitIn_Email() throws IOException {
@@ -291,15 +406,7 @@ public class Scraper {
 //		return el;
 //	}
 //
-//	public static String scrape_dieBasis_Adresse() throws IOException {
-//		String strasse = null;
-//		String plz = null;
-//		strasse = scrapeWebsite(client, "https://basis-karlsruhe.de/impressum/",
-//				"//*[@id=\"content\"]/section/div/div/div/div/div/div/div[2]/div/p[2]");
-//		plz = scrapeWebsite(client, "https://basis-karlsruhe.de/impressum/",
-//				"//*[@id=\"content\"]/section/div/div/div/div/div/div/div[2]/div/p[3]");
-//		return strasse + " " + plz;
-//	}
+	
 //
 //	public static String scrape_dieBasis_Zeit() throws IOException {
 //		// NLP
@@ -314,16 +421,7 @@ public class Scraper {
 //
 //	// oeffnungszeiten und kosten fehlen
 //
-//	public static String scrape_snapfit_Email() throws IOException {
-//		// NLP
-//		String el = scrapeWebsite(client, "https://snap-fit.de/impressum/", "/html/body/div[5]/div/div[2]/p[3]");
-//		GymParser gymParser = new GymParser();
-//		el = gymParser.getTokensFromBehind(el, ":");
-//		el = gymParser.getTokensFromBehind(el, ":");
-//		el = gymParser.getTokensFromBehind(el, ":");
-//		el = gymParser.getTokens(el, ":", "Geschäftsführung");
-//		return el;
-//	}
+	
 //
 //	public static String scrape_snapfit_Adresse_karlstrasse() throws IOException {
 //		// NLP
@@ -392,13 +490,13 @@ public class Scraper {
 //		el = gymParser.getTokensFromBehind(el, ":");
 //		return el;
 //	}
-//
-//	public static String scrape_fitpur_kosten() throws IOException {
-//		String el = scrapeWebsite(client, "https://www.fit-pur.eu/karlsruhe/",
-//				"//*[@id=\"content\"]/div/div/div/section[8]/div[2]/div/div[3]/div/div/div[2]/div");
-//		return el;
-//	}
-//
+////
+////	public static String scrape_fitpur_kosten() throws IOException {
+////		String el = scrapeWebsite(client, "https://www.fit-pur.eu/karlsruhe/",
+////				"//*[@id=\"content\"]/div/div/div/section[8]/div[2]/div/div[3]/div/div/div[2]/div");
+////		return el;
+////	}
+////
 //	public static String scrape_fitpur_Adresse() throws IOException {
 //		// NLP
 //		String adresse = scrapeWebsite(client, "https://www.fit-pur.eu/karlsruhe/",
@@ -493,26 +591,10 @@ public class Scraper {
 //	}
 //
 ////Bulldog gym#
-//	public static String scrape_bulldog_Email() throws IOException {
-//		String el = scrapeWebsite(client, "https://bulldog-gym.com/impressum/",
-//				"//*[@id=\"main\"]/div/div/div/section[2]/div/div/div/div/div/div[2]/div/div/p[3]");
-//		GymParser gymParser = new GymParser();
-//		el = gymParser.getTokensFromBehind(el, ":");
-//		el = gymParser.getTokens(el, ":", "Internet");
-//		return el;
-//	}
+
 //
 //	
-//	public static String scrape_bulldog_adresse() throws IOException {
-//		String zeit = scrapeWebsite(client, "https://bulldog-gym.com/",
-//				"//*[@id=\"offnungszeiten\"]/div[2]/div/div/div/div/section[1]/div/div/div/div/div/div[2]/div/div/p");
-//		String help = "";
-//		GymParser gymParser = new GymParser();
-//		help = gymParser.getTokens(zeit, ">", "|");
-//		help = help + gymParser.getTokens(zeit, "|", "<");
-//		zeit = help;
-//		return zeit;
-//	}
+
 //
 //	public static String scrape_bulldog_zeiten() throws IOException {
 //		String zeit = scrapeWebsite(client, "https://bulldog-gym.com/",

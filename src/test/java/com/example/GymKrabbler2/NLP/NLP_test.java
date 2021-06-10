@@ -20,7 +20,7 @@ class NLP_test {
 		InputStream inputStream = getClass().getResourceAsStream("/models/de-token.bin");
 		TokenizerModel model = new TokenizerModel(inputStream);
 		TokenizerME tokenizer = new TokenizerME(model);
-		String[] tokens = tokenizer.tokenize(Scraper.scrape_fitIn_Zeit_Kaiserstraße());
+		String[] tokens = tokenizer.tokenize("Das ist ein Satz.");
 		String[] test = {"Das", "ist", "ein", "Satz", "."};
 		
 		System.out.println("Das ist der Output: " + tokens[0] + tokens[1] + tokens[2]);

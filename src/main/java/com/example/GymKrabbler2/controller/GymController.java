@@ -47,24 +47,24 @@ public class GymController {
 		return "redirect:/index";
 	}
 
-	@GetMapping("/updateGym/{id}")
-	public String update(@PathVariable("id") long id, Model model) throws IOException {
-		Gym gym = gymRepository.findById(id).orElseThrow(() -> new IllegalArgumentException("Invalid gym Id:" + id));
-
-		try {
-			//
-			//Scraper scraper = new Scraper(gymRepository.findById(id));
-			//Adresse
-			//scraper.scrape(gym.adressescraper);
-			ScrapeController.update(gym);
-		} catch (IOException e) {
-			errorMessage = e.getMessage();
-		}
-		model.addAttribute("errorMessage", errorMessage);
-		gymRepository.save(gym);
-
-		return "redirect:/index";
-	}
+//	@GetMapping("/updateGym/{id}")
+//	public String update(@PathVariable("id") long id, Model model) throws IOException {
+//		Gym gym = gymRepository.findById(id).orElseThrow(() -> new IllegalArgumentException("Invalid gym Id:" + id));
+//
+//		try {
+//			//
+//			//Scraper scraper = new Scraper(gymRepository.findById(id));
+//			//Adresse
+//			//scraper.scrape(gym.adressescraper);
+//			Scraper scraper = new Scraper();
+//		} catch (IOException e) {
+//			errorMessage = e.getMessage();
+//		}
+//		model.addAttribute("errorMessage", errorMessage);
+//		gymRepository.save(gym);
+//
+//		return "redirect:/index";
+//	}
 
 	@GetMapping("/messageBox")
 	public String messageBox(Model model) throws IOException {
@@ -74,23 +74,23 @@ public class GymController {
 
 	}
 
-	@GetMapping("/updateAllGyms")
-	public String update(Model model) {
-
-		for (Gym gym : gymRepository.findAll()) {
-
-			try {
-				ScrapeController.update(gym);
-				gymRepository.save(gym);
-			} catch (IOException e) {
-				// TODO: handle exception
-				errorMessage = errorMessage + "\n" + e.getMessage();
-				continue;
-			}
-		}
-		model.addAttribute("errorMessage", errorMessage);
-		return "redirect:/index";
-	}
+//	@GetMapping("/updateAllGyms")
+//	public String update(Model model) {
+//
+//		for (Gym gym : gymRepository.findAll()) {
+//
+//			try {
+//				ScrapeController.update(gym);
+//				gymRepository.save(gym);
+//			} catch (IOException e) {
+//				// TODO: handle exception
+//				errorMessage = errorMessage + "\n" + e.getMessage();
+//				continue;
+//			}
+//		}
+//		model.addAttribute("errorMessage", errorMessage);
+//		return "redirect:/index";
+//	}
 
 	@GetMapping("/writeGym/{id}")
 	public String write(@PathVariable("id") long id, Model model) throws IOException {

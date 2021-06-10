@@ -26,6 +26,14 @@ public class ScrapeData {
 		this.setStart(start);
 		this.setEnd(end);		
 	}
+	
+	public long getId() {
+		return id;
+	}
+
+	public void setId(long id) {
+		this.id = id;
+	}
 
 	public boolean getNormal() {
 		return normal;
