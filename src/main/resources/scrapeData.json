@@ -1,254 +1,487 @@
 [
 	{
 		"scrape": {
+			"name": "fit-in 1 Zeiten ",
 			"id": "11",
 			"normal": "true",
 			"url": "https://fit-in.de/club/kaiserstrasse/",
 			"xpath": "//*[@id=\"Content\"]/div/div/div[2]/div/div[4]/div[2]",
 			"start": "ÖFFNUNGSZEITEN",
-			"end":  "Noch"
+			"end": "Noch"
 		}
 	},
 	{
 		"scrape": {
+			"name": "fit-in 1 Preis ",
 			"id": "12",
 			"normal": "true",
 			"url": "https://fit-in.de/mitgliedschaft/",
 			"xpath": "//*[@id=\"Content\"]/div/div/div/div/div/div/div[9]/div[2]/div/div/div[2]/div/div/p[1]",
 			"start": "",
-			"end":  ""
+			"end": ""
 		}
 	},
 	{
 		"scrape": {
+			"name": "fit-in 1 Adresse ",
 			"id": "13",
 			"normal": "true",
 			"url": "https://fit-in.de/club/kaiserstrasse/",
 			"xpath": "//*[@id=\\\"Content\\\"]/div/div/div[2]/div/div[4]/div[2]",
-			"start": "",
-			"end":  ""
+			"start": "Tel.",
+			"end": ""
 		}
 	},
 	{
 		"scrape": {
+			"name": "fit-in 1 Email ",
 			"id": "14",
 			"normal": "true",
 			"url": "https://fit-in.de/club/kaiserstrasse/",
 			"xpath": "//*[@id=\"Content\"]/div/div/div[2]/div/div[4]/div[2]",
 			"start": "",
-			"end":  ""
+			"end": ""
 		}
 	},
 	{
 		"scrape": {
+			"name": "fit-in 2 Zeiten ",
 			"id": "21",
 			"normal": "true",
 			"url": "https://fit-in.de/club/daimlerstrasse/",
 			"xpath": "//*[@id=\"Content\"]/div/div/div[2]/div/div[4]/div[2]",
 			"start": "",
-			"end":  ""
+			"end": ""
 		}
 	},
 	{
 		"scrape": {
+			"name": "fit-in 2 Preis ",
 			"id": "22",
 			"normal": "true",
 			"url": "https://fit-in.de/mitgliedschaft/",
 			"xpath": "//*[@id=\"Content\"]/div/div/div/div/div/div/div[9]/div[2]/div/div/div[2]/div/div/p[1]",
 			"start": "",
-			"end":  ""
+			"end": ""
 		}
 	},
 	{
 		"scrape": {
+			"name": "fit-in 2 Adresse ",
 			"id": "23",
 			"normal": "true",
 			"url": "https://fit-in.de/club/daimlerstrasse/",
 			"xpath": "//*[@id=\"Content\"]/div/div/div[2]/div/div[4]/div[2]",
 			"start": "",
-			"end":  ""
+			"end": ""
 		}
 	},
 	{
 		"scrape": {
+			"name": "fit-in 2 Email ",
 			"id": "24",
 			"normal": "true",
 			"url": "https://fit-in.de/impressum/",
 			"xpath": "//*[@id=\"Content\"]/div/div/div/div/div/div/div[2]/div[2]/div/div/div/div/p[1]/a[2]",
 			"start": "",
-			"end":  ""
+			"end": ""
 		}
 	},
 	{
 		"scrape": {
+			"name": "fit-in 3 Zeiten",
 			"id": "31",
 			"normal": "true",
 			"url": "https://fit-in.de/club/ebertstrasse/",
 			"xpath": "//*[@id=\"Content\"]/div/div/div[2]/div/div[4]/div[2]",
 			"start": "ÖFFNUNGSZEITEN",
-			"end":  "Noch"
+			"end": "Noch"
 		}
 	},
 	{
 		"scrape": {
+			"name": "fit-in 3 Preis",
 			"id": "32",
 			"normal": "true",
 			"url": "https://fit-in.de/mitgliedschaft/",
 			"xpath": "//*[@id=\"Content\"]/div/div/div/div/div/div/div[9]/div[2]/div/div/div[2]/div/div/p[1]",
 			"start": "",
-			"end":  ""
+			"end": ""
 		}
 	},
 	{
 		"scrape": {
+			"name": "fit-in 3 Adresse",
 			"id": "33",
 			"normal": "true",
 			"url": "https://fit-in.de/club/ebertstrasse/",
 			"xpath": "//*[@id=\"Content\"]/div/div/div[2]/div/div[4]/div[2]",
 			"start": "",
-			"end":  ""
+			"end": ""
 		}
 	},
 	{
 		"scrape": {
+			"name": "fit-in 3 Email ",
 			"id": "34",
 			"normal": "true",
 			"url": "https://fit-in.de/impressum/",
 			"xpath": "//*[@id=\"Content\"]/div/div/div/div/div/div/div[2]/div[2]/div/div/div/div/p[1]/a[2]",
 			"start": "",
-			"end":  ""
+			"end": ""
 		}
 	},
 	{
 		"scrape": {
+			"name": "fit-in 4 Zeiten",
 			"id": "41",
 			"normal": "true",
 			"url": "https://fit-in.de/club/durlach/",
 			"xpath": "//*[@id=\"Content\"]/div/div/div[2]/div/div[4]/div[2]",
-			"start": "",
-			"end":  ""
+			"start": "ÖFFNUNGSZEITEN",
+			"end": "Noch"
 		}
 	},
 	{
 		"scrape": {
+			"name": "fit-in 2 Preis ",
 			"id": "42",
 			"normal": "true",
 			"url": "https://fit-in.de/mitgliedschaft/",
 			"xpath": "//*[@id=\"Content\"]/div/div/div/div/div/div/div[9]/div[2]/div/div/div[2]/div/div/p[1]",
 			"start": "",
-			"end":  ""
+			"end": ""
 		}
 	},
 	{
 		"scrape": {
+			"name": "fit-in 4 Adresse ",
 			"id": "43",
 			"normal": "true",
 			"url": "https://fit-in.de/club/durlach/",
 			"xpath": "//*[@id=\"Content\"]/div/div/div[2]/div/div[4]/div[2]",
 			"start": "",
-			"end":  ""
+			"end": ""
 		}
 	},
 	{
 		"scrape": {
+			"name": "fit-in 4 Email",
 			"id": "44",
 			"normal": "true",
 			"url": "https://fit-in.de/impressum/",
 			"xpath": "//*[@id=\"Content\"]/div/div/div/div/div/div/div[2]/div[2]/div/div/div/div/p[1]/a[2]",
 			"start": "",
-			"end":  ""
+			"end": ""
 		}
 	},
 	{
 		"scrape": {
+			"name": "Pfitzenmeier Zeiten",
 			"id": "51",
 			"normal": "true",
 			"url": "https://www.pfitzenmeier.de/karlsruhe/",
 			"xpath": "//*[@id=\"tab_oeffnungszeiten\"]/div/div/div/table/tbody",
 			"start": "",
-			"end":  ""
+			"end": ""
 		}
 	},
 	{
 		"scrape": {
+			"name": "Pfitzenmeier Preis",
 			"id": "52",
 			"normal": "true",
 			"url": "https://www.pfitzenmeier.de/karlsruhe/",
 			"xpath": "//*[@id=\"tab_6767_30bis65\"]/div[1]/table/tbody/tr[1]/td[1]/span",
 			"start": "",
-			"end":  ""
+			"end": ""
 		}
 	},
 	{
 		"scrape": {
+			"name": "Pfitzenmeier Adresse",
 			"id": "53",
 			"normal": "true",
 			"url": "https://fit-in.de/club/durlach/",
-			"xpath": "//*[@id=\"Content\"]/div/div/div[2]/div/div[4]/div[2]",
+			"xpath": "//*[@id=\"collapseAddress\"]/div",
 			"start": "",
-			"end":  ""
+			"end": ""
 		}
 	},
 	{
 		"scrape": {
+			"name": "Pfitzenmeier Email",
 			"id": "54",
 			"normal": "true",
-			"url": "https://fit-in.de/club/durlach/",
-			"xpath": "//*[@id=\"Content\"]/div/div/div[2]/div/div[4]/div[2]",
+			"url": "https://www.pfitzenmeier.de/impressum/",
+			"xpath": "//*[@id=\"pos_2\"]/div/div/div/div/div/div[1]/div[6]/div/div/p[1]/a",
 			"start": "",
-			"end":  ""
+			"end": ""
 		}
 	},
 	{
 		"scrape": {
-			"id": "41",
+			"name": "Venice Beach Postgalerie Zeiten",
+			"id": "61",
 			"normal": "true",
-			"url": "https://fit-in.de/club/durlach/",
-			"xpath": "//*[@id=\"Content\"]/div/div/div[2]/div/div[4]/div[2]",
-			"start": "",
-			"end":  ""
+			"url": "https://www.venicebeach-fitness.de/clubs/premium-fitness/karlsruhe-postgalerie/",
+			"xpath": "//*[@id=\"pane_276\"]/div[1]/table/tbody",
+			"start": "An",
+			"end": ""
 		}
 	},
 	{
 		"scrape": {
-			"id": "41",
+			"name": "Venice Beach Postgalerie Preis",
+			"id": "62",
 			"normal": "true",
-			"url": "https://fit-in.de/club/durlach/",
-			"xpath": "//*[@id=\"Content\"]/div/div/div[2]/div/div[4]/div[2]",
+			"url": "https://www.venicebeach-fitness.de/clubs/premium-fitness/karlsruhe-postgalerie",
+			"xpath": "//*[@id=\"tab-8-1\"]/div/div/div/div/ul/li[1]/strong",
 			"start": "",
-			"end":  ""
+			"end": ""
 		}
 	},
 	{
 		"scrape": {
-			"id": "41",
+			"name": "Venice Beach Postgalerie Adresse",
+			"id": "63",
 			"normal": "true",
-			"url": "https://fit-in.de/club/durlach/",
-			"xpath": "//*[@id=\"Content\"]/div/div/div[2]/div/div[4]/div[2]",
+			"url": "https://www.venicebeach-fitness.de/clubs/premium-fitness/karlsruhe-postgalerie/",
+			"xpath": "//*[@id=\"kontakt\"]/div/p[1]",
 			"start": "",
-			"end":  ""
+			"end": ""
 		}
 	},
 	{
 		"scrape": {
-			"id": "41",
+			"name": "Venice Beach Postgalerie Email",
+			"id": "64",
 			"normal": "true",
-			"url": "https://fit-in.de/club/durlach/",
-			"xpath": "//*[@id=\"Content\"]/div/div/div[2]/div/div[4]/div[2]",
+			"url": "https://www.venicebeach-fitness.de/service/impressum.html",
+			"xpath": "//*[@id=\"footer\"]/div/div/div[1]/div/div[2]/p/a",
 			"start": "",
-			"end":  ""
+			"end": ""
 		}
 	},
 	{
 		"scrape": {
-			"id": "41",
+			"name": "Venice Beach Suedstadt Zeiten",
+			"id": "71",
 			"normal": "true",
-			"url": "https://fit-in.de/club/durlach/",
-			"xpath": "//*[@id=\"Content\"]/div/div/div[2]/div/div[4]/div[2]",
+			"url": "https://www.venicebeach-fitness.de/clubs/lifestyle-fitness-plus/karlsruhe/",
+			"xpath": "//*[@id=\"pane_413\"]/div/table/tbody",
 			"start": "",
-			"end":  ""
+			"end": ""
+		}
+	},
+	{
+		"scrape": {
+			"name": "Venice Beach Suedstadt Preis",
+			"id": "72",
+			"normal": "true",
+			"url": "https://www.venicebeach-fitness.de/clubs/lifestyle-fitness-plus/karlsruhe/",
+			"xpath": "//*[@id=\"tab-8-1\"]/div/div/div/div/ul/li[1]/strong",
+			"start": "",
+			"end": ""
+		}
+	},
+	{
+		"scrape": {
+			"name": "Venice Beach Suedstadt Adresse",
+			"id": "73",
+			"normal": "true",
+			"url": "https://www.venicebeach-fitness.de/clubs/lifestyle-fitness-plus/karlsruhe/",
+			"xpath": "//*[@id=\"kontakt\"]/div/p[1]",
+			"start": "",
+			"end": ""
+		}
+	},
+	{
+		"scrape": {
+			"name": "Venice Beach Suedstadt Email",
+			"id": "74",
+			"normal": "true",
+			"url": "https://www.venicebeach-fitness.de/service/impressum.html",
+			"xpath": "//*[@id=\"footer\"]/div/div/div[1]/div/div[2]/p/a",
+			"start": "",
+			"end": ""
+		}
+	},
+	{
+		"scrape": {
+			"name": "Die Basis Zeiten",
+			"id": "81",
+			"normal": "true",
+			"url": "https://finde-offen.de/karlsruhe/basis-karlsruhe-crossfit-karlsruhe-569669",
+			"xpath": "//*[@id=\"block-system-main\"]/div/div/div/div[2]/div/div[3]/div[1]/div/div[1]/div/div/div/div/div[2]/div[1]/div[2]/div/div",
+			"start": "",
+			"end": ""
+		}
+	},
+	{
+		"scrape": {
+			"name": "Die Basis Preis",
+			"id": "82",
+			"normal": "true",
+			"url": "https://basis-karlsruhe.de/membership/",
+			"xpath": "//*[@id=\"content\"]/section[4]/div/div/div[1]/div/div/div/div/div[3]/p",
+			"start": "",
+			"end": ""
+		}
+	},
+	{
+		"scrape": {
+			"name": "Die Basis Adresse",
+			"id": "83",
+			"normal": "false",
+			"url": "https://www.venicebeach-fitness.de/service/impressum.html",
+			"xpath": "//*[@id=\"footer\"]/div/div/div[1]/div/div[2]/p/a",
+			"start": "",
+			"end": ""
+		}
+	},
+	{
+		"scrape": {
+			"name": "Die Basis Email",
+			"id": "84",
+			"normal": "true",
+			"url": "https://basis-karlsruhe.de/impressum/",
+			"xpath": "//*[@id=\"content\"]/section/div/div/div/div/div/div/div[2]/div/p[8]",
+			"start": "",
+			"end": ""
+		}
+	},
+	{
+		"scrape": {
+			"name": "Snapfit Karlstrasse Zeiten",
+			"id": "91",
+			"normal": "true",
+			"url": "",
+			"xpath": "",
+			"start": "",
+			"end": ""
+		}
+	},
+	{
+		"scrape": {
+			"name": "Snapfit Karlstrasse Preis",
+			"id": "92",
+			"normal": "true",
+			"url": "",
+			"xpath": "",
+			"start": "",
+			"end": ""
+		}
+	},
+	{
+		"scrape": {
+			"name": "Snapfit Karlstrasse Adresse",
+			"id": "93",
+			"normal": "true",
+			"url": "https://snap-fit.de/location/",
+			"xpath": "/html/body/div[9]/div[1]/p[2]",
+			"start": "Karlstraße",
+			"end": "0721"
+		}
+	},
+	{
+		"scrape": {
+			"name": "Snapfit Karlstrasse Email",
+			"id": "94",
+			"normal": "false",
+			"url": "https://snap-fit.de/impressum/",
+			"xpath": "/html/body/div[5]/div/div[2]/p[3]",
+			"start": "",
+			"end": ""
+		}
+	},
+	{
+		"scrape": {
+			"name": "Snapfit Hagsfeld Zeiten",
+			"id": "101",
+			"normal": "true",
+			"url": "",
+			"xpath": "",
+			"start": "",
+			"end": ""
+		}
+	},
+	{
+		"scrape": {
+			"name": "Snapfit Hagsfeld Preis",
+			"id": "102",
+			"normal": "true",
+			"url": "",
+			"xpath": "",
+			"start": "",
+			"end": ""
+		}
+	},
+	{
+		"scrape": {
+			"name": "Snapfit Hagsfeld Adresse",
+			"id": "103",
+			"normal": "true",
+			"url": "https://snap-fit.de/location/",
+			"xpath": "/html/body/div[9]/div[3]/p[2]",
+			"start": "Hagsfeld",
+			"end": "0721"
+		}
+	},
+	{
+		"scrape": {
+			"name": "Snapfit Hagsfeld Email",
+			"id": "104",
+			"normal": "false",
+			"url": "https://snap-fit.de/impressum/",
+			"xpath": "/html/body/div[5]/div/div[2]/p[3]",
+			"start": "",
+			"end": ""
+		}
+	},
+	{
+		"scrape": {
+			"name": "Cleverfit Zeiten",
+			"id": "111",
+			"normal": "true",
+			"url": "https://www.clever-fit.com/de-de/fitnessstudio-in-der-naehe/clever-fit-karlsruhe/",
+			"xpath": "//*[@id=\"contact-info\"]/div[2]/div[3]",
+			"start": "",
+			"end": "Öffnungszeiten"
+		}
+	},
+	{
+		"scrape": {
+			"name": "Cleverfit Preis",
+			"id": "112",
+			"normal": "true",
+			"url": "https://www.clever-fit.com/de-de/fitnessstudio-in-der-naehe/clever-fit-karlsruhe/#price",
+			"xpath": "//*[@id=\"s-prices-container\"]/div[2]/section/div/div[3]/div[1]/div[2]/p",
+			"start": "",
+			"end": ""
+		}
+	},
+	{
+		"scrape": {
+			"name": "Cleverfit Adresse",
+			"id": "113",
+			"normal": "true",
+			"url": "https://www.clever-fit.com/de-de/fitnessstudio-in-der-naehe/clever-fit-karlsruhe/#price",
+			"xpath": "//*[@id=\"s-additional-container\"]/div/section/div/div/div/div/div[1]/div/p[2]",
+			"start": "",
+			"end": ""
+		}
+	},
+	{
+		"scrape": {
+			"name": "Cleverfit Email",
+			"id": "114",
+			"normal": "true",
+			"url": "https://www.clever-fit.com/de-de/fitnessstudio-in-der-naehe/clever-fit-karlsruhe/",
+			"xpath": "//*[@id=\"contact-info\"]/div[2]/div[2]/div[3]/a",
+			"start": "",
+			"end": ""
 		}
 	}
-	
 	
 ]

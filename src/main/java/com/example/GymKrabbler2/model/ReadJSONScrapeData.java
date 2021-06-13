@@ -54,28 +54,28 @@ public class ReadJSONScrapeData
     private static void parseGymObject(JSONObject employee, List<ScrapeData> scrapeData) 
     {
         //Get gym object within list
-        JSONObject employeeObject = (JSONObject) employee.get("scrape");
+        JSONObject scrapeDataObject = (JSONObject) employee.get("scrape");
         
         //Get id
-        long id = Long.parseLong((String) employeeObject.get("id"));
+        long id = Long.parseLong((String) scrapeDataObject.get("id"));
         System.out.println("" + id);
         
         //Get gym name
-        Boolean normal = Boolean.parseBoolean((String) employeeObject.get("normal"));    
+        Boolean normal = Boolean.parseBoolean((String) scrapeDataObject.get("normal"));    
         System.out.println(normal);
          
         //Get gym url
-        String url = (String) employeeObject.get("url");  
+        String url = (String) scrapeDataObject.get("url");  
         System.out.println(url);
          
         //Get gym email
-        String xpath = (String) employeeObject.get("xpath");    
+        String xpath = (String) scrapeDataObject.get("xpath");    
         System.out.println(xpath);
         
-        String start = (String) employeeObject.get("start");    
+        String start = (String) scrapeDataObject.get("start");    
         System.out.println(start);
         
-        String end = (String) employeeObject.get("end");    
+        String end = (String) scrapeDataObject.get("end");    
         System.out.println(end);
         
     
