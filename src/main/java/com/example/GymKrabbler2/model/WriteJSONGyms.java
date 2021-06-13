@@ -15,7 +15,7 @@ import org.json.simple.parser.ParseException;
 
 import com.example.GymKrabbler2.repository.GymRepository;
 
-public class WriteJSON {
+public class WriteJSONGyms {
 	static JSONParser jsonParser = new JSONParser();
 
 	public static void updateJSON(GymRepository gymRepository) {

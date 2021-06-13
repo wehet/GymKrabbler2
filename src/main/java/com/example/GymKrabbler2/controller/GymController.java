@@ -15,7 +15,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 
 import com.example.GymKrabbler2.model.Gym;
 import com.example.GymKrabbler2.model.ScrapeData;
-import com.example.GymKrabbler2.model.WriteJSON;
+import com.example.GymKrabbler2.model.WriteJSONGyms;
 import com.example.GymKrabbler2.repository.GymRepository;
 import com.example.GymKrabbler2.repository.ScrapeDataRepository;
 import com.example.GymKrabbler2.webCrawler.ScrapeController;
@@ -105,14 +105,14 @@ public class GymController {
 
 	@GetMapping("/writeGym/{id}")
 	public String write(@PathVariable("id") long id, Model model) throws IOException {
-		WriteJSON.updateJSON(gymRepository);
+		WriteJSONGyms.updateJSON(gymRepository);
 
 		return "redirect:/index";
 	}
 
 	@GetMapping("/saveAllGyms")
 	public String write(Model model) throws IOException {
-		WriteJSON.updateJSON(gymRepository);
+		WriteJSONGyms.updateJSON(gymRepository);
 
 		return "redirect:/index";
 	}

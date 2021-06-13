@@ -16,7 +16,7 @@ import org.json.simple.parser.ParseException;
 
 import com.example.GymKrabbler2.repository.GymRepository;
  
-public class ReadJSON 
+public class ReadJSONGyms 
 
 {
 	static JSONParser jsonParser = new JSONParser();
