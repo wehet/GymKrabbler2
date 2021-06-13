@@ -14,15 +14,20 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 
 import com.example.GymKrabbler2.model.Gym;
+import com.example.GymKrabbler2.model.ScrapeData;
 import com.example.GymKrabbler2.model.WriteJSON;
 import com.example.GymKrabbler2.repository.GymRepository;
+import com.example.GymKrabbler2.repository.ScrapeDataRepository;
 import com.example.GymKrabbler2.webCrawler.ScrapeController;
+import com.example.GymKrabbler2.webCrawler.Scraper;
 
 @Controller
 public class GymController {
 
 	@Autowired
 	private GymRepository gymRepository;
+	@Autowired
+	private ScrapeDataRepository scrapeDataRepository;
 	public static String errorMessage = "Aktuell gibt es keine Fehler.";
 
 	public GymController() {
@@ -32,7 +37,7 @@ public class GymController {
 	@GetMapping("/index")
 	public String showUserList(Model model) {
 		model.addAttribute("gyms", gymRepository.findAll());
-		
+
 		return "index";
 	}
 
@@ -47,24 +52,34 @@ public class GymController {
 		return "redirect:/index";
 	}
 
-//	@GetMapping("/updateGym/{id}")
-//	public String update(@PathVariable("id") long id, Model model) throws IOException {
-//		Gym gym = gymRepository.findById(id).orElseThrow(() -> new IllegalArgumentException("Invalid gym Id:" + id));
-//
-//		try {
-//			//
-//			//Scraper scraper = new Scraper(gymRepository.findById(id));
-//			//Adresse
-//			//scraper.scrape(gym.adressescraper);
-//			Scraper scraper = new Scraper();
-//		} catch (IOException e) {
-//			errorMessage = e.getMessage();
-//		}
-//		model.addAttribute("errorMessage", errorMessage);
-//		gymRepository.save(gym);
-//
-//		return "redirect:/index";
-//	}
+	@GetMapping("/updateGym/{id}")
+	public String update(@PathVariable("id") long id, Model model){
+		ScrapeController scrapeController = new ScrapeController();
+		Gym gym = gymRepository.findById(id).get();
+
+		try {
+			String zeit = scrapeController.scrape(id * 10 + 1);
+			String preis = scrapeController.scrape(id * 10 + 2);
+			String adresse = scrapeController.scrape(id * 10 + 3);
+			String email = scrapeController.scrape(id * 10 + 4);
+
+			gym.setZeiten(zeit);
+			gym.setPreis(preis);
+			gym.setAdresse(adresse);
+			gym.setEmail(email);
+
+			gymRepository.save(gym);
+
+			// Adresse
+			// scraper.scrape(gym.adressescraper);
+		} catch (Exception e) {
+			errorMessage = "Die Webseite des Gyms " + gym.getName()
+					+ " konnte nicht gescraped werden :( Bitte kontaktieren Sie den Support unter xxx@example.com";
+		}
+		model.addAttribute("errorMessage", errorMessage);
+
+		return "redirect:/index";
+	}
 
 	@GetMapping("/messageBox")
 	public String messageBox(Model model) throws IOException {
@@ -74,23 +89,19 @@ public class GymController {
 
 	}
 
-//	@GetMapping("/updateAllGyms")
-//	public String update(Model model) {
-//
-//		for (Gym gym : gymRepository.findAll()) {
-//
-//			try {
-//				ScrapeController.update(gym);
-//				gymRepository.save(gym);
-//			} catch (IOException e) {
-//				// TODO: handle exception
-//				errorMessage = errorMessage + "\n" + e.getMessage();
-//				continue;
-//			}
-//		}
-//		model.addAttribute("errorMessage", errorMessage);
-//		return "redirect:/index";
-//	}
+	@GetMapping("/updateAllGyms")
+	public String update(Model model) {
+
+		for (Gym gym : gymRepository.findAll()) {
+
+				GymController gymController = new GymController();
+				gymController.update(gym.getId(), model);
+				gymRepository.save(gym);
+			
+		}
+		model.addAttribute("errorMessage", errorMessage);
+		return "redirect:/index";
+	}
 
 	@GetMapping("/writeGym/{id}")
 	public String write(@PathVariable("id") long id, Model model) throws IOException {

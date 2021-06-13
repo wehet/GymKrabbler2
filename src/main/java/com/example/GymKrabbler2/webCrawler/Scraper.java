@@ -13,15 +13,16 @@ import com.gargoylesoftware.htmlunit.html.HtmlPage;
 
 public class Scraper {
 
-	static WebClient client = new WebClient();
-	public ScrapeData scrapeData;
+//	static WebClient client = new WebClient();
+	private ScrapeData scrapeData;
 
 	public Scraper(ScrapeData scrapeData) {
 		this.scrapeData = scrapeData;
 	}
 
 	// General Scraping method
-	private static String scrapeWebsite(WebClient client, ScrapeData scrapeData) {
+	public String scrapeWebsite(ScrapeData scrapeData) throws Exception {
+		WebClient client = new WebClient();
 		client.getOptions().setCssEnabled(false);
 		client.getOptions().setJavaScriptEnabled(false);
 		String el = null;
@@ -31,16 +32,8 @@ public class Scraper {
 			page = client.getPage(scrapeData.getUrl());
 			HtmlElement element = ((HtmlElement) page.getFirstByXPath(scrapeData.getXpath()));
 			el = element.asText();
-		} catch (FailingHttpStatusCodeException e) {
-			// TODO Auto-generated catch block
-		} catch (MalformedURLException e) {
-			// TODO Auto-generated catch block
-//			return "Fehler";
-		} catch (IOException e) {
-			// TODO Auto-generated catch block
-//			return "Fehler";
-		} catch (NullPointerException e) {
-//			return "Fehler";
+		} catch (Exception e) {
+			throw new Exception();
 		}
 		
 		//evtl noch was für Catch überlegen
@@ -48,9 +41,8 @@ public class Scraper {
 			GymParser scraper = new GymParser();
 			try {
 				el = scraper.getTokens(el, scrapeData.getStart(), scrapeData.getEnd());
-			} catch (IOException e) {
-				// TODO Auto-generated catch block
-				return el;
+			} catch (Exception e) {
+				throw new Exception();
 			}
 		} else {
 			//switch-Implementierung
@@ -60,48 +52,42 @@ public class Scraper {
 				try {
 					scrape_bulldog_adresse(el);
 				} catch (IOException e) {
-					// TODO Auto-generated catch block
-					e.printStackTrace();
+					throw new Exception();
 				}
 				break;
 			case 2:
 				try {
 					scrape_bulldog_Email(el);
 				} catch (IOException e) {
-					// TODO Auto-generated catch block
-					e.printStackTrace();
+					throw new Exception();
 				}
 				break;
 			case 3:
 				try {
 					scrape_fitpur_Adresse(el);
 				} catch (IOException e) {
-					// TODO Auto-generated catch block
-					e.printStackTrace();
+					throw new Exception();
 				}
 				break;
 			case 4:
 				try {
 					scrape_fitpur_Email(el);
 				} catch (IOException e) {
-					// TODO Auto-generated catch block
-					e.printStackTrace();
+					throw new Exception();
 				}
 				break;
 			case 5:
 				try {
 					scrape_snapfit_Email(el);
 				} catch (IOException e) {
-					// TODO Auto-generated catch block
-					e.printStackTrace();
+					throw new Exception();
 				}
 				break;
 			case 6:
 				try {
 					scrape_dieBasis_Adresse(el);
 				} catch (IOException e) {
-					// TODO Auto-generated catch block
-					e.printStackTrace();
+					throw new Exception();
 				}
 				break;
 			}

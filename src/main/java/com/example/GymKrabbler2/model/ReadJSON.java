@@ -58,7 +58,7 @@ public class ReadJSON
         JSONObject employeeObject = (JSONObject) employee.get("gym");
         
         //Get id
-        long id = Long.parseLong((String) employeeObject.get("name"));
+        long id = Long.parseLong((String) employeeObject.get("id"));
         System.out.println("" + id);
         
         //Get gym name
