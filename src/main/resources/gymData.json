@@ -82,7 +82,11 @@
 			"name": "Venice Beach Postgalerie",
 			"adresse": "Postgalerie",
 			"url": "https:\/\/www.venicebeach-fitness.de\/clubs\/premium-fitness\/karlsruhe-postgalerie\/",
-			"email": null
+			"email": null,
+			"scrapeZeiten": "61",
+			"scrapePreis": "62",
+			"scrapeAdresse": "63",
+			"scrapeEmail": "64"
 		}
 	},
 	{
@@ -93,7 +97,11 @@
 			"name": "Venice Beach Suedstadt",
 			"adresse": "Suedstadt",
 			"url": "https:\/\/www.venicebeach-fitness.de\/clubs\/lifestyle-fitness-plus\/karlsruhe\/",
-			"email": null
+			"email": null,
+			"scrapeZeiten": "71",
+			"scrapePreis": "72",
+			"scrapeAdresse": "73",
+			"scrapeEmail": "74"
 		}
 	},
 	{
@@ -104,7 +112,11 @@
 			"name": "Die Basis",
 			"adresse": "-",
 			"url": "https:\/\/basis-karlsruhe.de\/",
-			"email": null
+			"email": null,
+			"scrapeZeiten": "81",
+			"scrapePreis": "82",
+			"scrapeAdresse": "83",
+			"scrapeEmail": "84"
 		}
 	},
 	{
@@ -115,7 +127,11 @@
 			"name": "SnapFIt Karlstrasse",
 			"adresse": "Karlstrasse",
 			"url": "https:\/\/snap-fit.de\/",
-			"email": null
+			"email": null,
+			"scrapeZeiten": "91",
+			"scrapePreis": "92",
+			"scrapeAdresse": "93",
+			"scrapeEmail": "94"
 		}
 	},
 	{
@@ -126,7 +142,11 @@
 			"name": "SnapFit Hagsfeld",
 			"adresse": "Hagsfeld",
 			"url": "https:\/\/snap-fit.de\/",
-			"email": null
+			"email": null,
+			"scrapeZeiten": "101",
+			"scrapePreis": "102",
+			"scrapeAdresse": "103",
+			"scrapeEmail": "104"
 		}
 	},
 	{
@@ -137,7 +157,11 @@
 			"name": "CleverFit",
 			"adresse": "-",
 			"url": "https:\/\/www.clever-fit.com\/de-de\/fitnessstudio-in-der-naehe\/clever-fit-karlsruhe\/",
-			"email": null
+			"email": null,
+			"scrapeZeiten": "111",
+			"scrapePreis": "112",
+			"scrapeAdresse": "113",
+			"scrapeEmail": "114"
 		}
 	},
 	{
@@ -148,7 +172,11 @@
 			"name": "FitPur",
 			"adresse": "-",
 			"url": "https:\/\/www.fit-pur.eu\/karlsruhe\/",
-			"email": null
+			"email": null,
+			"scrapeZeiten": "121",
+			"scrapePreis": "122",
+			"scrapeAdresse": "123",
+			"scrapeEmail": "124"
 		}
 	},
 	{
@@ -159,7 +187,11 @@
 			"name": "Sportprinz Sued",
 			"adresse": "Sued",
 			"url": "https:\/\/www.sportprinz-fitness.de\/clubs\/karlsruhe-sued\/",
-			"email": null
+			"email": null,
+			"scrapeZeiten": "131",
+			"scrapePreis": "132",
+			"scrapeAdresse": "133",
+			"scrapeEmail": "134"
 		}
 	},
 	{
@@ -170,7 +202,11 @@
 			"name": "Sportprinz West",
 			"adresse": "West",
 			"url": "https:\/\/www.sportprinz-fitness.de\/clubs\/karlsruhe-west\/",
-			"email": null
+			"email": null,
+			"scrapeZeiten": "141",
+			"scrapePreis": "142",
+			"scrapeAdresse": "143",
+			"scrapeEmail": "144"
 		}
 	},
 	{
@@ -181,7 +217,11 @@
 			"name": "Johnny M",
 			"adresse": "-",
 			"url": "https:\/\/jonny-m.de\/clubs\/karlsruhe\/",
-			"email": null
+			"email": null,
+			"scrapeZeiten": "151",
+			"scrapePreis": "152",
+			"scrapeAdresse": "153",
+			"scrapeEmail": "154"
 		}
 	},
 	{
@@ -192,7 +232,11 @@
 			"name": "Bulldog",
 			"adresse": "-",
 			"url": "https:\/\/bulldog-gym.com\/",
-			"email": null
+			"email": null,
+			"scrapeZeiten": "161",
+			"scrapePreis": "162",
+			"scrapeAdresse": "163",
+			"scrapeEmail": "164"
 		}
 	}
 ]
