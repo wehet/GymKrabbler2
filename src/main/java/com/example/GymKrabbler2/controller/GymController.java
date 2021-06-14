@@ -25,9 +25,9 @@ import com.example.GymKrabbler2.webCrawler.Scraper;
 public class GymController {
 
 	@Autowired
-	private GymRepository gymRepository;
+	GymRepository gymRepository;
 	@Autowired
-	private ScrapeDataRepository scrapeDataRepository;
+	ScrapeDataRepository scrapeDataRepository;
 	public static String errorMessage = "Aktuell gibt es keine Fehler.";
 
 	public GymController() {
@@ -56,12 +56,21 @@ public class GymController {
 	public String update(@PathVariable("id") long id, Model model){
 		ScrapeController scrapeController = new ScrapeController();
 		Gym gym = gymRepository.findById(id).get();
+		
+		
+//		System.out.println(scrapeDataRepository.findById((long) 11).get().getUrl());
+		
 
 		try {
-			String zeit = scrapeController.scrape(id * 10 + 1);
-			String preis = scrapeController.scrape(id * 10 + 2);
-			String adresse = scrapeController.scrape(id * 10 + 3);
-			String email = scrapeController.scrape(id * 10 + 4);
+			
+			String zeit = scrapeController.scrape(id * 10 + 1, scrapeDataRepository);
+			System.out.println(zeit);
+			String preis = scrapeController.scrape(id * 10 + 2, scrapeDataRepository);
+			System.out.println(preis);
+			String adresse = scrapeController.scrape(id * 10 + 3, scrapeDataRepository);
+			System.out.println(adresse);
+			String email = scrapeController.scrape(id * 10 + 4, scrapeDataRepository);
+			System.out.println(email);
 
 			gym.setZeiten(zeit);
 			gym.setPreis(preis);
@@ -69,12 +78,15 @@ public class GymController {
 			gym.setEmail(email);
 
 			gymRepository.save(gym);
+			
+			
+		
 
-			// Adresse
-			// scraper.scrape(gym.adressescraper);
+	
 		} catch (Exception e) {
 			errorMessage = "Die Webseite des Gyms " + gym.getName()
 					+ " konnte nicht gescraped werden :( Bitte kontaktieren Sie den Support unter xxx@example.com";
+			System.out.println("Fehler beim Gymcontroller");
 		}
 		model.addAttribute("errorMessage", errorMessage);
 

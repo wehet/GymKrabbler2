@@ -22,6 +22,7 @@ public class Scraper {
 
 	// General Scraping method
 	public String scrapeWebsite(ScrapeData scrapeData) throws Exception {
+		@SuppressWarnings("resource")
 		WebClient client = new WebClient();
 		client.getOptions().setCssEnabled(false);
 		client.getOptions().setJavaScriptEnabled(false);
@@ -30,9 +31,15 @@ public class Scraper {
 		HtmlPage page = null;
 		try {
 			page = client.getPage(scrapeData.getUrl());
+			
+		
 			HtmlElement element = ((HtmlElement) page.getFirstByXPath(scrapeData.getXpath()));
+			
+			System.out.println("geht noch");
 			el = element.asText();
 		} catch (Exception e) {
+			
+			System.out.println("Fehler beim Scraper");
 			throw new Exception();
 		}
 		
@@ -42,6 +49,7 @@ public class Scraper {
 			try {
 				el = scraper.getTokens(el, scrapeData.getStart(), scrapeData.getEnd());
 			} catch (Exception e) {
+				System.out.println("Fehler beim Parsing");
 				throw new Exception();
 			}
 		} else {

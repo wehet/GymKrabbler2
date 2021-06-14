@@ -34,7 +34,7 @@ public class ReadJSONScrapeData
              
             List<ScrapeData> scrapeData = new LinkedList<ScrapeData>();
             
-            //Iterate over gym array
+            //Iterate over scrape array
             scrapeDataList.forEach( emp -> parseGymObject( (JSONObject) emp, scrapeData) );
             
             //update the repository
@@ -53,7 +53,7 @@ public class ReadJSONScrapeData
  
     private static void parseGymObject(JSONObject employee, List<ScrapeData> scrapeData) 
     {
-        //Get gym object within list
+        //Get scrapeData object within list
         JSONObject scrapeDataObject = (JSONObject) employee.get("scrape");
         
         //Get id
@@ -68,7 +68,7 @@ public class ReadJSONScrapeData
         String url = (String) scrapeDataObject.get("url");  
         System.out.println(url);
          
-        //Get gym email
+        //Get gym xpath
         String xpath = (String) scrapeDataObject.get("xpath");    
         System.out.println(xpath);
         

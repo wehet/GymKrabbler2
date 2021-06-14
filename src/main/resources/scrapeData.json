@@ -27,9 +27,9 @@
 			"id": "13",
 			"normal": "true",
 			"url": "https://fit-in.de/club/kaiserstrasse/",
-			"xpath": "//*[@id=\\\"Content\\\"]/div/div/div[2]/div/div[4]/div[2]",
-			"start": "Tel.",
-			"end": ""
+			"xpath": "//*[@id=\"Content\"]/div/div/div[2]/div/div[4]/div[2]",
+			"start": "",
+			"end": "Tel."
 		}
 	},
 	{
@@ -37,8 +37,8 @@
 			"name": "fit-in 1 Email ",
 			"id": "14",
 			"normal": "true",
-			"url": "https://fit-in.de/club/kaiserstrasse/",
-			"xpath": "//*[@id=\"Content\"]/div/div/div[2]/div/div[4]/div[2]",
+			"url": "https://fit-in.de/impressum/",
+			"xpath": "//*[@id=\"Content\"]/div/div/div/div/div/div/div[2]/div[2]/div/div/div/div/p[1]/a[2]",
 			"start": "",
 			"end": ""
 		}
@@ -50,8 +50,8 @@
 			"normal": "true",
 			"url": "https://fit-in.de/club/daimlerstrasse/",
 			"xpath": "//*[@id=\"Content\"]/div/div/div[2]/div/div[4]/div[2]",
-			"start": "",
-			"end": ""
+			"start": "ÖFFNUNGSZEITEN",
+			"end": "Noch"
 		}
 	},
 	{
@@ -73,7 +73,7 @@
 			"url": "https://fit-in.de/club/daimlerstrasse/",
 			"xpath": "//*[@id=\"Content\"]/div/div/div[2]/div/div[4]/div[2]",
 			"start": "",
-			"end": ""
+			"end": "Tel."
 		}
 	},
 	{
@@ -117,7 +117,7 @@
 			"url": "https://fit-in.de/club/ebertstrasse/",
 			"xpath": "//*[@id=\"Content\"]/div/div/div[2]/div/div[4]/div[2]",
 			"start": "",
-			"end": ""
+			"end": "Tel."
 		}
 	},
 	{
@@ -161,7 +161,7 @@
 			"url": "https://fit-in.de/club/durlach/",
 			"xpath": "//*[@id=\"Content\"]/div/div/div[2]/div/div[4]/div[2]",
 			"start": "",
-			"end": ""
+			"end": "Tel."
 		}
 	},
 	{
@@ -202,9 +202,9 @@
 			"name": "Pfitzenmeier Adresse",
 			"id": "53",
 			"normal": "true",
-			"url": "https://fit-in.de/club/durlach/",
-			"xpath": "//*[@id=\"collapseAddress\"]/div",
-			"start": "",
+			"url": "https://www.pfitzenmeier.de/impressum/",
+			"xpath": "//*[@id=\"pos_2\"]/div/div/div/div/div/div[1]/div[2]",
+			"start": "GmbH",
 			"end": ""
 		}
 	},
@@ -226,8 +226,8 @@
 			"normal": "true",
 			"url": "https://www.venicebeach-fitness.de/clubs/premium-fitness/karlsruhe-postgalerie/",
 			"xpath": "//*[@id=\"pane_276\"]/div[1]/table/tbody",
-			"start": "An",
-			"end": ""
+			"start": "",
+			"end": "An"
 		}
 	},
 	{
@@ -314,7 +314,7 @@
 			"normal": "true",
 			"url": "https://finde-offen.de/karlsruhe/basis-karlsruhe-crossfit-karlsruhe-569669",
 			"xpath": "//*[@id=\"block-system-main\"]/div/div/div/div[2]/div/div[3]/div[1]/div/div[1]/div/div/div/div/div[2]/div[1]/div[2]/div/div",
-			"start": "",
+			"start": "13.06.2021",
 			"end": ""
 		}
 	},
@@ -347,7 +347,7 @@
 			"normal": "true",
 			"url": "https://basis-karlsruhe.de/impressum/",
 			"xpath": "//*[@id=\"content\"]/section/div/div/div/div/div/div/div[2]/div/p[8]",
-			"start": "",
+			"start": ":",
 			"end": ""
 		}
 	},
