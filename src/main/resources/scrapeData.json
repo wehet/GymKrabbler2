@@ -446,8 +446,8 @@
 			"normal": "true",
 			"url": "https://www.clever-fit.com/de-de/fitnessstudio-in-der-naehe/clever-fit-karlsruhe/",
 			"xpath": "//*[@id=\"contact-info\"]/div[2]/div[3]",
-			"start": "",
-			"end": "Öffnungszeiten"
+			"start": "Öffnungszeiten",
+			"end": ""
 		}
 	},
 	{
@@ -482,6 +482,227 @@
 			"start": "",
 			"end": ""
 		}
+	},
+	{
+		"scrape": {
+			"name": "Fitpur Zeiten",
+			"id": "121",
+			"normal": "true",
+			"url": "https://www.fit-pur.eu/karlsruhe/",
+			"xpath": "//*[@id=\"content\"]/div/div/div/section[9]/div/div/div/div/div/section/div/div/div[1]/div/div/div[2]/div/div",
+			"start": "!",
+			"end": ""
+		}
+	},
+	{
+		"scrape": {
+			"name": "Fitpur Preis",
+			"id": "122",
+			"normal": "true",
+			"url": "https://www.fit-pur.eu/karlsruhe/",
+			"xpath": "//*[@id=\"content\"]/div/div/div/section[8]/div[2]/div/div[3]/div/div/div[2]/div",
+			"start": "",
+			"end": ""
+		}
+	},
+	{
+		"scrape": {
+			"name": "Fitpur Adresse",
+			"id": "123",
+			"normal": "true",
+			"url": "https://www.fit-pur.eu/karlsruhe/",
+			"xpath": "//*[@id=\"content\"]/div/div/div/section[9]/div/div/div/div/div/section/div/div/div[1]/div/div/div[2]/div/div",
+			"start": "663",
+			"end": "karlsruhe@fit-pur"
+		}
+	},
+	{
+		"scrape": {
+			"name": "Fitpur Email",
+			"id": "124",
+			"normal": "false",
+			"url": "https://www.fit-pur.eu/impressum/",
+			"xpath": "//*[@id=\"content\"]/div/div/div/section/div/div/div/div/div/section/div/div/div/div/div/div[3]/div/div/p[4]",
+			"start": "",
+			"end": ""
+		}
+	},
+	{
+		"scrape": {
+			"name": "Sportprinz Sued Zeiten",
+			"id": "131",
+			"normal": "false",
+			"url": "https://www.sportprinz-fitness.de/karlsruhe-sued",
+			"xpath": "//*[@id=\"Wrapper\"]/div[2]/div/div/section[6]/div/div/div[1]/div/div/div[2]/div/div/p",
+			"start": "",
+			"end": ""
+		}
+	},
+	{
+		"scrape": {
+			"name": "Sportprinz Sued Preis",
+			"id": "132",
+			"normal": "false",
+			"url": "https://www.sportprinz-fitness.de/preise/",
+			"xpath": "//*[@id=\"Wrapper\"]/div[2]/div/div/section/div[2]/div/div/div/div/section[1]/div/div/div[1]/div/div/div/div/div/div[2]",
+			"start": "",
+			"end": ""
+		}
+	},
+	{
+		"scrape": {
+			"name": "Sportprinz Sued Adresse",
+			"id": "133",
+			"normal": "false",
+			"url": "https://www.sportprinz-fitness.de/karlsruhe-sued",
+			"xpath": "//*[@id=\"Wrapper\"]/div[2]/div/div/section[1]/div[2]/div/div/div/div/div[2]/div/h4",
+			"start": "|",
+			"end": ""
+		}
+	},
+	{
+		"scrape": {
+			"name": "Sportprinz Sued Email",
+			"id": "134",
+			"normal": "false",
+			"url": "https://www.sportprinz-fitness.de/impressum/",
+			"xpath": "//*[@id=\"Wrapper\"]/div[2]/div/div/section[2]/div/div/div[1]/div/div/div/div/div/p[4]/span[1]/a/strong",
+			"start": "",
+			"end": ""
+		}
+	},
+	{
+		"scrape": {
+			"name": "Sportprinz West Zeiten",
+			"id": "141",
+			"normal": "false",
+			"url": "https://www.sportprinz-fitness.de/karlsruhe-west",
+			"xpath": "//*[@id=\"Wrapper\"]/div[2]/div/div/section[6]/div/div/div[1]/div/div/div[2]/div/div/p",
+			"start": "",
+			"end": ""
+		}
+	},
+	{
+		"scrape": {
+			"name": "Sportprinz West Preis",
+			"id": "142",
+			"normal": "true",
+			"url": "https://www.sportprinz-fitness.de/preise/",
+			"xpath": "//*[@id=\"Wrapper\"]/div[2]/div/div/section/div[2]/div/div/div/div/section[1]/div/div/div[1]/div/div/div/div/div/div[2]",
+			"start": "",
+			"end": ""
+		}
+	},
+	{
+		"scrape": {
+			"name": "Sportprinz West Adresse",
+			"id": "143",
+			"normal": "true",
+			"url": "https://www.sportprinz-fitness.de/karlsruhe-west",
+			"xpath": "//*[@id=\"Wrapper\"]/div[2]/div/div/section[1]/div[2]/div/div/div/div/div[2]/div/h4",
+			"start": "|",
+			"end": ""
+		}
+	},
+	{
+		"scrape": {
+			"name": "Sportprinz West Email",
+			"id": "144",
+			"normal": "true",
+			"url": "https://www.sportprinz-fitness.de/impressum/",
+			"xpath": "//*[@id=\"Wrapper\"]/div[2]/div/div/section[2]/div/div/div[1]/div/div/div/div/div/p[4]/span[1]/a/strong",
+			"start": "",
+			"end": ""
+		}
+	},
+		{
+		"scrape": {
+			"name": "JohnnyM Zeiten",
+			"id": "151",
+			"normal": "true",
+			"url": "https://jonny-m.de/clubs/karlsruhe/",
+			"xpath": "//*[@id=\"post-32544\"]/div/div/div/div[6]/div[2]/div[2]/div[2]",
+			"start": "Öffnungszeiten",
+			"end": ""
+		}
+	},
+	{
+		"scrape": {
+			"name": "JohnnyM Preis",
+			"id": "152",
+			"normal": "true",
+			"url": "https://jonny-m.de/preise/#blue-label",
+			"xpath": "//*[@id=\"blue-label\"]/div[1]/div/p[2]/span",
+			"start": "",
+			"end": ""
+		}
+	},
+	{
+		"scrape": {
+			"name": "JohnnyM Adresse",
+			"id": "153",
+			"normal": "true",
+			"url": "https://jonny-m.de/clubs/karlsruhe/",
+			"xpath": "//*[@id=\"post-32544\"]/div/div/div/div[6]/div[2]/div[2]/div[1]/div/p[1]",
+			"start": "Europaplatz",
+			"end": ""
+		}
+	},
+	{
+		"scrape": {
+			"name": "JohnnyM Email",
+			"id": "154",
+			"normal": "true",
+			"url": "https://jonny-m.de/impressum",
+			"xpath": "//*[@id=\"post-32194\"]/div/div/div/div/div/div/div/div/p[6]/a",
+			"start": "",
+			"end": ""
+		}
+	},
+		{
+		"scrape": {
+			"name": "Bulldog Zeiten",
+			"id": "161",
+			"normal": "true",
+			"url": "https://bulldog-gym.com/",
+			"xpath": "//*[@id=\"offnungszeiten\"]/div[2]/div/div/div/div/section[1]/div/div/div/div/div/div[3]",
+			"start": "",
+			"end": ""
+		}
+	},
+	{
+		"scrape": {
+			"name": "Bulldog Preis",
+			"id": "162",
+			"normal": "true",
+			"url": "",
+			"xpath": "]",
+			"start": "",
+			"end": ""
+		}
+	},
+	{
+		"scrape": {
+			"name": "Bulldog Adresse",
+			"id": "163",
+			"normal": "false",
+			"url": "https://bulldog-gym.com/",
+			"xpath": "//*[@id=\"offnungszeiten\"]/div[2]/div/div/div/div/section[1]/div/div/div/div/div/div[2]/div/div/p",
+			"start": "",
+			"end": ""
+		}
+	},
+	{
+		"scrape": {
+			"name": "Bulldog Email",
+			"id": "164",
+			"normal": "false",
+			"url": "https://bulldog-gym.com/impressum/",
+			"xpath": "//*[@id=\"main\"]/div/div/div/section[2]/div/div/div/div/div/div[2]/div/div/p[3]",
+			"start": "",
+			"end": ""
+		}
 	}
+	
 	
 ]

@@ -53,41 +53,62 @@ public class GymController {
 	}
 
 	@GetMapping("/updateGym/{id}")
-	public String update(@PathVariable("id") long id, Model model){
+	public String update(@PathVariable("id") long id, Model model) {
 		ScrapeController scrapeController = new ScrapeController();
 		Gym gym = gymRepository.findById(id).get();
-		
-		
+
 //		System.out.println(scrapeDataRepository.findById((long) 11).get().getUrl());
-		
 
 		try {
-			
+
 			String zeit = scrapeController.scrape(id * 10 + 1, scrapeDataRepository);
 			System.out.println(zeit);
-			String preis = scrapeController.scrape(id * 10 + 2, scrapeDataRepository);
-			System.out.println(preis);
-			String adresse = scrapeController.scrape(id * 10 + 3, scrapeDataRepository);
-			System.out.println(adresse);
-			String email = scrapeController.scrape(id * 10 + 4, scrapeDataRepository);
-			System.out.println(email);
 
 			gym.setZeiten(zeit);
-			gym.setPreis(preis);
-			gym.setAdresse(adresse);
-			gym.setEmail(email);
 
-			gymRepository.save(gym);
-			
-			
-		
-
-	
 		} catch (Exception e) {
-			errorMessage = "Die Webseite des Gyms " + gym.getName()
+			errorMessage = "Die Öffnungszeiten des Gyms " + gym.getName()
+					+ " konnten nicht gescraped werden :( Bitte kontaktieren Sie den Support unter xxx@example.com";
+			System.out.println("Fehler beim Gymcontroller");
+		}
+		try {
+
+			String preis = scrapeController.scrape(id * 10 + 2, scrapeDataRepository);
+			System.out.println(preis);
+
+			gym.setPreis(preis);
+
+		} catch (Exception e) {
+			errorMessage = "Der Preis des Gyms " + gym.getName()
 					+ " konnte nicht gescraped werden :( Bitte kontaktieren Sie den Support unter xxx@example.com";
 			System.out.println("Fehler beim Gymcontroller");
 		}
+		try {
+
+			String adresse = scrapeController.scrape(id * 10 + 3, scrapeDataRepository);
+			System.out.println(adresse);
+
+			gym.setAdresse(adresse);
+
+		} catch (Exception e) {
+			errorMessage = "Die Adresse des Gyms " + gym.getName()
+					+ " konnte nicht gescraped werden :( Bitte kontaktieren Sie den Support unter xxx@example.com";
+			System.out.println("Fehler beim Gymcontroller");
+		}
+		try {
+
+			String email = scrapeController.scrape(id * 10 + 4, scrapeDataRepository);
+			System.out.println(email);
+
+			gym.setEmail(email);
+
+		} catch (Exception e) {
+			errorMessage = "Die Email des Gyms " + gym.getName()
+					+ " konnte nicht gescraped werden :( Bitte kontaktieren Sie den Support unter xxx@example.com";
+			System.out.println("Fehler beim Gymcontroller");
+		}
+
+		gymRepository.save(gym);
 		model.addAttribute("errorMessage", errorMessage);
 
 		return "redirect:/index";
@@ -106,10 +127,10 @@ public class GymController {
 
 		for (Gym gym : gymRepository.findAll()) {
 
-				GymController gymController = new GymController();
-				gymController.update(gym.getId(), model);
-				gymRepository.save(gym);
-			
+			GymController gymController = new GymController();
+			gymController.update(gym.getId(), model);
+			gymRepository.save(gym);
+
 		}
 		model.addAttribute("errorMessage", errorMessage);
 		return "redirect:/index";
