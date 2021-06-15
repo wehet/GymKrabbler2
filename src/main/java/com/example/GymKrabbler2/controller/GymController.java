@@ -41,16 +41,16 @@ public class GymController {
 		return "index";
 	}
 
-	@PostMapping("/update/{id}")
-	public String updateGym(@PathVariable("id") long id, Gym gym, BindingResult result, Model model) {
-		if (result.hasErrors()) {
-			gym.setId(id);
-			return "update-gym";
-		}
-
-		gymRepository.save(gym);
-		return "redirect:/index";
-	}
+//	@PostMapping("/update/{id}")
+//	public String updateGym(@PathVariable("id") long id, Gym gym, BindingResult result, Model model) {
+//		if (result.hasErrors()) {
+//			gym.setId(id);
+//			return "update-gym";
+//		}
+//
+//		gymRepository.save(gym);
+//		return "redirect:/index";
+//	}
 
 	@GetMapping("/updateGym/{id}")
 	public String update(@PathVariable("id") long id, Model model) {
@@ -69,7 +69,6 @@ public class GymController {
 		} catch (Exception e) {
 			errorMessage = "Die Öffnungszeiten des Gyms " + gym.getName()
 					+ " konnten nicht gescraped werden :( Bitte kontaktieren Sie den Support unter xxx@example.com";
-			System.out.println("Fehler beim Gymcontroller");
 		}
 		try {
 
@@ -81,7 +80,6 @@ public class GymController {
 		} catch (Exception e) {
 			errorMessage = "Der Preis des Gyms " + gym.getName()
 					+ " konnte nicht gescraped werden :( Bitte kontaktieren Sie den Support unter xxx@example.com";
-			System.out.println("Fehler beim Gymcontroller");
 		}
 		try {
 
@@ -93,7 +91,6 @@ public class GymController {
 		} catch (Exception e) {
 			errorMessage = "Die Adresse des Gyms " + gym.getName()
 					+ " konnte nicht gescraped werden :( Bitte kontaktieren Sie den Support unter xxx@example.com";
-			System.out.println("Fehler beim Gymcontroller");
 		}
 		try {
 
@@ -105,7 +102,6 @@ public class GymController {
 		} catch (Exception e) {
 			errorMessage = "Die Email des Gyms " + gym.getName()
 					+ " konnte nicht gescraped werden :( Bitte kontaktieren Sie den Support unter xxx@example.com";
-			System.out.println("Fehler beim Gymcontroller");
 		}
 
 		gymRepository.save(gym);

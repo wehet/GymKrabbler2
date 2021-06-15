@@ -8,39 +8,29 @@ public class ScrapeData {
 	@Id
 	private long id;
 
-	private boolean normal;
 	private String url;
 	private String xpath;
 	private String start;
-	private String end;	
+	private String end;
 
 	public ScrapeData() {
 		super();
 	}
-	
-	public ScrapeData(long id, boolean normal, String url, String xpath, String start, String end) {
+
+	public ScrapeData(long id, String url, String xpath, String start, String end) {
 		this.id = id;
-		this.setNormal(normal);
 		this.setUrl(url);
 		this.setXpath(xpath);
 		this.setStart(start);
-		this.setEnd(end);		
+		this.setEnd(end);
 	}
-	
+
 	public long getId() {
 		return id;
 	}
 
 	public void setId(long id) {
 		this.id = id;
-	}
-
-	public boolean getNormal() {
-		return normal;
-	}
-
-	public void setNormal(boolean normal) {
-		this.normal = normal;
 	}
 
 	public String getUrl() {
@@ -74,5 +64,5 @@ public class ScrapeData {
 	public void setEnd(String end) {
 		this.end = end;
 	}
-	
+
 }

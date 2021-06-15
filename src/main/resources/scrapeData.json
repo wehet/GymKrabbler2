@@ -3,7 +3,6 @@
 		"scrape": {
 			"name": "fit-in 1 Zeiten ",
 			"id": "11",
-			"normal": "true",
 			"url": "https://fit-in.de/club/kaiserstrasse/",
 			"xpath": "//*[@id=\"Content\"]/div/div/div[2]/div/div[4]/div[2]",
 			"start": "ÖFFNUNGSZEITEN",
@@ -14,7 +13,6 @@
 		"scrape": {
 			"name": "fit-in 1 Preis ",
 			"id": "12",
-			"normal": "true",
 			"url": "https://fit-in.de/mitgliedschaft/",
 			"xpath": "//*[@id=\"Content\"]/div/div/div/div/div/div/div[9]/div[2]/div/div/div[2]/div/div/p[1]",
 			"start": "",
@@ -25,7 +23,6 @@
 		"scrape": {
 			"name": "fit-in 1 Adresse ",
 			"id": "13",
-			"normal": "true",
 			"url": "https://fit-in.de/club/kaiserstrasse/",
 			"xpath": "//*[@id=\"Content\"]/div/div/div[2]/div/div[4]/div[2]",
 			"start": "",
@@ -36,7 +33,6 @@
 		"scrape": {
 			"name": "fit-in 1 Email ",
 			"id": "14",
-			"normal": "true",
 			"url": "https://fit-in.de/impressum/",
 			"xpath": "//*[@id=\"Content\"]/div/div/div/div/div/div/div[2]/div[2]/div/div/div/div/p[1]/a[2]",
 			"start": "",
@@ -47,7 +43,6 @@
 		"scrape": {
 			"name": "fit-in 2 Zeiten ",
 			"id": "21",
-			"normal": "true",
 			"url": "https://fit-in.de/club/daimlerstrasse/",
 			"xpath": "//*[@id=\"Content\"]/div/div/div[2]/div/div[4]/div[2]",
 			"start": "ÖFFNUNGSZEITEN",
@@ -58,7 +53,6 @@
 		"scrape": {
 			"name": "fit-in 2 Preis ",
 			"id": "22",
-			"normal": "true",
 			"url": "https://fit-in.de/mitgliedschaft/",
 			"xpath": "//*[@id=\"Content\"]/div/div/div/div/div/div/div[9]/div[2]/div/div/div[2]/div/div/p[1]",
 			"start": "",
@@ -69,7 +63,6 @@
 		"scrape": {
 			"name": "fit-in 2 Adresse ",
 			"id": "23",
-			"normal": "true",
 			"url": "https://fit-in.de/club/daimlerstrasse/",
 			"xpath": "//*[@id=\"Content\"]/div/div/div[2]/div/div[4]/div[2]",
 			"start": "",
@@ -80,7 +73,6 @@
 		"scrape": {
 			"name": "fit-in 2 Email ",
 			"id": "24",
-			"normal": "true",
 			"url": "https://fit-in.de/impressum/",
 			"xpath": "//*[@id=\"Content\"]/div/div/div/div/div/div/div[2]/div[2]/div/div/div/div/p[1]/a[2]",
 			"start": "",
@@ -91,7 +83,6 @@
 		"scrape": {
 			"name": "fit-in 3 Zeiten",
 			"id": "31",
-			"normal": "true",
 			"url": "https://fit-in.de/club/ebertstrasse/",
 			"xpath": "//*[@id=\"Content\"]/div/div/div[2]/div/div[4]/div[2]",
 			"start": "ÖFFNUNGSZEITEN",
@@ -102,7 +93,6 @@
 		"scrape": {
 			"name": "fit-in 3 Preis",
 			"id": "32",
-			"normal": "true",
 			"url": "https://fit-in.de/mitgliedschaft/",
 			"xpath": "//*[@id=\"Content\"]/div/div/div/div/div/div/div[9]/div[2]/div/div/div[2]/div/div/p[1]",
 			"start": "",
@@ -113,7 +103,6 @@
 		"scrape": {
 			"name": "fit-in 3 Adresse",
 			"id": "33",
-			"normal": "true",
 			"url": "https://fit-in.de/club/ebertstrasse/",
 			"xpath": "//*[@id=\"Content\"]/div/div/div[2]/div/div[4]/div[2]",
 			"start": "",
@@ -124,7 +113,6 @@
 		"scrape": {
 			"name": "fit-in 3 Email ",
 			"id": "34",
-			"normal": "true",
 			"url": "https://fit-in.de/impressum/",
 			"xpath": "//*[@id=\"Content\"]/div/div/div/div/div/div/div[2]/div[2]/div/div/div/div/p[1]/a[2]",
 			"start": "",
@@ -135,7 +123,6 @@
 		"scrape": {
 			"name": "fit-in 4 Zeiten",
 			"id": "41",
-			"normal": "true",
 			"url": "https://fit-in.de/club/durlach/",
 			"xpath": "//*[@id=\"Content\"]/div/div/div[2]/div/div[4]/div[2]",
 			"start": "ÖFFNUNGSZEITEN",
@@ -146,7 +133,6 @@
 		"scrape": {
 			"name": "fit-in 2 Preis ",
 			"id": "42",
-			"normal": "true",
 			"url": "https://fit-in.de/mitgliedschaft/",
 			"xpath": "//*[@id=\"Content\"]/div/div/div/div/div/div/div[9]/div[2]/div/div/div[2]/div/div/p[1]",
 			"start": "",
@@ -157,7 +143,6 @@
 		"scrape": {
 			"name": "fit-in 4 Adresse ",
 			"id": "43",
-			"normal": "true",
 			"url": "https://fit-in.de/club/durlach/",
 			"xpath": "//*[@id=\"Content\"]/div/div/div[2]/div/div[4]/div[2]",
 			"start": "",
@@ -168,7 +153,6 @@
 		"scrape": {
 			"name": "fit-in 4 Email",
 			"id": "44",
-			"normal": "true",
 			"url": "https://fit-in.de/impressum/",
 			"xpath": "//*[@id=\"Content\"]/div/div/div/div/div/div/div[2]/div[2]/div/div/div/div/p[1]/a[2]",
 			"start": "",
@@ -179,7 +163,6 @@
 		"scrape": {
 			"name": "Pfitzenmeier Zeiten",
 			"id": "51",
-			"normal": "true",
 			"url": "https://www.pfitzenmeier.de/karlsruhe/",
 			"xpath": "//*[@id=\"tab_oeffnungszeiten\"]/div/div/div/table/tbody",
 			"start": "",
@@ -190,7 +173,6 @@
 		"scrape": {
 			"name": "Pfitzenmeier Preis",
 			"id": "52",
-			"normal": "true",
 			"url": "https://www.pfitzenmeier.de/karlsruhe/",
 			"xpath": "//*[@id=\"tab_6767_30bis65\"]/div[1]/table/tbody/tr[1]/td[1]/span",
 			"start": "",
@@ -201,7 +183,6 @@
 		"scrape": {
 			"name": "Pfitzenmeier Adresse",
 			"id": "53",
-			"normal": "true",
 			"url": "https://www.pfitzenmeier.de/impressum/",
 			"xpath": "//*[@id=\"pos_2\"]/div/div/div/div/div/div[1]/div[2]",
 			"start": "GmbH",
@@ -212,7 +193,6 @@
 		"scrape": {
 			"name": "Pfitzenmeier Email",
 			"id": "54",
-			"normal": "true",
 			"url": "https://www.pfitzenmeier.de/impressum/",
 			"xpath": "//*[@id=\"pos_2\"]/div/div/div/div/div/div[1]/div[6]/div/div/p[1]/a",
 			"start": "",
@@ -223,7 +203,6 @@
 		"scrape": {
 			"name": "Venice Beach Postgalerie Zeiten",
 			"id": "61",
-			"normal": "true",
 			"url": "https://www.venicebeach-fitness.de/clubs/premium-fitness/karlsruhe-postgalerie/",
 			"xpath": "//*[@id=\"pane_276\"]/div[1]/table/tbody",
 			"start": "",
@@ -234,7 +213,6 @@
 		"scrape": {
 			"name": "Venice Beach Postgalerie Preis",
 			"id": "62",
-			"normal": "true",
 			"url": "https://www.venicebeach-fitness.de/clubs/premium-fitness/karlsruhe-postgalerie",
 			"xpath": "//*[@id=\"tab-8-1\"]/div/div/div/div/ul/li[1]/strong",
 			"start": "",
@@ -245,7 +223,6 @@
 		"scrape": {
 			"name": "Venice Beach Postgalerie Adresse",
 			"id": "63",
-			"normal": "true",
 			"url": "https://www.venicebeach-fitness.de/clubs/premium-fitness/karlsruhe-postgalerie/",
 			"xpath": "//*[@id=\"kontakt\"]/div/p[1]",
 			"start": "",
@@ -256,7 +233,6 @@
 		"scrape": {
 			"name": "Venice Beach Postgalerie Email",
 			"id": "64",
-			"normal": "true",
 			"url": "https://www.venicebeach-fitness.de/service/impressum.html",
 			"xpath": "//*[@id=\"footer\"]/div/div/div[1]/div/div[2]/p/a",
 			"start": "",
@@ -267,7 +243,6 @@
 		"scrape": {
 			"name": "Venice Beach Suedstadt Zeiten",
 			"id": "71",
-			"normal": "true",
 			"url": "https://www.venicebeach-fitness.de/clubs/lifestyle-fitness-plus/karlsruhe/",
 			"xpath": "//*[@id=\"pane_413\"]/div/table/tbody",
 			"start": "",
@@ -278,7 +253,6 @@
 		"scrape": {
 			"name": "Venice Beach Suedstadt Preis",
 			"id": "72",
-			"normal": "true",
 			"url": "https://www.venicebeach-fitness.de/clubs/lifestyle-fitness-plus/karlsruhe/",
 			"xpath": "//*[@id=\"tab-8-1\"]/div/div/div/div/ul/li[1]/strong",
 			"start": "",
@@ -289,7 +263,6 @@
 		"scrape": {
 			"name": "Venice Beach Suedstadt Adresse",
 			"id": "73",
-			"normal": "true",
 			"url": "https://www.venicebeach-fitness.de/clubs/lifestyle-fitness-plus/karlsruhe/",
 			"xpath": "//*[@id=\"kontakt\"]/div/p[1]",
 			"start": "",
@@ -300,7 +273,6 @@
 		"scrape": {
 			"name": "Venice Beach Suedstadt Email",
 			"id": "74",
-			"normal": "true",
 			"url": "https://www.venicebeach-fitness.de/service/impressum.html",
 			"xpath": "//*[@id=\"footer\"]/div/div/div[1]/div/div[2]/p/a",
 			"start": "",
@@ -311,7 +283,6 @@
 		"scrape": {
 			"name": "Die Basis Zeiten",
 			"id": "81",
-			"normal": "true",
 			"url": "https://finde-offen.de/karlsruhe/basis-karlsruhe-crossfit-karlsruhe-569669",
 			"xpath": "//*[@id=\"block-system-main\"]/div/div/div/div[2]/div/div[3]/div[1]/div/div[1]/div/div/div/div/div[2]/div[1]/div[2]/div/div",
 			"start": "13.06.2021",
@@ -322,7 +293,6 @@
 		"scrape": {
 			"name": "Die Basis Preis",
 			"id": "82",
-			"normal": "true",
 			"url": "https://basis-karlsruhe.de/membership/",
 			"xpath": "//*[@id=\"content\"]/section[4]/div/div/div[1]/div/div/div/div/div[3]/p",
 			"start": "",
@@ -333,7 +303,6 @@
 		"scrape": {
 			"name": "Die Basis Adresse",
 			"id": "83",
-			"normal": "false",
 			"url": "https://www.venicebeach-fitness.de/service/impressum.html",
 			"xpath": "//*[@id=\"footer\"]/div/div/div[1]/div/div[2]/p/a",
 			"start": "",
@@ -344,7 +313,6 @@
 		"scrape": {
 			"name": "Die Basis Email",
 			"id": "84",
-			"normal": "true",
 			"url": "https://basis-karlsruhe.de/impressum/",
 			"xpath": "//*[@id=\"content\"]/section/div/div/div/div/div/div/div[2]/div/p[8]",
 			"start": ":",
@@ -355,7 +323,6 @@
 		"scrape": {
 			"name": "Snapfit Karlstrasse Zeiten",
 			"id": "91",
-			"normal": "true",
 			"url": "",
 			"xpath": "",
 			"start": "",
@@ -366,7 +333,6 @@
 		"scrape": {
 			"name": "Snapfit Karlstrasse Preis",
 			"id": "92",
-			"normal": "true",
 			"url": "",
 			"xpath": "",
 			"start": "",
@@ -377,7 +343,6 @@
 		"scrape": {
 			"name": "Snapfit Karlstrasse Adresse",
 			"id": "93",
-			"normal": "true",
 			"url": "https://snap-fit.de/location/",
 			"xpath": "/html/body/div[9]/div[1]/p[2]",
 			"start": "Karlstraße",
@@ -388,18 +353,16 @@
 		"scrape": {
 			"name": "Snapfit Karlstrasse Email",
 			"id": "94",
-			"normal": "false",
 			"url": "https://snap-fit.de/impressum/",
 			"xpath": "/html/body/div[5]/div/div[2]/p[3]",
-			"start": "",
-			"end": ""
+			"start": "902",
+			"end": "Geschäftsführung"
 		}
 	},
 	{
 		"scrape": {
 			"name": "Snapfit Hagsfeld Zeiten",
 			"id": "101",
-			"normal": "true",
 			"url": "",
 			"xpath": "",
 			"start": "",
@@ -410,7 +373,6 @@
 		"scrape": {
 			"name": "Snapfit Hagsfeld Preis",
 			"id": "102",
-			"normal": "true",
 			"url": "",
 			"xpath": "",
 			"start": "",
@@ -421,7 +383,6 @@
 		"scrape": {
 			"name": "Snapfit Hagsfeld Adresse",
 			"id": "103",
-			"normal": "true",
 			"url": "https://snap-fit.de/location/",
 			"xpath": "/html/body/div[9]/div[3]/p[2]",
 			"start": "Hagsfeld",
@@ -432,18 +393,16 @@
 		"scrape": {
 			"name": "Snapfit Hagsfeld Email",
 			"id": "104",
-			"normal": "false",
 			"url": "https://snap-fit.de/impressum/",
 			"xpath": "/html/body/div[5]/div/div[2]/p[3]",
-			"start": "",
-			"end": ""
+			"start": "902",
+			"end": "Geschäftsführung"
 		}
 	},
 	{
 		"scrape": {
 			"name": "Cleverfit Zeiten",
 			"id": "111",
-			"normal": "true",
 			"url": "https://www.clever-fit.com/de-de/fitnessstudio-in-der-naehe/clever-fit-karlsruhe/",
 			"xpath": "//*[@id=\"contact-info\"]/div[2]/div[3]",
 			"start": "Öffnungszeiten",
@@ -454,7 +413,6 @@
 		"scrape": {
 			"name": "Cleverfit Preis",
 			"id": "112",
-			"normal": "true",
 			"url": "https://www.clever-fit.com/de-de/fitnessstudio-in-der-naehe/clever-fit-karlsruhe/#price",
 			"xpath": "//*[@id=\"s-prices-container\"]/div[2]/section/div/div[3]/div[1]/div[2]/p",
 			"start": "",
@@ -465,7 +423,6 @@
 		"scrape": {
 			"name": "Cleverfit Adresse",
 			"id": "113",
-			"normal": "true",
 			"url": "https://www.clever-fit.com/de-de/fitnessstudio-in-der-naehe/clever-fit-karlsruhe/#price",
 			"xpath": "//*[@id=\"s-additional-container\"]/div/section/div/div/div/div/div[1]/div/p[2]",
 			"start": "",
@@ -476,7 +433,6 @@
 		"scrape": {
 			"name": "Cleverfit Email",
 			"id": "114",
-			"normal": "true",
 			"url": "https://www.clever-fit.com/de-de/fitnessstudio-in-der-naehe/clever-fit-karlsruhe/",
 			"xpath": "//*[@id=\"contact-info\"]/div[2]/div[2]/div[3]/a",
 			"start": "",
@@ -487,7 +443,6 @@
 		"scrape": {
 			"name": "Fitpur Zeiten",
 			"id": "121",
-			"normal": "true",
 			"url": "https://www.fit-pur.eu/karlsruhe/",
 			"xpath": "//*[@id=\"content\"]/div/div/div/section[9]/div/div/div/div/div/section/div/div/div[1]/div/div/div[2]/div/div",
 			"start": "!",
@@ -498,7 +453,6 @@
 		"scrape": {
 			"name": "Fitpur Preis",
 			"id": "122",
-			"normal": "true",
 			"url": "https://www.fit-pur.eu/karlsruhe/",
 			"xpath": "//*[@id=\"content\"]/div/div/div/section[8]/div[2]/div/div[3]/div/div/div[2]/div",
 			"start": "",
@@ -509,21 +463,19 @@
 		"scrape": {
 			"name": "Fitpur Adresse",
 			"id": "123",
-			"normal": "true",
 			"url": "https://www.fit-pur.eu/karlsruhe/",
 			"xpath": "//*[@id=\"content\"]/div/div/div/section[9]/div/div/div/div/div/section/div/div/div[1]/div/div/div[2]/div/div",
-			"start": "663",
-			"end": "karlsruhe@fit-pur"
+			"start": "Fitpur",
+			"end": "Tel"
 		}
 	},
 	{
 		"scrape": {
 			"name": "Fitpur Email",
 			"id": "124",
-			"normal": "false",
 			"url": "https://www.fit-pur.eu/impressum/",
 			"xpath": "//*[@id=\"content\"]/div/div/div/section/div/div/div/div/div/section/div/div/div/div/div/div[3]/div/div/p[4]",
-			"start": "",
+			"start": "40",
 			"end": ""
 		}
 	},
@@ -531,7 +483,6 @@
 		"scrape": {
 			"name": "Sportprinz Sued Zeiten",
 			"id": "131",
-			"normal": "false",
 			"url": "https://www.sportprinz-fitness.de/karlsruhe-sued",
 			"xpath": "//*[@id=\"Wrapper\"]/div[2]/div/div/section[6]/div/div/div[1]/div/div/div[2]/div/div/p",
 			"start": "",
@@ -542,7 +493,6 @@
 		"scrape": {
 			"name": "Sportprinz Sued Preis",
 			"id": "132",
-			"normal": "false",
 			"url": "https://www.sportprinz-fitness.de/preise/",
 			"xpath": "//*[@id=\"Wrapper\"]/div[2]/div/div/section/div[2]/div/div/div/div/section[1]/div/div/div[1]/div/div/div/div/div/div[2]",
 			"start": "",
@@ -553,10 +503,9 @@
 		"scrape": {
 			"name": "Sportprinz Sued Adresse",
 			"id": "133",
-			"normal": "false",
 			"url": "https://www.sportprinz-fitness.de/karlsruhe-sued",
 			"xpath": "//*[@id=\"Wrapper\"]/div[2]/div/div/section[1]/div[2]/div/div/div/div/div[2]/div/h4",
-			"start": "|",
+			"start": "Süd",
 			"end": ""
 		}
 	},
@@ -564,7 +513,6 @@
 		"scrape": {
 			"name": "Sportprinz Sued Email",
 			"id": "134",
-			"normal": "false",
 			"url": "https://www.sportprinz-fitness.de/impressum/",
 			"xpath": "//*[@id=\"Wrapper\"]/div[2]/div/div/section[2]/div/div/div[1]/div/div/div/div/div/p[4]/span[1]/a/strong",
 			"start": "",
@@ -575,7 +523,6 @@
 		"scrape": {
 			"name": "Sportprinz West Zeiten",
 			"id": "141",
-			"normal": "false",
 			"url": "https://www.sportprinz-fitness.de/karlsruhe-west",
 			"xpath": "//*[@id=\"Wrapper\"]/div[2]/div/div/section[6]/div/div/div[1]/div/div/div[2]/div/div/p",
 			"start": "",
@@ -586,7 +533,6 @@
 		"scrape": {
 			"name": "Sportprinz West Preis",
 			"id": "142",
-			"normal": "true",
 			"url": "https://www.sportprinz-fitness.de/preise/",
 			"xpath": "//*[@id=\"Wrapper\"]/div[2]/div/div/section/div[2]/div/div/div/div/section[1]/div/div/div[1]/div/div/div/div/div/div[2]",
 			"start": "",
@@ -597,7 +543,6 @@
 		"scrape": {
 			"name": "Sportprinz West Adresse",
 			"id": "143",
-			"normal": "true",
 			"url": "https://www.sportprinz-fitness.de/karlsruhe-west",
 			"xpath": "//*[@id=\"Wrapper\"]/div[2]/div/div/section[1]/div[2]/div/div/div/div/div[2]/div/h4",
 			"start": "|",
@@ -608,18 +553,16 @@
 		"scrape": {
 			"name": "Sportprinz West Email",
 			"id": "144",
-			"normal": "true",
 			"url": "https://www.sportprinz-fitness.de/impressum/",
 			"xpath": "//*[@id=\"Wrapper\"]/div[2]/div/div/section[2]/div/div/div[1]/div/div/div/div/div/p[4]/span[1]/a/strong",
 			"start": "",
 			"end": ""
 		}
 	},
-		{
+	{
 		"scrape": {
 			"name": "JohnnyM Zeiten",
 			"id": "151",
-			"normal": "true",
 			"url": "https://jonny-m.de/clubs/karlsruhe/",
 			"xpath": "//*[@id=\"post-32544\"]/div/div/div/div[6]/div[2]/div[2]/div[2]",
 			"start": "Öffnungszeiten",
@@ -630,7 +573,6 @@
 		"scrape": {
 			"name": "JohnnyM Preis",
 			"id": "152",
-			"normal": "true",
 			"url": "https://jonny-m.de/preise/#blue-label",
 			"xpath": "//*[@id=\"blue-label\"]/div[1]/div/p[2]/span",
 			"start": "",
@@ -641,7 +583,6 @@
 		"scrape": {
 			"name": "JohnnyM Adresse",
 			"id": "153",
-			"normal": "true",
 			"url": "https://jonny-m.de/clubs/karlsruhe/",
 			"xpath": "//*[@id=\"post-32544\"]/div/div/div/div[6]/div[2]/div[2]/div[1]/div/p[1]",
 			"start": "Europaplatz",
@@ -652,18 +593,16 @@
 		"scrape": {
 			"name": "JohnnyM Email",
 			"id": "154",
-			"normal": "true",
 			"url": "https://jonny-m.de/impressum",
 			"xpath": "//*[@id=\"post-32194\"]/div/div/div/div/div/div/div/div/p[6]/a",
 			"start": "",
 			"end": ""
 		}
 	},
-		{
+	{
 		"scrape": {
 			"name": "Bulldog Zeiten",
 			"id": "161",
-			"normal": "true",
 			"url": "https://bulldog-gym.com/",
 			"xpath": "//*[@id=\"offnungszeiten\"]/div[2]/div/div/div/div/section[1]/div/div/div/div/div/div[3]",
 			"start": "",
@@ -674,7 +613,6 @@
 		"scrape": {
 			"name": "Bulldog Preis",
 			"id": "162",
-			"normal": "true",
 			"url": "",
 			"xpath": "]",
 			"start": "",
@@ -685,24 +623,20 @@
 		"scrape": {
 			"name": "Bulldog Adresse",
 			"id": "163",
-			"normal": "false",
 			"url": "https://bulldog-gym.com/",
 			"xpath": "//*[@id=\"offnungszeiten\"]/div[2]/div/div/div/div/section[1]/div/div/div/div/div/div[2]/div/div/p",
-			"start": "",
-			"end": ""
+			"start": ">",
+			"end": "<"
 		}
 	},
 	{
 		"scrape": {
 			"name": "Bulldog Email",
 			"id": "164",
-			"normal": "false",
 			"url": "https://bulldog-gym.com/impressum/",
 			"xpath": "//*[@id=\"main\"]/div/div/div/section[2]/div/div/div/div/div/div[2]/div/div/p[3]",
-			"start": "",
-			"end": ""
+			"start": "33",
+			"end": "Internet"
 		}
 	}
-	
-	
 ]
