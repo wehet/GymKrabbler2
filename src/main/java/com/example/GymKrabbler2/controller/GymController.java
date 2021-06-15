@@ -127,9 +127,7 @@ public class GymController {
 
 		for (Gym gym : gymRepository.findAll()) {
 
-			GymController gymController = new GymController();
-			gymController.update(gym.getId(), model);
-			gymRepository.save(gym);
+			this.update(gym.getId(), model);
 
 		}
 		model.addAttribute("errorMessage", errorMessage);
