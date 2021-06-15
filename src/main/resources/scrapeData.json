@@ -303,10 +303,10 @@
 		"scrape": {
 			"name": "Die Basis Adresse",
 			"id": "83",
-			"url": "https://www.venicebeach-fitness.de/service/impressum.html",
-			"xpath": "//*[@id=\"footer\"]/div/div/div[1]/div/div[2]/p/a",
-			"start": "",
-			"end": ""
+			"url": "https://basis-karlsruhe.de/impressum/",
+			"xpath": "//*[@id=\"content\"]/section/div/div/div/div/div/div/div[2]/div",
+			"start": "GmbH",
+			"end": "Vertreten"
 		}
 	},
 	{
@@ -315,7 +315,7 @@
 			"id": "84",
 			"url": "https://basis-karlsruhe.de/impressum/",
 			"xpath": "//*[@id=\"content\"]/section/div/div/div/div/div/div/div[2]/div/p[8]",
-			"start": ":",
+			"start": "",
 			"end": ""
 		}
 	},
