@@ -38,13 +38,13 @@ public class WriteJSONGyms {
 				gymDetails.put("url", gym.getUrl());
 				gymDetails.put("email", gym.getEmail());
 				gymDetails.put("preis", gym.getPreis());
+				gymDetails.put("scrapeZeiten", gym.getScrapeZeiten());
+				gymDetails.put("scrapePreis", gym.getScrapePreis());
+				gymDetails.put("scrapeAdresse", gym.getScrapeAdresse());
+				gymDetails.put("scrapeEmail", gym.getScrapeEmail());
 				
 				gymObject.put("gym", gymDetails);
 				gymList.add(gymObject);
-				
-
-				
-
 			}
 			file.write(gymList.toJSONString());
 			file.close();

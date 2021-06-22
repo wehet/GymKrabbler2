@@ -1,24 +1,15 @@
 package com.example.GymKrabbler2.controller;
 
 import java.io.IOException;
-import org.json.simple.JSONObject;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RequestParam;
-
 import com.example.GymKrabbler2.model.Gym;
-import com.example.GymKrabbler2.model.ScrapeData;
 import com.example.GymKrabbler2.model.WriteJSONGyms;
 import com.example.GymKrabbler2.repository.GymRepository;
 import com.example.GymKrabbler2.repository.ScrapeDataRepository;
-import com.example.GymKrabbler2.webCrawler.ScrapeController;
 import com.example.GymKrabbler2.webCrawler.Scraper;
 
 @Controller
@@ -54,15 +45,10 @@ public class GymController {
 
 	@GetMapping("/updateGym/{id}")
 	public String update(@PathVariable("id") long id, Model model) {
-		ScrapeController scrapeController = new ScrapeController();
 		Gym gym = gymRepository.findById(id).get();
 
-//		System.out.println(scrapeDataRepository.findById((long) 11).get().getUrl());
-
 		try {
-
-			String zeit = scrapeController.scrape(id * 10 + 1, scrapeDataRepository);
-			System.out.println(zeit);
+			String zeit = new Scraper(scrapeDataRepository.findById(gym.getScrapeZeiten()).get()).scrapeWebsite();
 
 			gym.setZeiten(zeit);
 
@@ -72,7 +58,7 @@ public class GymController {
 		}
 		try {
 
-			String preis = scrapeController.scrape(id * 10 + 2, scrapeDataRepository);
+			String preis = new Scraper(scrapeDataRepository.findById(gym.getScrapePreis()).get()).scrapeWebsite();
 			System.out.println(preis);
 
 			gym.setPreis(preis);
@@ -83,7 +69,7 @@ public class GymController {
 		}
 		try {
 
-			String adresse = scrapeController.scrape(id * 10 + 3, scrapeDataRepository);
+			String adresse = new Scraper(scrapeDataRepository.findById(gym.getScrapeAdresse()).get()).scrapeWebsite();
 			System.out.println(adresse);
 
 			gym.setAdresse(adresse);
@@ -94,7 +80,7 @@ public class GymController {
 		}
 		try {
 
-			String email = scrapeController.scrape(id * 10 + 4, scrapeDataRepository);
+			String email = new Scraper(scrapeDataRepository.findById(gym.getScrapeEmail()).get()).scrapeWebsite();
 			System.out.println(email);
 
 			gym.setEmail(email);
@@ -123,6 +109,7 @@ public class GymController {
 
 		for (Gym gym : gymRepository.findAll()) {
 
+			System.out.println("" + gym.getId());
 			this.update(gym.getId(), model);
 
 		}

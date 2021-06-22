@@ -14,14 +14,17 @@ public class Gym {
 	private String preis;
 	private String adresse;
 	private String bewertung;
-	
-	
+	private long scrapeZeiten;
+	private long scrapePreis;
+	private long scrapeAdresse;
+	private long scrapeEmail;
 
 	public Gym() {
 		super();
 	}
-	
-	public Gym(long id, String name, String url, String email, String zeiten, String preis, String adresse, String bewertung) {
+
+	public Gym(long id, String name, String url, String email, String zeiten, String preis, String adresse,
+			String bewertung, long scrapeZeiten, long scrapePreis, long scrapeAdresse, long scrapeEmail) {
 		this.id = id;
 		this.name = name;
 		this.url = url;
@@ -30,7 +33,10 @@ public class Gym {
 		this.bewertung = bewertung;
 		this.preis = preis;
 		this.zeiten = zeiten;
-		
+		this.scrapeZeiten = scrapeZeiten;
+		this.scrapePreis = scrapePreis;
+		this.scrapeAdresse = scrapeAdresse;
+		this.scrapeZeiten = scrapeZeiten;
 	}
 
 	public long getId() {
@@ -100,6 +106,38 @@ public class Gym {
 
 	public void setBewertung(String bewertung) {
 		this.bewertung = bewertung;
+	}
+
+	public long getScrapeZeiten() {
+		return scrapeZeiten;
+	}
+
+	public void setScrapeZeiten(long scrapeZeiten) {
+		this.scrapeZeiten = scrapeZeiten;
+	}
+
+	public long getScrapePreis() {
+		return scrapePreis;
+	}
+
+	public void setScrapePreis(long scrapePreis) {
+		this.scrapePreis = scrapePreis;
+	}
+
+	public long getScrapeAdresse() {
+		return scrapeAdresse;
+	}
+
+	public void setScrapeAdresse(long scrapeAdresse) {
+		this.scrapeAdresse = scrapeAdresse;
+	}
+
+	public long getScrapeEmail() {
+		return scrapeEmail;
+	}
+
+	public void setScrapeEmail(long scrapeEmail) {
+		this.scrapeEmail = scrapeEmail;
 	}
 
 }

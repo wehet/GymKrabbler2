@@ -1,27 +1,21 @@
 package com.example.GymKrabbler2.webCrawler;
 
-import java.io.IOException;
-import java.net.MalformedURLException;
-import java.util.Iterator;
-
 import com.example.GymKrabbler2.model.ScrapeData;
-import com.example.GymKrabbler2.webCrawler.exceptions.ScrapeException;
-import com.gargoylesoftware.htmlunit.FailingHttpStatusCodeException;
 import com.gargoylesoftware.htmlunit.WebClient;
 import com.gargoylesoftware.htmlunit.html.HtmlElement;
 import com.gargoylesoftware.htmlunit.html.HtmlPage;
 
 public class Scraper {
+	private ScrapeData scrapeData;
 
 //	static WebClient client = new WebClient();
-	private ScrapeData scrapeData;
 
 	public Scraper(ScrapeData scrapeData) {
 		this.scrapeData = scrapeData;
 	}
 
 	// General Scraping method
-	public String scrapeWebsite(ScrapeData scrapeData) throws Exception {
+	public String scrapeWebsite() throws Exception {
 		@SuppressWarnings("resource")
 		WebClient client = new WebClient();
 		client.getOptions().setCssEnabled(false);

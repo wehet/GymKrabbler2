@@ -1,7 +1,5 @@
 package com.example.GymKrabbler2.model;
 
-
-
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
@@ -13,85 +11,59 @@ import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
 import org.json.simple.parser.ParseException;
 
-
 import com.example.GymKrabbler2.repository.GymRepository;
- 
-public class ReadJSONGyms 
+
+public class ReadJSONGyms
 
 {
 	static JSONParser jsonParser = new JSONParser();
-	
-	
-    
-    @SuppressWarnings("unchecked")
+
+	@SuppressWarnings("unchecked")
 	public static void parseGyms(GymRepository gymRepository) {
-    	  try (FileReader reader = new FileReader("src\\main\\resources\\gymData.json"))
-        {
-            //Read JSON file
-            Object obj = jsonParser.parse(reader);
- 
-            JSONArray gymList = (JSONArray) obj;
-            System.out.println(gymList);
-             
-            List<Gym> gyms = new LinkedList<Gym>();
-            
-            //Iterate over gym array
-            gymList.forEach( emp -> parseGymObject( (JSONObject) emp, gyms) );
-            
-            //update the repository
-            gymRepository.saveAll(gyms);
-            
-           
- 
-        } catch (FileNotFoundException e) {
-            e.printStackTrace();
-        } catch (IOException e) {
-            e.printStackTrace();
-        } catch (ParseException e) {
-            e.printStackTrace();
-        }
-    }
- 
-    private static void parseGymObject(JSONObject employee, List<Gym> gyms) 
-    {
-        //Get gym object within list
-        JSONObject employeeObject = (JSONObject) employee.get("gym");
-        
-        //Get id
-        long id = Long.parseLong((String) employeeObject.get("id"));
-        System.out.println("" + id);
-        
-        //Get gym name
-        String name = (String) employeeObject.get("name");    
-        System.out.println(name);
-         
-        //Get gym url
-        String url = (String) employeeObject.get("url");  
-        System.out.println(url);
-         
-        //Get gym email
-        String email = (String) employeeObject.get("email");    
-        System.out.println(email);
-        
-        String zeiten = (String) employeeObject.get("zeiten");    
-        System.out.println(zeiten);
-        
-        String adresse = (String) employeeObject.get("adresse");    
-        System.out.println(adresse);
-        
-        String bewertung = (String) employeeObject.get("bewertung");    
-        System.out.println(bewertung);
-        
-        String preis = (String) employeeObject.get("preis");    
-        System.out.println(preis);
-        
-        
-       
-        //add new Gym
-        gyms.add(new Gym(id, name, url, email, zeiten, preis, adresse, bewertung ));
-        
-        
-        
-        
-    }
+		try (FileReader reader = new FileReader("src\\main\\resources\\gymData.json")) {
+			// Read JSON file
+			Object obj = jsonParser.parse(reader);
+
+			JSONArray gymList = (JSONArray) obj;
+			System.out.println(gymList);
+
+			List<Gym> gyms = new LinkedList<Gym>();
+
+			// Iterate over gym array
+			gymList.forEach(gym -> parseGymObject((JSONObject) gym, gyms));
+
+			// update the repository
+			gymRepository.saveAll(gyms);
+
+		} catch (FileNotFoundException e) {
+			e.printStackTrace();
+		} catch (IOException e) {
+			e.printStackTrace();
+		} catch (ParseException e) {
+			e.printStackTrace();
+		}
+	}
+
+	private static void parseGymObject(JSONObject gym, List<Gym> gyms) {
+		// Get gym object within list
+		JSONObject gymObject = (JSONObject) gym.get("gym");
+
+		long id = Long.parseLong((String) gymObject.get("id"));
+		String name = (String) gymObject.get("name");
+		String url = (String) gymObject.get("url");
+		String email = (String) gymObject.get("email");
+		String zeiten = (String) gymObject.get("zeiten");
+		String adresse = (String) gymObject.get("adresse");
+		String bewertung = (String) gymObject.get("bewertung");
+		String preis = (String) gymObject.get("preis");
+		long scrapeZeiten = Long.parseLong((String) gymObject.get("scrapeZeiten"));
+		long scrapePreis = Long.parseLong((String) gymObject.get("scrapePreis"));
+		long scrapeAdresse = Long.parseLong((String) gymObject.get("scrapeAdresse"));
+		long scrapeEmail = Long.parseLong((String) gymObject.get("scrapeEmail"));
+
+		// add new Gym
+		gyms.add(new Gym(id, name, url, email, zeiten, preis, adresse, bewertung, scrapeZeiten, scrapePreis,
+				scrapeAdresse, scrapeEmail));
+
+	}
 }
