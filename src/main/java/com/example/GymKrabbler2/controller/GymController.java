@@ -38,70 +38,6 @@ public class GymController {
 		return "index";
 	}
 
-//	@PostMapping("/update/{id}")
-//	public String updateGym(@PathVariable("id") long id, Gym gym, BindingResult result, Model model) {
-//		if (result.hasErrors()) {
-//			gym.setId(id);
-//			return "update-gym";
-//		}
-//
-//		gymRepository.save(gym);
-//		return "redirect:/index";
-//	}
-
-	@GetMapping("/updateGym/{id}")
-	public String update(@PathVariable("id") long id, Model model) {
-		Gym gym = gymRepository.findById(id).get();
-
-		try {
-			String zeit = new Scraper(scrapeDataRepository.findById(gym.getScrapeZeiten()).get()).scrapeWebsite();
-
-			gym.setZeiten(zeit);
-
-		} catch (Exception e) {
-			errorMessage = "Die Öffnungszeiten des Gyms " + gym.getName()
-					+ " konnten nicht gescraped werden :( Bitte kontaktieren Sie den Support unter xxx@example.com";
-		}
-		try {
-
-			String preis = new Scraper(scrapeDataRepository.findById(gym.getScrapePreis()).get()).scrapeWebsite();
-			System.out.println(preis);
-
-			gym.setPreis(preis);
-
-		} catch (Exception e) {
-			errorMessage = "Der Preis des Gyms " + gym.getName()
-					+ " konnte nicht gescraped werden :( Bitte kontaktieren Sie den Support unter xxx@example.com";
-		}
-		try {
-
-			String adresse = new Scraper(scrapeDataRepository.findById(gym.getScrapeAdresse()).get()).scrapeWebsite();
-			System.out.println(adresse);
-
-			gym.setAdresse(adresse);
-
-		} catch (Exception e) {
-			errorMessage = "Die Adresse des Gyms " + gym.getName()
-					+ " konnte nicht gescraped werden :( Bitte kontaktieren Sie den Support unter xxx@example.com";
-		}
-		try {
-
-			String email = new Scraper(scrapeDataRepository.findById(gym.getScrapeEmail()).get()).scrapeWebsite();
-			System.out.println(email);
-
-			gym.setEmail(email);
-
-		} catch (Exception e) {
-			errorMessage = "Die Email des Gyms " + gym.getName()
-					+ " konnte nicht gescraped werden :( Bitte kontaktieren Sie den Support unter xxx@example.com";
-		}
-
-		gymRepository.save(gym);
-		model.addAttribute("errorMessage", errorMessage);
-
-		return "redirect:/index";
-	}
-
 	@GetMapping("/messageBox")
 	public String messageBox(Model model) throws IOException {
 		model.addAttribute("errorMessage", errorMessage);
@@ -112,14 +48,54 @@ public class GymController {
 
 	@GetMapping("/updateAllGyms")
 	public String update(Model model) {
-		
-		
 
 		for (Gym gym : gymRepository.findAll()) {
 
-			System.out.println("" + gym.getId());
-			this.update(gym.getId(), model);
-			
+			try {
+				String zeit = new Scraper(scrapeDataRepository.findById(gym.getScrapeZeiten()).get()).scrapeWebsite();
+
+				gym.setZeiten(zeit);
+
+			} catch (Exception e) {
+				errorMessage = "Die Öffnungszeiten des Gyms " + gym.getName()
+						+ " konnten nicht gescraped werden :( Bitte kontaktieren Sie den Support unter xxx@example.com";
+			}
+			try {
+
+				String preis = new Scraper(scrapeDataRepository.findById(gym.getScrapePreis()).get()).scrapeWebsite();
+				System.out.println(preis);
+
+				gym.setPreis(preis);
+
+			} catch (Exception e) {
+				errorMessage = "Der Preis des Gyms " + gym.getName()
+						+ " konnte nicht gescraped werden :( Bitte kontaktieren Sie den Support unter xxx@example.com";
+			}
+			try {
+
+				String adresse = new Scraper(scrapeDataRepository.findById(gym.getScrapeAdresse()).get())
+						.scrapeWebsite();
+				System.out.println(adresse);
+
+				gym.setAdresse(adresse);
+
+			} catch (Exception e) {
+				errorMessage = "Die Adresse des Gyms " + gym.getName()
+						+ " konnte nicht gescraped werden :( Bitte kontaktieren Sie den Support unter xxx@example.com";
+			}
+			try {
+
+				String email = new Scraper(scrapeDataRepository.findById(gym.getScrapeEmail()).get()).scrapeWebsite();
+				System.out.println(email);
+
+				gym.setEmail(email);
+
+			} catch (Exception e) {
+				errorMessage = "Die Email des Gyms " + gym.getName()
+						+ " konnte nicht gescraped werden :( Bitte kontaktieren Sie den Support unter xxx@example.com";
+			}
+
+			gymRepository.save(gym);
 
 		}
 		model.addAttribute("errorMessage", errorMessage);
