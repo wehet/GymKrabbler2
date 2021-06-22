@@ -1,6 +1,12 @@
 package com.example.GymKrabbler2.controller;
 
 import java.io.IOException;
+import org.json.simple.JSONObject;
+
+import javax.swing.JFrame;
+import javax.swing.JPanel;
+import javax.swing.JProgressBar;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -106,11 +112,14 @@ public class GymController {
 
 	@GetMapping("/updateAllGyms")
 	public String update(Model model) {
+		
+		
 
 		for (Gym gym : gymRepository.findAll()) {
 
 			System.out.println("" + gym.getId());
 			this.update(gym.getId(), model);
+			
 
 		}
 		model.addAttribute("errorMessage", errorMessage);
