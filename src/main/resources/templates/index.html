@@ -8,18 +8,27 @@
 </head>
 <body id="Content">
 	<div class="header">
-		<img src="styles/logo3.png" alt="Logo" align="left" style="height: 100px; width: 130px;">
+		<img src="styles/logo3.png" alt="Logo" align="left" style="height: 150px; width: 170px;">
 		<h1 align="center">GymKrabbler</h1>
 		<h2 style="text-align: center; font-style: italic;">Finde dein
 			Fitnesstudio in Karlsruhe!</h2>
 	</div>
 	<br>
+	<center>
+		<h3>Zur vollständigen Ansicht bitte den folgenden Button betätigen:</h3>
+			<p>
+				<button class="glow-on-hover" type="button">
+					<a th:href="@{/updateAllGyms/}">Alles aktualisieren</a>
+				</button>
+			</p>
+		</center>
 	<div th:switch="${gyms}" class="container">
 		<!--SearchFunction-->
 		<input type="text" id="myInput" onkeyup="myFunction()"
 			placeholder="Search for names...">
 			
 		<center>
+			
 
 			<h3 th:case="null">Bisher gibt es noch keine Fitnessstudios!</h3>
 			<div th:case="*">
@@ -54,11 +63,7 @@
 					</tbody>
 				</table>
 			</div>
-			<p>
-				<button class="glow-on-hover" type="button">
-					<a th:href="@{/updateAllGyms/}">Update All</a>
-				</button>
-			</p>
+			
 		</center>
 	</div>
 	<center>

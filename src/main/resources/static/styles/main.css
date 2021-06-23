@@ -20,141 +20,162 @@ h3 {
     color: white;
 }
 
+/*Links*/
 
-table {
-
-    width: 95%;
+/* unvisited link */
+a:link {
+    color: #ff9271;
 }
 
-p {
-    font-family: sans-serif;
-    color: white;
+/* visited link */
+a:visited {
+    color: #C0C0C0;
 }
 
-td,
-th {
-    width: 4rem;
-    height: 2rem;
-    /* border: 1px solid white; */
-    text-align: center;
-    font-family: Arial;
-    color: white;
+/* mouse over link */
+a:hover {
+    color: #8ebf42;
 }
 
-th {
-    background: rgba(85, 85, 85, 1);
-    position: sticky;
-    top: 0;
+/* selected link */
+a:active {
+    color: #800000;
 }
 
-td {
-    /* background: black;*/
-    background: rgba(51, 51, 51, 1);
-}
+    table {
 
-
-
-body {
-    background-color: black;
-}
-
-.header {
-    padding: 0.8em;
-    width: 100%;
-    background: rgba(51, 51, 51, 1);
-    border-top: 10px solid #ff9271;
-}
-
-/*button*/
-
-.glow-on-hover {
-    width: 220px;
-    height: 50px;
-    border: none;
-    outline: none;
-    color: #fff;
-    background: #111;
-    cursor: pointer;
-    position: relative;
-    z-index: 0;
-    border-radius: 10px;
-}
-
-.glow-on-hover:before {
-    content: '';
-    background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
-    position: absolute;
-    top: -2px;
-    left: -2px;
-    background-size: 400%;
-    z-index: -1;
-    filter: blur(5px);
-    width: calc(100% + 4px);
-    height: calc(100% + 4px);
-    animation: glowing 20s linear infinite;
-    opacity: 0;
-    transition: opacity .3s ease-in-out;
-    border-radius: 10px;
-}
-
-.glow-on-hover:active {
-    color: #000
-}
-
-.glow-on-hover:active:after {
-    background: transparent;
-}
-
-.glow-on-hover:hover:before {
-    opacity: 1;
-}
-
-.glow-on-hover:after {
-    z-index: -1;
-    content: '';
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background: #111;
-    left: 0;
-    top: 0;
-    border-radius: 10px;
-}
-
-@keyframes glowing {
-    0% {
-        background-position: 0 0;
+        width: 95%;
     }
 
-    50% {
-        background-position: 400% 0;
+    p {
+        font-family: sans-serif;
+        color: white;
     }
 
-    100% {
-        background-position: 0 0;
+    td,
+    th {
+        width: 4rem;
+        height: 2rem;
+        /* border: 1px solid white; */
+        text-align: center;
+        font-family: Arial;
+        color: white;
     }
-}
 
-/*Search*/
+    th {
+        background: rgba(85, 85, 85, 1);
+        position: sticky;
+        top: 0;
+    }
 
-#myInput {
-    background-image: url("src/main/resources/static/styles/lupe.png");
-    /* Add a search icon to input */
-    background-position: 10px 12px;
-    /* Position the search icon */
-    background-repeat: no-repeat;
-    /* Do not repeat the icon image */
-    width: 20%;
-    /* Full-width */
-    font-size: 16px;
-    /* Increase font-size */
-    padding: 12px 20px 12px 40px;
-    /* Add some padding */
-    border: 1px solid #ddd;
-    /* Add a grey border */
-    margin-bottom: 12px;
-    /* Add some space below the input */
-    margin-left: 2.5%;
+    td {
+        /* background: black;*/
+        background: rgba(51, 51, 51, 1);
+    }
 
 
-}
+
+    body {
+        background-color: black;
+    }
+
+    .header {
+        padding: 0.8em;
+        width: 100%;
+        background: rgba(51, 51, 51, 1);
+        border-top: 10px solid #ff9271;
+    }
+
+    /*button*/
+
+    .glow-on-hover {
+        width: 220px;
+        height: 50px;
+        border: none;
+        outline: none;
+        color: #fff;
+        background: #555;
+        cursor: pointer;
+        position: relative;
+        z-index: 0;
+        border-radius: 10px;
+    }
+
+    .glow-on-hover:before {
+        content: '';
+        background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
+        position: absolute;
+        top: -2px;
+        left: -2px;
+        background-size: 400%;
+        z-index: -1;
+        filter: blur(5px);
+        width: calc(100% + 4px);
+        height: calc(100% + 4px);
+        animation: glowing 20s linear infinite;
+        opacity: 0;
+        transition: opacity .3s ease-in-out;
+        border-radius: 10px;
+    }
+
+    .glow-on-hover:active {
+        color: #000
+    }
+
+    .glow-on-hover:active:after {
+        background: transparent;
+    }
+
+    .glow-on-hover:hover:before {
+        opacity: 1;
+    }
+
+    .glow-on-hover:after {
+        z-index: -1;
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background: #111;
+        left: 0;
+        top: 0;
+        border-radius: 10px;
+    }
+
+    @keyframes glowing {
+        0% {
+            background-position: 0 0;
+        }
+
+        50% {
+            background-position: 400% 0;
+        }
+
+        100% {
+            background-position: 0 0;
+        }
+    }
+
+    /*Search*/
+
+    #myInput {
+        background-image: url("src/main/resources/static/styles/lupe.png");
+        /* Add a search icon to input */
+        background-position: 10px 12px;
+        /* Position the search icon */
+        background-repeat: no-repeat;
+        /* Do not repeat the icon image */
+        width: 20%;
+        /* Full-width */
+        font-size: 16px;
+        /* Increase font-size */
+        padding: 12px 20px 12px 40px;
+        /* Add some padding */
+        border: 1px solid #ddd;
+        /* Add a grey border */
+        margin-bottom: 12px;
+        /* Add some space below the input */
+        margin-left: 2.5%;
+
+
+    }
