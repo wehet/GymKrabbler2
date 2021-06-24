@@ -25,6 +25,7 @@ public class Scraper {
 		HtmlPage page = null;
 		try {
 			page = client.getPage(scrapeData.getUrl());
+			System.out.println("getPage: " + page);
 
 			HtmlElement element = ((HtmlElement) page.getFirstByXPath(scrapeData.getXpath()));
 
