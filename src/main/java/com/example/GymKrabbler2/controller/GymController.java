@@ -52,13 +52,15 @@ public class GymController {
 		for (Gym gym : gymRepository.findAll()) {
 
 			Scraper scraper = new Scraper();
+			
+			
 
 			try {
 				String zeit = scraper.scrapeWebsite(scrapeDataRepository.findById(gym.getScrapeZeiten()).get());
 
 				gym.setZeiten(zeit);
 
-			} catch (Exception e) {
+			} catch (Exception e1) {
 				errorMessage = "Die Öffnungszeiten des Gyms " + gym.getName()
 						+ " konnten nicht gescraped werden :( Bitte kontaktieren Sie den Support unter xxx@example.com";
 			}
@@ -69,7 +71,7 @@ public class GymController {
 
 				gym.setPreis(preis);
 
-			} catch (Exception e) {
+			} catch (Exception e2) {
 				errorMessage = "Der Preis des Gyms " + gym.getName()
 						+ " konnte nicht gescraped werden :( Bitte kontaktieren Sie den Support unter xxx@example.com";
 			}
@@ -80,21 +82,25 @@ public class GymController {
 
 				gym.setAdresse(adresse);
 
-			} catch (Exception e) {
+			} catch (Exception e3) {
 				errorMessage = "Die Adresse des Gyms " + gym.getName()
 						+ " konnte nicht gescraped werden :( Bitte kontaktieren Sie den Support unter xxx@example.com";
 			}
+			
 			try {
+				
+				System.out.println("Email id lautet: " + gym.getScrapeEmail());
 
 				String email = scraper.scrapeWebsite(scrapeDataRepository.findById(gym.getScrapeEmail()).get());
 				System.out.println(email);
 
 				gym.setEmail(email);
 
-			} catch (Exception e) {
+			} catch (Exception e4) {
 				errorMessage = "Die Email des Gyms " + gym.getName()
 						+ " konnte nicht gescraped werden :( Bitte kontaktieren Sie den Support unter xxx@example.com";
 			}
+			
 
 			gymRepository.save(gym);
 

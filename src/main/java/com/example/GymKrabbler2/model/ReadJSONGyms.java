@@ -34,6 +34,11 @@ public class ReadJSONGyms
 
 			// update the repository
 			gymRepository.saveAll(gyms);
+		
+			for(Gym gym : gymRepository.findAll()) {
+				System.out.println("ADRESSE " +gym.getScrapeAdresse());
+				System.out.println("EMAIL " +gym.getScrapeEmail());
+			}
 
 		} catch (FileNotFoundException e) {
 			e.printStackTrace();
@@ -64,6 +69,7 @@ public class ReadJSONGyms
 		// add new Gym
 		gyms.add(new Gym(id, name, url, email, zeiten, preis, adresse, bewertung, scrapeZeiten, scrapePreis,
 				scrapeAdresse, scrapeEmail));
+		
 
 	}
 }
