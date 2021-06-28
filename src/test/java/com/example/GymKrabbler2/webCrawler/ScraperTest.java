@@ -46,8 +46,8 @@ public class ScraperTest {
 //		PowerMockito.whenNew(MyObject.class).withNoArguments().thenReturn(myObjectMock);
 		
 		
-		Scraper s = new Scraper(mockData);
-		String el = s.scrapeWebsite(); 
+		Scraper s = new Scraper();
+		String el = s.scrapeWebsite(mockData); 
 		assertEquals("irgendwas", el);
 	}
 

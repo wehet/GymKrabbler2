@@ -10,12 +10,10 @@ public class Scraper {
 
 //	static WebClient client = new WebClient();
 
-	public Scraper(ScrapeData scrapeData) {
-		this.scrapeData = scrapeData;
-	}
+	public Scraper() {}
 
 	// General Scraping method
-	public String scrapeWebsite() throws Exception {
+	public String scrapeWebsite(ScrapeData scrapeData) throws Exception {
 		@SuppressWarnings("resource")
 		WebClient client = new WebClient();
 		client.getOptions().setCssEnabled(false);
@@ -38,9 +36,9 @@ public class Scraper {
 
 		// evtl noch was für Catch überlegen
 
-		GymParser scraper = new GymParser();
+		GymParser parser = new GymParser();
 		try {
-			el = scraper.getTokens(el, scrapeData.getStart(), scrapeData.getEnd());
+			el = parser.getTokens(el, scrapeData.getStart(), scrapeData.getEnd());
 		} catch (Exception e) {
 			System.out.println("Fehler beim Parsing");
 			throw new Exception();

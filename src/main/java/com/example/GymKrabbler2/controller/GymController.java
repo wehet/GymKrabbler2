@@ -51,8 +51,10 @@ public class GymController {
 
 		for (Gym gym : gymRepository.findAll()) {
 
+			Scraper scraper = new Scraper();
+
 			try {
-				String zeit = new Scraper(scrapeDataRepository.findById(gym.getScrapeZeiten()).get()).scrapeWebsite();
+				String zeit = scraper.scrapeWebsite(scrapeDataRepository.findById(gym.getScrapeZeiten()).get());
 
 				gym.setZeiten(zeit);
 
@@ -62,7 +64,7 @@ public class GymController {
 			}
 			try {
 
-				String preis = new Scraper(scrapeDataRepository.findById(gym.getScrapePreis()).get()).scrapeWebsite();
+				String preis = scraper.scrapeWebsite(scrapeDataRepository.findById(gym.getScrapePreis()).get());
 				System.out.println(preis);
 
 				gym.setPreis(preis);
@@ -73,8 +75,7 @@ public class GymController {
 			}
 			try {
 
-				String adresse = new Scraper(scrapeDataRepository.findById(gym.getScrapeAdresse()).get())
-						.scrapeWebsite();
+				String adresse = scraper.scrapeWebsite(scrapeDataRepository.findById(gym.getScrapeAdresse()).get());
 				System.out.println(adresse);
 
 				gym.setAdresse(adresse);
@@ -85,7 +86,7 @@ public class GymController {
 			}
 			try {
 
-				String email = new Scraper(scrapeDataRepository.findById(gym.getScrapeEmail()).get()).scrapeWebsite();
+				String email = scraper.scrapeWebsite(scrapeDataRepository.findById(gym.getScrapeEmail()).get());
 				System.out.println(email);
 
 				gym.setEmail(email);
