@@ -36,7 +36,7 @@ public class Gym {
 		this.scrapeZeiten = scrapeZeiten;
 		this.scrapePreis = scrapePreis;
 		this.scrapeAdresse = scrapeAdresse;
-		this.scrapeZeiten = scrapeZeiten;
+		this.scrapeEmail = scrapeEmail;
 	}
 
 	public long getId() {
