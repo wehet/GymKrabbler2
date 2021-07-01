@@ -70,6 +70,7 @@ public class GymController {
 				System.out.println(preis);
 
 				gym.setPreis(preis);
+			
 
 			} catch (Exception e2) {
 				errorMessage = "Der Preis des Gyms " + gym.getName()
@@ -103,6 +104,9 @@ public class GymController {
 			
 
 			gymRepository.save(gym);
+			
+			//Updaten der Gyms
+			//WriteJSONGyms.updateJSON(gymRepository);
 
 		}
 		model.addAttribute("errorMessage", errorMessage);
