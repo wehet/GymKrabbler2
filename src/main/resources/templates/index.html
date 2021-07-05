@@ -53,13 +53,10 @@
 							<td th:text="${gym.zeiten}"></td>
 							<td th:text="${gym.preis}"></td>
 							<td th:text="${gym.adresse}"></td>
-							<td th:text="${gym.email}"></td>
+							<!-- <td th:text="${gym.email}"></td> -->
+							<td><a th:text="${gym.email}" th:href="'mailto:' + ${gym.email}"></a></td>
 							<td><a th:text="${gym.url}" th:href="${gym.url}"></a></td>
-				
-
-
 						</tr>
-
 					</tbody>
 				</table>
 			</div>
