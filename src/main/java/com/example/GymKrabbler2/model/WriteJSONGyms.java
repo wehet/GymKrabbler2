@@ -60,37 +60,6 @@ public class WriteJSONGyms {
 	@SuppressWarnings("unchecked")
 	public static void main(String[] args) {
 
-//        //First Employee
-//        JSONObject gymDetails = new JSONObject();
-//        gymDetails.put("firstName", "Lokesh");
-//        gymDetails.put("lastName", "Gupta");
-//        gymDetails.put("website", "howtodoinjava.com");
-//         
-//        JSONObject gymObject = new JSONObject(); 
-//        gymObject.put("employee", gymDetails);
-//         
-//        //Second Employee
-//        JSONObject gymDetails2 = new JSONObject();
-//        gymDetails2.put("firstName", "Brian");
-//        gymDetails2.put("lastName", "Schultz");
-//        gymDetails2.put("website", "example.com");
-//         
-//        JSONObject gymObject2 = new JSONObject(); 
-//        gymObject2.put("employee", gymDetails2);
-//         
-//        //Add employees to list
-//        JSONArray gymList = new JSONArray();
-//        gymList.add(gymObject);
-//        gymList.add(gymObject2);
-//         
-//        //Write JSON file
-//        try (FileWriter file = new FileWriter("src\\main\\resources\\gymData.json")) {
-//            //We can write any JSONArray or JSONObject instance to the file
-//            file.write(gymList.toJSONString()); 
-//            file.flush();
-// 
-//        } catch (IOException e) {
-//            e.printStackTrace();
-//        }
+
 	}
 }
