@@ -23,9 +23,15 @@ function myFunction() {
 
 function fillProgressBar() {
 	var progressBarContainer, progressBarFilling;
-	progressBarContainer = document.getElementsByClassName("progress")
-	progressBarFilling = document.getElementsByClassName("progress-filling")
-	//progressBarContainer.style.display = "inline";
+	progressBarContainer = document.getElementById("progressID")
+	progressBarFilling = document.getElementById("progress-fill-ID")
+	setTimeout(function () {
+		window.alert(document.getElementById("myTable").rows[1].cells[3].innerHTML)
+    }, 5000);
+		//progressBarContainer.style.display = "inline";
 	//progressBarFilling.style.display = "inline";
-	progressBarFilling.style.width = "50%";
+	progressBarFilling.style.width = "80%";
+	window.alert("something happened: " + document.getElementById("test").textContent)
+	
+	
 }

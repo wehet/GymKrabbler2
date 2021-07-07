@@ -40,13 +40,15 @@
 		<h3>Zur vollständigen Ansicht bitte den folgenden Button
 			betätigen:</h3>
 		<p>
-			<button class="glow-on-hover" type="button"
-				onclick="fillProgressBar()">
+			<button class="glow-on-hover" type="button" onclick="fillProgressBar()">
 				<a th:href="@{/updateAllGyms/}">Alles aktualisieren</a>
 			</button>
+			<button class="glow-on-hover" type="button" id="test"
+				onclick="fillProgressBar()">click!
+			</button>
 		</p>
-		<div class="progress">
-			<div class="progress-filling"></div>
+		<div id="progressID" class="progress">
+			<div id="progress-fill-ID" class="progress-filling"></div>
 		</div>
 	</center>
 	<div th:switch="${gyms}" class="container">
