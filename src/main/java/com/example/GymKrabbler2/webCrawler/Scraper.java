@@ -31,6 +31,7 @@ public class Scraper {
 		} catch (Exception e) {
 
 			System.out.println("Fehler beim Scraper");
+			e.printStackTrace();
 			throw new Exception();
 		}
 
