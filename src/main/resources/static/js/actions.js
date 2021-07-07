@@ -1,22 +1,37 @@
 
 function myFunction() {
-  // Declare variables
-  var input, filter, table, tr, td, i, txtValue;
-  input = document.getElementById("myInput");
-  filter = input.value.toUpperCase();
-  table = document.getElementById("myTable");
-  tr = table.getElementsByTagName("tr");
+	// Declare variables
+	var input, filter, table, tr, td, i, txtValue;
+	input = document.getElementById("myInput");
+	filter = input.value.toUpperCase();
+	table = document.getElementById("myTable");
+	tr = table.getElementsByTagName("tr");
 
-  // Loop through all table rows, and hide those who don't match the search query
-  for (i = 0; i < tr.length; i++) {
-    td = tr[i].getElementsByTagName("td")[0];
-    if (td) {
-      txtValue = td.textContent || td.innerText;
-      if (txtValue.toUpperCase().indexOf(filter) > -1) {
-        tr[i].style.display = "";
-      } else {
-        tr[i].style.display = "none";
-      }
-    }
-  }
+	// Loop through all table rows, and hide those who don't match the search query
+	for (i = 0; i < tr.length; i++) {
+		td = tr[i].getElementsByTagName("td")[0];
+		if (td) {
+			txtValue = td.textContent || td.innerText;
+			if (txtValue.toUpperCase().indexOf(filter) > -1) {
+				tr[i].style.display = "";
+			} else {
+				tr[i].style.display = "none";
+			}
+		}
+	}
+}
+
+function fillProgressBar() {
+	var progressBarContainer, progressBarFilling;
+	progressBarContainer = document.getElementById("progressID")
+	progressBarFilling = document.getElementById("progress-fill-ID")
+	setTimeout(function () {
+		window.alert(document.getElementById("myTable").rows[1].cells[3].innerHTML)
+    }, 5000);
+		//progressBarContainer.style.display = "inline";
+	//progressBarFilling.style.display = "inline";
+	progressBarFilling.style.width = "80%";
+	window.alert("something happened: " + document.getElementById("test").textContent)
+	
+	
 }

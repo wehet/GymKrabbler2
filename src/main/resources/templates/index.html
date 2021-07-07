@@ -5,30 +5,59 @@
 <link th:href="@{/styles/main.css}" rel="stylesheet" />
 <script type="text/javascript" th:src="@{/js/actions.js}"></script>
 <title>Gyms in Karlsruhe</title>
+<script type="text/javascript">
+	var i = 0;
+	function move() {
+		if (i == 0) {
+			i = 1;
+			var elem = document.getElementById("progressBar");
+			var width = 1;
+			var id = setInterval(frame, 10);
+			function frame() {
+				if (width >= 100) {
+					clearInterval(id);
+					i = 0;
+				} else {
+					width++;
+					elem.style.width = width + "%";
+				}
+			}
+		}
+	}
+</script>
 </head>
 <body id="Content">
+
 	<div class="header">
-		<img src="styles/logo3.png" alt="Logo" align="left" style="height: 150px; width: 170px;">
+		<img src="styles/logo3.png" alt="Logo" align="left"
+			style="height: 150px; width: 170px;">
 		<h1 align="center">GymKrabbler</h1>
 		<h2 style="text-align: center; font-style: italic;">Finde dein
 			Fitnesstudio in Karlsruhe!</h2>
 	</div>
 	<br>
 	<center>
-		<h3>Zur vollständigen Ansicht bitte den folgenden Button betätigen:</h3>
-			<p>
-				<button class="glow-on-hover" type="button">
-					<a th:href="@{/updateAllGyms/}">Alles aktualisieren</a>
-				</button>
-			</p>
-		</center>
+		<h3>Zur vollständigen Ansicht bitte den folgenden Button
+			betätigen:</h3>
+		<p>
+			<button class="glow-on-hover" type="button" onclick="fillProgressBar()">
+				<a th:href="@{/updateAllGyms/}">Alles aktualisieren</a>
+			</button>
+			<button class="glow-on-hover" type="button" id="test"
+				onclick="fillProgressBar()">click!
+			</button>
+		</p>
+		<div id="progressID" class="progress">
+			<div id="progress-fill-ID" class="progress-filling"></div>
+		</div>
+	</center>
 	<div th:switch="${gyms}" class="container">
 		<!--SearchFunction-->
 		<input type="text" id="myInput" onkeyup="myFunction()"
 			placeholder="Search for names...">
-			
+
 		<center>
-			
+
 
 			<h3 th:case="null">Bisher gibt es noch keine Fitnessstudios!</h3>
 			<div th:case="*">
@@ -42,7 +71,7 @@
 							<th>Adresse</th>
 							<th>E-Mail</th>
 							<th>Link</th>
-				
+
 
 
 						</tr>
@@ -54,23 +83,24 @@
 							<td th:text="${gym.preis}"></td>
 							<td th:text="${gym.adresse}"></td>
 							<!-- <td th:text="${gym.email}"></td> -->
-							<td><a th:text="${gym.email}" th:href="'mailto:' + ${gym.email}"></a></td>
+							<td><a th:text="${gym.email}"
+								th:href="'mailto:' + ${gym.email}"></a></td>
 							<td><a th:text="${gym.url}" th:href="${gym.url}"></a></td>
 						</tr>
 					</tbody>
 				</table>
 			</div>
-			
+
 		</center>
 	</div>
 	<center>
-	<div>
-		<p>Bitte kontaktieren Sie den Support unter xxx@example.com, falls
-			Fehler beim Scraping auftreten.</p>
-		<p th:text="${errorMessage}"></p>
-	</div>
-	
-	
+		<div>
+			<p>Bitte kontaktieren Sie den Support unter xxx@example.com,
+				falls Fehler beim Scraping auftreten.</p>
+			<p th:text="${errorMessage}"></p>
+		</div>
+
+
 	</center>
 </body>
 </html>
