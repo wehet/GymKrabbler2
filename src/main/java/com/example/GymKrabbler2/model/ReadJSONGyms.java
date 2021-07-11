@@ -66,7 +66,7 @@ public class ReadJSONGyms
 		long scrapePreis = Long.parseLong((String) gymObject.get("scrapePreis"));
 		long scrapeAdresse = Long.parseLong((String) gymObject.get("scrapeAdresse"));
 		long scrapeEmail = Long.parseLong((String) gymObject.get("scrapeEmail"));
-		Timestamp timestamp = (Timestamp) gymObject.get("timestamp");
+		Timestamp timestamp = Timestamp.valueOf((String) gymObject.get("timestamp"));
 		String status = (String) gymObject.get("status");
 
 		// add new Gym

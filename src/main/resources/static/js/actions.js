@@ -21,25 +21,44 @@ function myFunction() {
 	}
 }
 
-function fillProgressBar() {
-	//var data;
-//	loadJSON(function(response) {
-//		  // Parse JSON string into object
-//		    var actual_JSON = JSON.parse(response);
-//		    console.log("this is our json: " + actual_JSON)
-//		 });
-	//window.alert(data[0].url)
+async function fillProgressBar() {
+
+	var progressBarContainer = document.getElementById("progressID");
+	var progressBarFilling = document.getElementById("progressFillID");
+	var loadingText = document.getElementById("loadingID");
+	progressBarContainer.style.display = "block";
+	progressBarFilling.style.display = "block";
+	loadingText.style.display = "block";
+	var i= 2;
+	//progressBarFilling.style.width = (i + 15) + "%";
+
+	do {	
+		const result = await wait1Second();
+		i = i + 1;
+		progressBarFilling.style.width = (i) + "%";
+		console.log(result);
+	} while (i<90);
 	
-	var progressBarContainer, progressBarFilling;
-	progressBarContainer = document.getElementById("progressID")
-	progressBarFilling = document.getElementById("progress-fill-ID")
-	setInterval(function () {
-		progressBarFilling.style.width = i + "%";
-    }, 1000);
-		progressBarContainer.style.display = "inline";
-	progressBarFilling.style.display = "inline";
-	progressBarFilling.style.width = "80%";
-	//window.alert("something happened: " + document.getElementById("test").textContent)	
+}
+
+async function finishFilling() {
+	var progressBarContainer = document.getElementById("progressID");
+	var progressBarFilling = document.getElementById("progressFillID");
+	var loadingText = document.getElementById("loadingID");
+	progressBarFilling.style.width = "100%";
+	const result = await wait1Second();
+	progressBarFilling.style.display = "none";
+	progressBarContainer.style.display = "none";
+	loadingText.style.display = "none";
+	console.log(result);
+}
+
+function wait1Second() {
+	return new Promise((resolve) => {
+		setTimeout(() => {
+			resolve("finished")
+		}, 500);
+	});
 }
 
 //function loadJSON(callback) {   
@@ -55,3 +74,5 @@ function fillProgressBar() {
 //    };
 //    xobj.send(null);  
 // }
+
+

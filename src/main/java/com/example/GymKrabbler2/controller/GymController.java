@@ -115,8 +115,8 @@ public class GymController {
 			gymRepository.save(gym);
 			
 			//Updaten der Gyms
-			//WriteJSONGyms.updateJSON(gymRepository);
-
+			WriteJSONGyms.updateJSON(gymRepository);
+			
 		}
 		model.addAttribute("errorMessage", errorMessage);
 		return "redirect:/index";

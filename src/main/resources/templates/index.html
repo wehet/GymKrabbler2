@@ -4,10 +4,11 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <link th:href="@{/styles/main.css}" rel="stylesheet" />
 <script type="text/javascript" th:src="@{/js/actions.js}"></script>
+<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> -->
 <title>Gyms in Karlsruhe</title>
 
 </head>
-<body id="Content">
+<body id="Content" onload="finishFilling()">
 
 	<div class="header">
 		<img src="styles/logo3.png" alt="Logo" align="left"
@@ -21,15 +22,14 @@
 		<h3>Zur vollständigen Ansicht bitte den folgenden Button
 			betätigen:</h3>
 		<p>
-			<button class="glow-on-hover" type="button" onclick="fillProgressBar()">
+			<button class="glow-on-hover" type="button"
+				onclick="fillProgressBar()">
 				<a th:href="@{/updateAllGyms/}">Alles aktualisieren</a>
 			</button>
-			<button class="glow-on-hover" type="button" id="test"
-				onclick="fillProgressBar()">click!
-			</button>
 		</p>
+		<p id="loadingID">loading...</p>
 		<div id="progressID" class="progress">
-			<div id="progress-fill-ID" class="progress-filling"></div>
+			<div id="progressFillID" class="progress-filling"></div>
 		</div>
 	</center>
 	<div th:switch="${gyms}" class="container">
@@ -63,7 +63,6 @@
 							<td th:text="${gym.zeiten}"></td>
 							<td th:text="${gym.preis}"></td>
 							<td th:text="${gym.adresse}"></td>
-							<!-- <td th:text="${gym.email}"></td> -->
 							<td><a th:text="${gym.email}"
 								th:href="'mailto:' + ${gym.email}"></a></td>
 							<td><a th:text="${gym.url}" th:href="${gym.url}"></a></td>

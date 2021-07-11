@@ -181,17 +181,25 @@ a:active {
     }
     
     .progress {
-	    width:200px;
-	    height:10px;
-	    border:1px solid black;
-	    position:relative;
+		width: 200px;
+		height: 10px;
+		border: 1px solid white;
+		position: relative;
+		color: white;
 	}
 
-	.progress-filling{
-	    content:'\A';
-	    position:absolute;
-	    background:white;
-	    top:0; bottom:0;
-	    left:0; 
-	    width:10%;
+	.progress-filling {
+		content: '\A';
+		position: absolute;
+		background: white;
+		top: 0;
+		bottom: 0;
+		left: 0;
+		width: 0%;
+		display: "none";
+	}
+
+	#loadingID {
+		color: white;
+		font-size: small;
 	}

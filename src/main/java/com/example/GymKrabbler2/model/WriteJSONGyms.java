@@ -34,18 +34,19 @@ public class WriteJSONGyms {
 				JSONObject gymObject = new JSONObject();
 
 				JSONObject gymDetails = new JSONObject();
+				gymDetails.put("id", "" + gym.getId());
 				gymDetails.put("name", gym.getName());
 				gymDetails.put("adresse", gym.getAdresse());
 				gymDetails.put("zeiten", gym.getZeiten());
 				gymDetails.put("url", gym.getUrl());
 				gymDetails.put("email", gym.getEmail());
 				gymDetails.put("preis", gym.getPreis());
-				gymDetails.put("scrapeZeiten", gym.getScrapeZeiten());
-				gymDetails.put("scrapePreis", gym.getScrapePreis());
-				gymDetails.put("scrapeAdresse", gym.getScrapeAdresse());
-				gymDetails.put("scrapeEmail", gym.getScrapeEmail());
-				gymDetails.put("timestamp", gym.getTimestamp());
-				gymDetails.put("timestamp", gym.getStatus());
+				gymDetails.put("scrapeZeiten", "" + gym.getScrapeZeiten());
+				gymDetails.put("scrapePreis", "" + gym.getScrapePreis());
+				gymDetails.put("scrapeAdresse", "" + gym.getScrapeAdresse());
+				gymDetails.put("scrapeEmail", "" + gym.getScrapeEmail());
+				gymDetails.put("timestamp", "" + gym.getTimestamp());
+				gymDetails.put("status", gym.getStatus());
 				
 				
 				gymObject.put("gym", gymDetails);
@@ -64,7 +65,7 @@ public class WriteJSONGyms {
 
 	@SuppressWarnings("unchecked")
 	public static void main(String[] args) {
-
+		System.out.println(new Timestamp(new Date().getTime()));
 
 	}
 }
