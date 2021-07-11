@@ -1,5 +1,6 @@
 package com.example.GymKrabbler2.webCrawler;
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertThat;
 import static org.junit.Assert.assertThrows;
 import static org.junit.Assert.assertTrue;
 import static org.junit.Assert.fail;
@@ -25,14 +26,15 @@ public class ScrapeWebsiteTest {
 		
 		//an Scraper Objekt übergeben
 		Scraper scraper = new Scraper();
+		
+		
 		try {
 		//scrapeWebsite Methode ausführen
 		scraper.scrapeWebsite(sd);
 		fail();
 		}catch(Exception e) {
-			//Assert.assertTrue(e)
-           // .isInstanceOf(NullPointerException.class)
-           // .hasMessage("url");
+			String message = e.getMessage();
+			assertEquals("Fehler beim Scraper",message);
 		}
 	}
 
