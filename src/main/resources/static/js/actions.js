@@ -22,16 +22,36 @@ function myFunction() {
 }
 
 function fillProgressBar() {
+	//var data;
+//	loadJSON(function(response) {
+//		  // Parse JSON string into object
+//		    var actual_JSON = JSON.parse(response);
+//		    console.log("this is our json: " + actual_JSON)
+//		 });
+	//window.alert(data[0].url)
+	
 	var progressBarContainer, progressBarFilling;
 	progressBarContainer = document.getElementById("progressID")
 	progressBarFilling = document.getElementById("progress-fill-ID")
-	setTimeout(function () {
-		window.alert(document.getElementById("myTable").rows[1].cells[3].innerHTML)
-    }, 5000);
-		//progressBarContainer.style.display = "inline";
-	//progressBarFilling.style.display = "inline";
+	setInterval(function () {
+		progressBarFilling.style.width = i + "%";
+    }, 1000);
+		progressBarContainer.style.display = "inline";
+	progressBarFilling.style.display = "inline";
 	progressBarFilling.style.width = "80%";
-	window.alert("something happened: " + document.getElementById("test").textContent)
-	
-	
+	//window.alert("something happened: " + document.getElementById("test").textContent)	
 }
+
+//function loadJSON(callback) {   
+//
+//    var xobj = new XMLHttpRequest();
+//    xobj.overrideMimeType("application/json");
+//    xobj.open('GET', 'http://localhost:8081/gymData.json', true); // Replace 'my_data' with the path to your file
+//    xobj.onreadystatechange = function () {
+//          if (xobj.readyState == 4 && xobj.status == "200") {
+//            // Required use of an anonymous callback as .open will NOT return a value but simply returns undefined in asynchronous mode
+//            callback(xobj.responseText);
+//          }
+//    };
+//    xobj.send(null);  
+// }

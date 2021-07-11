@@ -1,5 +1,7 @@
 package com.example.GymKrabbler2.model;
 
+import java.sql.Timestamp;
+
 import javax.persistence.*;
 
 @Entity
@@ -18,13 +20,16 @@ public class Gym {
 	private long scrapePreis;
 	private long scrapeAdresse;
 	private long scrapeEmail;
+	private Timestamp timestamp;
+	private String status;
+	
 
 	public Gym() {
 		super();
 	}
 
 	public Gym(long id, String name, String url, String email, String zeiten, String preis, String adresse,
-			String bewertung, long scrapeZeiten, long scrapePreis, long scrapeAdresse, long scrapeEmail) {
+			String bewertung, long scrapeZeiten, long scrapePreis, long scrapeAdresse, long scrapeEmail, Timestamp timestamp, String status) {
 		this.id = id;
 		this.name = name;
 		this.url = url;
@@ -37,6 +42,8 @@ public class Gym {
 		this.scrapePreis = scrapePreis;
 		this.scrapeAdresse = scrapeAdresse;
 		this.scrapeEmail = scrapeEmail;
+		this.timestamp = timestamp;
+		this.status = status;
 	}
 
 	public long getId() {
@@ -138,6 +145,22 @@ public class Gym {
 
 	public void setScrapeEmail(long scrapeEmail) {
 		this.scrapeEmail = scrapeEmail;
+	}
+
+	public Timestamp getTimestamp() {
+		return timestamp;
+	}
+
+	public void setTimestamp(Timestamp timestamp) {
+		this.timestamp = timestamp;
+	}
+
+	public String getStatus() {
+		return status;
+	}
+
+	public void setStatus(String status) {
+		this.status = status;
 	}
 
 }

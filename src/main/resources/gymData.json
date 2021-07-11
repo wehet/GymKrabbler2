@@ -11,7 +11,9 @@
 			"scrapeZeiten": "11",
 			"scrapePreis": "12",
 			"scrapeAdresse": "13",
-			"scrapeEmail": "14"
+			"scrapeEmail": "14",
+			"timestamp": null,
+			"status": null
 		}
 	},
 	{
@@ -26,7 +28,9 @@
 			"scrapeZeiten": "21",
 			"scrapePreis": "22",
 			"scrapeAdresse": "23",
-			"scrapeEmail": "24"
+			"scrapeEmail": "24",
+			"status": null,
+			"timestamp": null
 		}
 	},
 	{
@@ -41,7 +45,9 @@
 			"scrapeZeiten": "31",
 			"scrapePreis": "32",
 			"scrapeAdresse": "33",
-			"scrapeEmail": "34"
+			"scrapeEmail": "34",
+			"timestamp": null,
+			"status": null
 		}
 	},
 	{
@@ -56,7 +62,9 @@
 			"scrapeZeiten": "41",
 			"scrapePreis": "42",
 			"scrapeAdresse": "43",
-			"scrapeEmail": "44"
+			"scrapeEmail": "44",
+			"timestamp": null,
+			"status": null
 		}
 	},
 	{
@@ -71,7 +79,9 @@
 			"scrapeZeiten": "51",
 			"scrapePreis": "52",
 			"scrapeAdresse": "53",
-			"scrapeEmail": "54"
+			"scrapeEmail": "54",
+			"timestamp": null,
+			"status": null
 		}
 	},
 	{
@@ -86,7 +96,9 @@
 			"scrapeZeiten": "61",
 			"scrapePreis": "62",
 			"scrapeAdresse": "63",
-			"scrapeEmail": "64"
+			"scrapeEmail": "64",
+			"timestamp": null,
+			"status": null
 		}
 	},
 	{
@@ -101,7 +113,9 @@
 			"scrapeZeiten": "71",
 			"scrapePreis": "72",
 			"scrapeAdresse": "73",
-			"scrapeEmail": "74"
+			"scrapeEmail": "74",
+			"timestamp": null,
+			"status": null
 		}
 	},
 	{
@@ -116,7 +130,9 @@
 			"scrapeZeiten": "81",
 			"scrapePreis": "82",
 			"scrapeAdresse": "83",
-			"scrapeEmail": "84"
+			"scrapeEmail": "84",
+			"timestamp": null,
+			"status": null
 		}
 	},
 	{
@@ -131,7 +147,9 @@
 			"scrapeZeiten": "91",
 			"scrapePreis": "92",
 			"scrapeAdresse": "93",
-			"scrapeEmail": "94"
+			"scrapeEmail": "94",
+			"timestamp": null,
+			"status": null
 		}
 	},
 	{
@@ -146,7 +164,9 @@
 			"scrapeZeiten": "101",
 			"scrapePreis": "102",
 			"scrapeAdresse": "103",
-			"scrapeEmail": "104"
+			"scrapeEmail": "104",
+			"timestamp": null,
+			"status": null
 		}
 	},
 	{
@@ -161,7 +181,9 @@
 			"scrapeZeiten": "111",
 			"scrapePreis": "112",
 			"scrapeAdresse": "113",
-			"scrapeEmail": "114"
+			"scrapeEmail": "114",
+			"timestamp": null,
+			"status": null
 		}
 	},
 	{
@@ -176,7 +198,9 @@
 			"scrapeZeiten": "121",
 			"scrapePreis": "122",
 			"scrapeAdresse": "123",
-			"scrapeEmail": "124"
+			"scrapeEmail": "124",
+			"timestamp": null,
+			"status": null
 		}
 	},
 	{
@@ -191,7 +215,9 @@
 			"scrapeZeiten": "131",
 			"scrapePreis": "132",
 			"scrapeAdresse": "133",
-			"scrapeEmail": "134"
+			"scrapeEmail": "134",
+			"timestamp": null,
+			"status": null
 		}
 	},
 	{
@@ -206,7 +232,9 @@
 			"scrapeZeiten": "141",
 			"scrapePreis": "142",
 			"scrapeAdresse": "143",
-			"scrapeEmail": "144"
+			"scrapeEmail": "144",
+			"timestamp": null,
+			"status": null
 		}
 	},
 	{
@@ -221,7 +249,9 @@
 			"scrapeZeiten": "151",
 			"scrapePreis": "152",
 			"scrapeAdresse": "153",
-			"scrapeEmail": "154"
+			"scrapeEmail": "154",
+			"timestamp": null,
+			"status": null
 		}
 	},
 	{
@@ -236,7 +266,9 @@
 			"scrapeZeiten": "161",
 			"scrapePreis": "162",
 			"scrapeAdresse": "163",
-			"scrapeEmail": "164"
+			"scrapeEmail": "164",
+			"timestamp": null,
+			"status": null
 		}
 	}
 ]

@@ -1,6 +1,9 @@
 package com.example.GymKrabbler2.controller;
 
 import java.io.IOException;
+import java.sql.Timestamp;
+import java.util.Date;
+
 import org.json.simple.JSONObject;
 
 import javax.swing.JFrame;
@@ -52,6 +55,7 @@ public class GymController {
 		for (Gym gym : gymRepository.findAll()) {
 
 			Scraper scraper = new Scraper();
+			gym.setStatus("ok");
 			
 			
 
@@ -63,6 +67,7 @@ public class GymController {
 			} catch (Exception e1) {
 				errorMessage = "Die Öffnungszeiten des Gyms " + gym.getName()
 						+ " konnten nicht gescraped werden :( Bitte kontaktieren Sie den Support unter xxx@example.com";
+				gym.setStatus(gym.getStatus() + "Öffnungszeiten, ");
 			}
 			try {
 
@@ -75,6 +80,7 @@ public class GymController {
 			} catch (Exception e2) {
 				errorMessage = "Der Preis des Gyms " + gym.getName()
 						+ " konnte nicht gescraped werden :( Bitte kontaktieren Sie den Support unter xxx@example.com";
+				gym.setStatus(gym.getStatus() + "Preis, ");
 			}
 			try {
 
@@ -86,6 +92,7 @@ public class GymController {
 			} catch (Exception e3) {
 				errorMessage = "Die Adresse des Gyms " + gym.getName()
 						+ " konnte nicht gescraped werden :( Bitte kontaktieren Sie den Support unter xxx@example.com";
+				gym.setStatus(gym.getStatus() + "Adresse, ");
 			}
 			
 			try {
@@ -100,9 +107,11 @@ public class GymController {
 			} catch (Exception e4) {
 				errorMessage = "Die Email des Gyms " + gym.getName()
 						+ " konnte nicht gescraped werden :( Bitte kontaktieren Sie den Support unter xxx@example.com";
+				gym.setStatus(gym.getStatus() + "Email, ");
 			}
 			
-
+			gym.setTimestamp(new Timestamp(new Date().getTime()));
+			System.out.println("Timestamp: " + gym.getTimestamp());
 			gymRepository.save(gym);
 			
 			//Updaten der Gyms

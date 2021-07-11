@@ -5,26 +5,7 @@
 <link th:href="@{/styles/main.css}" rel="stylesheet" />
 <script type="text/javascript" th:src="@{/js/actions.js}"></script>
 <title>Gyms in Karlsruhe</title>
-<script type="text/javascript">
-	var i = 0;
-	function move() {
-		if (i == 0) {
-			i = 1;
-			var elem = document.getElementById("progressBar");
-			var width = 1;
-			var id = setInterval(frame, 10);
-			function frame() {
-				if (width >= 100) {
-					clearInterval(id);
-					i = 0;
-				} else {
-					width++;
-					elem.style.width = width + "%";
-				}
-			}
-		}
-	}
-</script>
+
 </head>
 <body id="Content">
 

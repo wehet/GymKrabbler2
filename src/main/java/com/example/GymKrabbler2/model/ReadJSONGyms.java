@@ -3,6 +3,7 @@ package com.example.GymKrabbler2.model;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
+import java.sql.Timestamp;
 import java.util.LinkedList;
 import java.util.List;
 
@@ -65,10 +66,12 @@ public class ReadJSONGyms
 		long scrapePreis = Long.parseLong((String) gymObject.get("scrapePreis"));
 		long scrapeAdresse = Long.parseLong((String) gymObject.get("scrapeAdresse"));
 		long scrapeEmail = Long.parseLong((String) gymObject.get("scrapeEmail"));
+		Timestamp timestamp = (Timestamp) gymObject.get("timestamp");
+		String status = (String) gymObject.get("status");
 
 		// add new Gym
 		gyms.add(new Gym(id, name, url, email, zeiten, preis, adresse, bewertung, scrapeZeiten, scrapePreis,
-				scrapeAdresse, scrapeEmail));
+				scrapeAdresse, scrapeEmail, timestamp, status));
 		
 
 	}
