@@ -32,7 +32,7 @@ public class Scraper {
 
 			System.out.println("Fehler beim Scraper");
 			e.printStackTrace();
-			throw new Exception();
+			throw new Exception("Fehler beim Scraper");
 		}
 
 		// evtl noch was für Catch überlegen
