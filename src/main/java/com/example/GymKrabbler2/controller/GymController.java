@@ -53,73 +53,77 @@ public class GymController {
 	public String update(Model model) {
 
 		for (Gym gym : gymRepository.findAll()) {
-
-			Scraper scraper = new Scraper();
-			gym.setStatus("ok");
-			
-			
-
-			try {
-				String zeit = scraper.scrapeWebsite(scrapeDataRepository.findById(gym.getScrapeZeiten()).get());
-
-				gym.setZeiten(zeit);
-
-			} catch (Exception e1) {
-				errorMessage = "Die Öffnungszeiten des Gyms " + gym.getName()
-						+ " konnten nicht gescraped werden :( Bitte kontaktieren Sie den Support unter xxx@example.com";
-				gym.setStatus(gym.getStatus() + "Öffnungszeiten, ");
-			}
-			try {
-
-				String preis = scraper.scrapeWebsite(scrapeDataRepository.findById(gym.getScrapePreis()).get());
-				System.out.println(preis);
-
-				gym.setPreis(preis);
-			
-
-			} catch (Exception e2) {
-				errorMessage = "Der Preis des Gyms " + gym.getName()
-						+ " konnte nicht gescraped werden :( Bitte kontaktieren Sie den Support unter xxx@example.com";
-				gym.setStatus(gym.getStatus() + "Preis, ");
-			}
-			try {
-
-				String adresse = scraper.scrapeWebsite(scrapeDataRepository.findById(gym.getScrapeAdresse()).get());
-				System.out.println(adresse);
-
-				gym.setAdresse(adresse);
-
-			} catch (Exception e3) {
-				errorMessage = "Die Adresse des Gyms " + gym.getName()
-						+ " konnte nicht gescraped werden :( Bitte kontaktieren Sie den Support unter xxx@example.com";
-				gym.setStatus(gym.getStatus() + "Adresse, ");
-			}
-			
-			try {
-				
-				System.out.println("Email id lautet: " + gym.getScrapeEmail());
-
-				String email = scraper.scrapeWebsite(scrapeDataRepository.findById(gym.getScrapeEmail()).get());
-				System.out.println(email);
-
-				gym.setEmail(email);
-
-			} catch (Exception e4) {
-				errorMessage = "Die Email des Gyms " + gym.getName()
-						+ " konnte nicht gescraped werden :( Bitte kontaktieren Sie den Support unter xxx@example.com";
-				gym.setStatus(gym.getStatus() + "Email, ");
-			}
-			
-			gym.setTimestamp(new Timestamp(new Date().getTime()));
-			System.out.println("Timestamp: " + gym.getTimestamp());
-			gymRepository.save(gym);
-			
-			//Updaten der Gyms
-			WriteJSONGyms.updateJSON(gymRepository);
-			
+			updateGym(gym);
 		}
+
+		// Updaten der Gyms
+		WriteJSONGyms.updateJSON(gymRepository);
 		model.addAttribute("errorMessage", errorMessage);
 		return "redirect:/index";
+	}
+
+	public void updateGym(Gym gym) {
+		gym.setStatus("");
+		Scraper scraper = new Scraper();
+
+		try {
+			String zeit = scraper.scrapeWebsite(scrapeDataRepository.findById(gym.getScrapeZeiten()).get());
+
+			gym.setZeiten(zeit);
+
+		} catch (Exception e1) {
+			errorMessage = "Die Öffnungszeiten des Gyms " + gym.getName()
+					+ " konnten nicht gescraped werden :( Bitte kontaktieren Sie den Support unter xxx@example.com";
+			gym.setStatus(gym.getStatus() + "Öffnungszeiten, ");
+		}
+		try {
+
+			String preis = scraper.scrapeWebsite(scrapeDataRepository.findById(gym.getScrapePreis()).get());
+			System.out.println(preis);
+
+			gym.setPreis(preis);
+
+		} catch (Exception e2) {
+			errorMessage = "Der Preis des Gyms " + gym.getName()
+					+ " konnte nicht gescraped werden :( Bitte kontaktieren Sie den Support unter xxx@example.com";
+			gym.setStatus(gym.getStatus() + "Preis, ");
+		}
+		try {
+
+			String adresse = scraper.scrapeWebsite(scrapeDataRepository.findById(gym.getScrapeAdresse()).get());
+			System.out.println(adresse);
+
+			gym.setAdresse(adresse);
+
+		} catch (Exception e3) {
+			errorMessage = "Die Adresse des Gyms " + gym.getName()
+					+ " konnte nicht gescraped werden :( Bitte kontaktieren Sie den Support unter xxx@example.com";
+			gym.setStatus(gym.getStatus() + "Adresse, ");
+		}
+
+		try {
+
+			System.out.println("Email id lautet: " + gym.getScrapeEmail());
+
+			String email = scraper.scrapeWebsite(scrapeDataRepository.findById(gym.getScrapeEmail()).get());
+			System.out.println(email);
+
+			gym.setEmail(email);
+
+		} catch (Exception e4) {
+			errorMessage = "Die Email des Gyms " + gym.getName()
+					+ " konnte nicht gescraped werden :( Bitte kontaktieren Sie den Support unter xxx@example.com";
+			gym.setStatus(gym.getStatus() + "Email, ");
+		}
+
+		if (gym.getStatus() == "") {
+			gym.setStatus("ok");
+		}
+
+		gym.setTimestamp(new Timestamp(new Date().getTime()));
+		System.out.println("Timestamp: " + gym.getTimestamp());
+		gymRepository.save(gym);
+
 	}
 
 	@GetMapping("/writeGym/{id}")
