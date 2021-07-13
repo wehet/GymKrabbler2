@@ -28,7 +28,7 @@ public class GymController {
 	GymRepository gymRepository;
 	@Autowired
 	ScrapeDataRepository scrapeDataRepository;
-	public static String errorMessage = "Aktuell gibt es keine Fehler.";
+	public static String errorMessage;
 
 	public GymController() {
 		// TODO Auto-generated constructor stub
@@ -39,14 +39,6 @@ public class GymController {
 		model.addAttribute("gyms", gymRepository.findAll());
 
 		return "index";
-	}
-
-	@GetMapping("/messageBox")
-	public String messageBox(Model model) throws IOException {
-		model.addAttribute("errorMessage", errorMessage);
-		System.out.println(errorMessage);
-		return "messageBox";
-
 	}
 
 	@GetMapping("/updateAllGyms")
@@ -72,8 +64,6 @@ public class GymController {
 			gym.setZeiten(zeit);
 
 		} catch (Exception e1) {
-			errorMessage = "Die Öffnungszeiten des Gyms " + gym.getName()
-					+ " konnten nicht gescraped werden :( Bitte kontaktieren Sie den Support unter xxx@example.com";
 			gym.setStatus(gym.getStatus() + "Öffnungszeiten, ");
 		}
 		try {
@@ -84,8 +74,6 @@ public class GymController {
 			gym.setPreis(preis);
 
 		} catch (Exception e2) {
-			errorMessage = "Der Preis des Gyms " + gym.getName()
-					+ " konnte nicht gescraped werden :( Bitte kontaktieren Sie den Support unter xxx@example.com";
 			gym.setStatus(gym.getStatus() + "Preis, ");
 		}
 		try {
@@ -96,8 +84,6 @@ public class GymController {
 			gym.setAdresse(adresse);
 
 		} catch (Exception e3) {
-			errorMessage = "Die Adresse des Gyms " + gym.getName()
-					+ " konnte nicht gescraped werden :( Bitte kontaktieren Sie den Support unter xxx@example.com";
 			gym.setStatus(gym.getStatus() + "Adresse, ");
 		}
 
@@ -111,13 +97,13 @@ public class GymController {
 			gym.setEmail(email);
 
 		} catch (Exception e4) {
-			errorMessage = "Die Email des Gyms " + gym.getName()
-					+ " konnte nicht gescraped werden :( Bitte kontaktieren Sie den Support unter xxx@example.com";
 			gym.setStatus(gym.getStatus() + "Email, ");
 		}
 
 		if (gym.getStatus() == "") {
 			gym.setStatus("ok");
+		} else {
+			errorMessage = errorMessage + gym.getName() + ", ";
 		}
 
 		gym.setTimestamp(new Timestamp(new Date().getTime()));

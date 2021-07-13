@@ -38,6 +38,8 @@ async function fillProgressBar() {
 		progressBarFilling.style.width = (i) + "%";
 		console.log(result);
 	} while (i<90);
+
+	displayError();
 	
 }
 
@@ -61,6 +63,15 @@ function wait1Second() {
 	});
 }
 
+function displayError() {
+	var gyms = document.getElementById("errorMessage");
+	if (gyms.innerHTML != "ok") {
+		window.alert("Die Daten des Gyms" + gyms + 
+				"konnten nicht gescraped werden :( Bitte kontaktieren Sie den Support unter xxx@example.com");
+	}
+	
+}
+
 //function loadJSON(callback) {   
 //
 //    var xobj = new XMLHttpRequest();
@@ -74,5 +85,3 @@ function wait1Second() {
 //    };
 //    xobj.send(null);  
 // }
-
-
