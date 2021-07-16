@@ -6,6 +6,7 @@ import java.util.Date;
 
 import org.json.simple.JSONObject;
 
+import javax.servlet.http.HttpSession;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.JProgressBar;
@@ -42,7 +43,7 @@ public class GymController {
 	}
 
 	@GetMapping("/updateAllGyms")
-	public String update(Model model) {
+	public String update(Model model, HttpSession session) {
 
 		for (Gym gym : gymRepository.findAll()) {
 			updateGym(gym);
@@ -50,7 +51,8 @@ public class GymController {
 
 		// Updaten der Gyms
 		WriteJSONGyms.updateJSON(gymRepository);
-		model.addAttribute("errorMessage", errorMessage);
+		//model.addAttribute("errorMessage", errorMessage);
+		session.setAttribute("errorMessage", errorMessage);
 		return "redirect:/index";
 	}
 
