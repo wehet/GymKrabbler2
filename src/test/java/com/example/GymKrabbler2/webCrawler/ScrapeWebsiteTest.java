@@ -20,6 +20,7 @@ import com.gargoylesoftware.htmlunit.html.HtmlPage;
 
 public class ScrapeWebsiteTest {
 	@Test
+	//Exception bei scrapeWebseite testen
 	void scrapeWebsiteTest() throws Exception{
 		//Fehlerhaftes Scrapedata Objekt erstellen
 		ScrapeData sd = new ScrapeData();
