@@ -15,7 +15,7 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 
 public class SelTest {
 
-	
+	//zum Ausführen der Tests: geckodriver.exe lokal installieren und Dateipfad entsprechend anpassen
 	
 	@Test
 	//Anzeige der Hauptwebseite überprüfen
@@ -45,7 +45,7 @@ public class SelTest {
 	
 	
 	@Test
-	//Suchfeld überprüfen
+	//Suchleiste überprüfen
 	public void searchTest() {
 		System.setProperty("webdriver.gecko.driver", "C:\\Users\\zoech\\Documents\\DHBW\\6. Semester\\SE\\geckodriver-v0.29.1-win64\\geckodriver.exe");
 		WebDriver driver = new FirefoxDriver();

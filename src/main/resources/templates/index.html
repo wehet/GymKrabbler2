@@ -10,6 +10,7 @@
 </head>
 <body id="Content" onload="finishFilling()">
 
+<!-- header -->
 	<div class="header">
 		<img src="styles/logo3.png" alt="Logo" align="left"
 			style="height: 150px; width: 170px;">
@@ -42,7 +43,7 @@
 
 			<h3 th:case="null">Bisher gibt es noch keine Fitnessstudios!</h3>
 			<div th:case="*">
-
+<!-- table -->
 				<table id="myTable" cellpadding="10">
 					<thead>
 						<tr>
@@ -73,6 +74,8 @@
 
 		</center>
 	</div>
+	
+	<!-- footer -->
 	<center>
 		<div>
 			<p>Bitte kontaktieren Sie den Support unter xxx@example.com,

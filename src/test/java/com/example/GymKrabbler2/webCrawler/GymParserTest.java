@@ -9,9 +9,11 @@ import org.junit.jupiter.api.*;
 
 public class GymParserTest {
 	@Test
+	//NLP in GymParser überprüfen
 	void tokenTest() throws IOException {
 		GymParser gymParser = new GymParser();
 		String gesamt, start, end;
+		//Beispieltext (String)
 		gesamt = "Kaiserstraße 94 a \r\n" + " 76133 Karlsruhe\r\n" + " Tel.: 0721 – 663 37 37\r\n" + "\r\n"
 				+ " ÖFFNUNGSZEITEN\r\n" + "\r\n" + " Mo - Fr: 06.00 Uhr – 23.00 Uhr\r\n"
 				+ " Sa - So: 08.00 Uhr – 22.00 Uhr\r\n" + "\r\n" + " KIDS CLUB\r\n" + "\r\n"
