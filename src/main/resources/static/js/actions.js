@@ -38,8 +38,6 @@ async function fillProgressBar() {
 		progressBarFilling.style.width = (i) + "%";
 		console.log(result);
 	} while (i<90);
-
-	displayError();
 	
 }
 
@@ -53,6 +51,8 @@ async function finishFilling() {
 	progressBarContainer.style.display = "none";
 	loadingText.style.display = "none";
 	console.log(result);
+	displayError();
+
 }
 
 function wait1Second() {
@@ -64,10 +64,14 @@ function wait1Second() {
 }
 
 function displayError() {
-	var gyms = document.getElementById("errorMessage");
-	if (gyms.innerHTML != "ok") {
-		window.alert("Die Daten des Gyms" + gyms + 
-				"konnten nicht gescraped werden :( Bitte kontaktieren Sie den Support unter xxx@example.com");
+	var errorMessage = document.getElementById("errorMessage");
+	if (errorMessage.innerHTML != "") {
+		if(errorMessage.innerHTML !== "ok") {
+			var displayedError = errorMessage.innerHTML.slice(0, errorMessage.innerHTML.length - 2);
+			window.alert("Die Daten des Gyms " + displayedError + 
+					" konnten nicht gescraped werden :( Bitte kontaktieren Sie den Support unter xxx@example.com");	
+		}
+		
 	}
 	
 }

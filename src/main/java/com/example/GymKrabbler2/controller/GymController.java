@@ -45,13 +45,17 @@ public class GymController {
 	@GetMapping("/updateAllGyms")
 	public String update(Model model, HttpSession session) {
 
+		errorMessage = "";
+
 		for (Gym gym : gymRepository.findAll()) {
 			updateGym(gym);
 		}
 
 		// Updaten der Gyms
 		WriteJSONGyms.updateJSON(gymRepository);
-		//model.addAttribute("errorMessage", errorMessage);
+		if (errorMessage == "") {
+			errorMessage = "ok";
+		}
 		session.setAttribute("errorMessage", errorMessage);
 		return "redirect:/index";
 	}
