@@ -43,7 +43,7 @@ public class GymController {
 	}
 
 	@GetMapping("/updateAllGyms")
-	public String update(Model model, HttpSession session) {
+	public String update(HttpSession session) {
 
 		errorMessage = "";
 
