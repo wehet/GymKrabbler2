@@ -1,4 +1,4 @@
-package com.example.GymKrabbler2.webCrawler;
+package com.example.GymKrabbler2.webScraper;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertThat;
 import static org.junit.Assert.assertThrows;

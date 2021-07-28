@@ -20,7 +20,7 @@ import com.example.GymKrabbler2.model.Gym;
 import com.example.GymKrabbler2.model.WriteJSONGyms;
 import com.example.GymKrabbler2.repository.GymRepository;
 import com.example.GymKrabbler2.repository.ScrapeDataRepository;
-import com.example.GymKrabbler2.webCrawler.Scraper;
+import com.example.GymKrabbler2.webScraper.Scraper;
 
 @Controller
 public class GymController {

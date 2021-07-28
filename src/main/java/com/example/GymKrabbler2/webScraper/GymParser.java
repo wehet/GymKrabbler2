@@ -1,4 +1,4 @@
-package com.example.GymKrabbler2.webCrawler;
+package com.example.GymKrabbler2.webScraper;
 
 import java.io.IOException;
 import java.io.InputStream;
