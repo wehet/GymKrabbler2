@@ -10,7 +10,8 @@ public class Scraper {
 
 //	static WebClient client = new WebClient();
 
-	public Scraper() {}
+	public Scraper() {
+	}
 
 	// General Scraping method
 	public String scrapeWebsite(ScrapeData scrapeData) throws Exception {
@@ -34,8 +35,6 @@ public class Scraper {
 			e.printStackTrace();
 			throw new Exception("Fehler beim Scraper");
 		}
-
-		// evtl noch was für Catch überlegen
 
 		GymParser parser = new GymParser();
 		try {
